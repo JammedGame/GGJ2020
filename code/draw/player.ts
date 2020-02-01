@@ -76,7 +76,7 @@ class Player
     private updatePosition(playerPos: Three.Vector2) : void
     {
         let radf = Math.PI / 180;
-        let angleFactor = 360 / (GLOBE_PRECISION / 2);
+        let angleFactor = 180 / (GLOBE_PRECISION / 2);
         let x: number = playerPos.x;
         let wx: number = GLOBE_PRECISION / 2 - 1;
         let kx: number = (x > wx) ? (wx - x) : -(x - wx);
@@ -86,12 +86,6 @@ class Player
         let ky: number = (y > wy) ? (wy - y) : -(y - wy);
         let ry: number = (ky + 0.5) * angleFactor;
         let euler = new Three.Euler(ry * radf, rx * radf, 0, 'YXZ');
-        //console.log(euler);
         this._camera.pivot.setRotationFromEuler(euler);
-        //this._camera.pivot.matrix = this._camera.pivot.matrix.multiply(mat);
-
-        //this._camera.pivot.setRotationFromQuaternion(new Three.Quaternion.);
-        //this._camera.pivot.rotation.y = rx;
-        //this._camera.pivot.rotation.x = ry;
     }
 }
