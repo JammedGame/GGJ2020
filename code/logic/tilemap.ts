@@ -12,7 +12,7 @@ class Tile {
 	pollutionDiff: number;
 	ozone: number; // 0..1
 	trail: boolean;
-	wind: [number, number]; // [-1..1, -1..1] 
+	wind: [number, number]; // [-1..1, -1..1]
 	scorch: number; // 0..1
 
 	toString(): string {
@@ -21,9 +21,9 @@ class Tile {
 }
 
 class Tilemap {
-	width: number;
-	height: number;
-	matrix: Tile[][];
+	readonly width: number;
+	readonly height: number;
+	readonly matrix: Tile[][];
 	debuggingEnabled: boolean;
 
 	constructor(width: number, height: number) {
