@@ -1,0 +1,4 @@
+/node_modules
+/tscompiled
+/build/app.js
+package-lock.json
