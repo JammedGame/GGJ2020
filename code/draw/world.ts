@@ -10,6 +10,7 @@ class World extends Scene
     private _sun: Sun;
     private _globe: Globe;
     private _player: Player;
+    public get player(): Player { return this._player; }
     public constructor()
     {
         super();
@@ -23,5 +24,10 @@ class World extends Scene
         this._scene.add(this._sun.instance);
         this._scene.add(this._globe.instance);
         this._scene.add(this._player.instance);
+    }
+    public update()
+    {
+        // override
+        this._globe.update();
     }
 }

@@ -15,4 +15,8 @@ class Scene
     {
         // virtual
     }
+    public update(): void
+    {
+        // virtual
+    }
 }
