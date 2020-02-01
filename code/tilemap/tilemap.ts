@@ -14,8 +14,9 @@ class Tilemap {
 	matrix: Tile[][];
 
 	constructor(width: number, height: number) {
-		this.matrix = Tile[width][height];
+		this.matrix = [];
 		for (let x = 0; x < width; x++) {
+			this.matrix[x] = [];
 			for (let y = 0; y < height; y++) {
 				let newTile = new Tile();
 				newTile.x = x;
