@@ -4,7 +4,8 @@ export {    DEFAULT_FOV,
             MAPS,
             GLOBE_SCALE,
             GLOBE_PRECISION,
-            PLAYER_SCALE
+            PLAYER_SCALE,
+            OZONE_SCALE
 }
 const DEFAULT_FOV = 75;
 const RESOLUTION =
@@ -26,4 +27,5 @@ const MAPS =
 }
 const GLOBE_SCALE = 1.0;
 const GLOBE_PRECISION = 256;
+const OZONE_SCALE = 1.05;
 const PLAYER_SCALE = 0.05;
