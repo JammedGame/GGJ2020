@@ -45,13 +45,13 @@ class Globe
     {
         if(!Settings.debugGlobe)
         {
-            this._material = new Three.MeshStandardMaterial({
+            this._material = new Three.MeshBasicMaterial({
                 map: this._colorMap,
                 // todo temp disabled
                 //normalMap: this._normalMap,
                 //emissiveMap: this._specularMap,
                 //displacementMap: this._bumpMap,
-                displacementScale: 0.01
+                //displacementScale: 0.01
             });
         }
         else
