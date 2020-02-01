@@ -23,7 +23,12 @@ class GameLogic
         this._scene = new World();
         this._renderer.setActiveScene(this._scene);
         (<World>this._scene).player.hookCamera(this._renderer.camera);
-        this._tilemap = new Tilemap();
+		this._tilemap = new Tilemap();
+		this._tilemap.setPollutionAt(0, 0, 10); // temp
+		this._tilemap.setWindAt(0, 0, 1, 1); // temp
+		this._tilemap.setWindAt(3, 3, -0.5, -0.5); // temp
+		this._tilemap.interpolateWind();
+		Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
         this._apiData = new Api();
         this._apiData.getApiData();
         console.log(this._apiData.allCities);

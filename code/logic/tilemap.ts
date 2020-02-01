@@ -22,8 +22,9 @@ class Tile {
 	interpolatedWind: [number, number];
 	scorch: number; // 0..1
 
-	distanceTo(other: Tile): number {
-		let xDistance = this.x - other.x;
+	distanceWrapped(other: Tile): number {
+		let xDistance = Math.abs(this.x - other.x);
+		xDistance = Math.min(xDistance, WORLD_WIDTH - xDistance);
 		let yDistance = this.y - other.y;
 		return Math.sqrt(xDistance * xDistance + yDistance * yDistance);
 	}
@@ -68,6 +69,17 @@ class Tilemap {
 	log(): void {
 		let logMatrix: string[][] = this.matrix.map(column => column.map(tile => tile.toString()));
 		console.table(logMatrix);
+		console.log("press T to advance simulation step-by-step");
+	}
+
+	debug(): void {
+		if (!this.debuggingEnabled) {
+			this.debuggingEnabled = true;
+			this.log();
+		} else {
+			this.simulate();
+			this.log();
+		}
 	}
 
 	getTileWrapped(x: number, y: number): Tile {
@@ -107,7 +119,7 @@ class Tilemap {
 				let closestTile: Tile = this.findClosestWindyTile(tile);
 				if (closestTile == null) continue;
 
-				let distance: number = tile.distanceTo(closestTile);
+				let distance: number = tile.distanceWrapped(closestTile);
 				let coefficient = Math.pow(WIND_INTERPOLATION_GRADIENT, distance);
 				tile.interpolatedWind[0] = coefficient * closestTile.wind[0];
 				tile.interpolatedWind[1] = coefficient * closestTile.wind[1];
@@ -118,13 +130,15 @@ class Tilemap {
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
 				let tile: Tile = this.matrix[x][y];
+				if (tile.wind[0] != 0 || tile.wind[1] != 0) continue;
+
 				tile.wind = tile.interpolatedWind;
 			}
 		}
 	}
 
 	findClosestWindyTile(tile: Tile): Tile {
-		for (let radius = 1; radius < WIND_INTERPOLATION_MAX_DISTANCE; radius++) {
+		for (let radius = 1; radius <= WIND_INTERPOLATION_MAX_DISTANCE; radius++) {
 			// find all candidate tiles at the current radius
 			let candidateTiles: Tile[] = [];
 			for (let x = tile.x - radius; x < tile.x + radius; x++) {
