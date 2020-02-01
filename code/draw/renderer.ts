@@ -5,14 +5,15 @@ import { RESOLUTION } from '../data/constants';
 import { Camera } from './camera';
 import { Scene } from './scene';
 import { Log } from '../util/log';
+import { Settings } from '../settings';
 
 class Renderer
 {
-    private _stop: boolean;
     private _scene: Scene;
     private _camera: Camera;
     private _canvasParent: HTMLDivElement;
     private _renderer: Three.Renderer;
+    public get camera(): Camera { return this._camera; }
     public constructor(canvasID: string)
     {
         this._canvasParent = <HTMLDivElement> document.getElementById(canvasID);
@@ -34,19 +35,12 @@ class Renderer
         }
         this.render();
     }
-    public stop() : void
-    {
-        this._stop = true;
-    }
     public render() : void
     {
-        /// Render stuff
-        if(this._stop)
+        if(!Settings.pause)
         {
-            this._stop = false;
-            return;
+            this._renderer.render(this._scene.instance, this._camera.instance);
         }
-        this._renderer.render(this._scene.instance, this._camera.instance);
         requestAnimationFrame(this.render.bind(this));
     }
 }

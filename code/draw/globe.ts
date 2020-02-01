@@ -6,6 +6,7 @@ import { Settings } from '../settings';
 
 class Globe
 {
+    private _debugGlobe: boolean;
     private _mesh: Three.Mesh;
     private _material: Three.Material;
     private _sphereGeometry: Three.Geometry;
@@ -20,6 +21,27 @@ class Globe
         this._normalMap = new Three.TextureLoader().load(MAPS.NORMAL);
         this._specularMap = new Three.TextureLoader().load(MAPS.SPECULAR);
         this._bumpMap = new Three.TextureLoader().load(MAPS.BUMP);
+        this._debugGlobe = Settings.debugGlobe;
+        this.generateMaterial();
+        this._sphereGeometry = new Three.SphereGeometry(
+            GLOBE_SCALE,
+            GLOBE_PRECISION,
+            GLOBE_PRECISION / 2 + 1
+        );
+        this._mesh = new Three.Mesh(this._sphereGeometry, this._material);
+        this._mesh.name = 'Globe';
+    }
+    public update()
+    {
+        if(Settings.debugGlobe != this._debugGlobe)
+        {
+            this._debugGlobe = Settings.debugGlobe;
+            this.generateMaterial();
+            this._mesh.material = this._material;
+        }
+    }
+    private generateMaterial()
+    {
         if(!Settings.debugGlobe)
         {
             this._material = new Three.MeshStandardMaterial({
@@ -35,12 +57,5 @@ class Globe
             this._material = new Three.MeshNormalMaterial();
             this._material.flatShading = true;
         }
-        this._sphereGeometry = new Three.SphereGeometry(
-            GLOBE_SCALE,
-            GLOBE_PRECISION,
-            GLOBE_PRECISION / 2 + 1
-        );
-        this._mesh = new Three.Mesh(this._sphereGeometry, this._material);
-        this._mesh.name = 'Globe';
     }
 }

@@ -42,7 +42,7 @@ class Omozon
                 this.addQuad(i * this._quad_size_x, -90 + j * this._quad_size_y);
 
         this._mesh = new Three.Mesh(this._geometry, this._material);
-        this._mesh.name = 'Player';
+        this._mesh.name = 'Omozon';
     }
 
     vertexShader() {

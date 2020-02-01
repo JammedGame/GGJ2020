@@ -1,8 +1,129 @@
-[
+{
+    "Cities": [
+    {
+        "city": "Zurich",
+        "state": "Zurich",
+        "country": "Switzerland"
+    },
+    {
+        "city": "Wellington",
+        "state": "Wellington",
+        "country": "New Zealand"
+    },
+    {
+        "city": "Warsaw",
+        "state": "Mazovia",
+        "country": "Poland"
+    },
+    {
+        "city": "Vladivostok",
+        "state": "Primorskiy",
+        "country": "Russia"
+    },
+    {
+        "city": "Vienna",
+        "state": "Vienna",
+        "country": "Austria"
+    },
+    {
+        "city": "Veracruz",
+        "state": "Veracruz",
+        "country": "Mexico"
+    },
+    {
+        "city": "Venice",
+        "state": "Veneto",
+        "country": "Italy"
+    },
+    {
+        "city": "Tokyo",
+        "state": "Tokyo",
+        "country": "Japan"
+    },
+    {
+        "city": "Teheran",
+        "state": "Tehran",
+        "country": "Iran"
+    },
+    {
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia"
+    },
+    {
+        "city": "Stockholm",
+        "state": "Stockholm",
+        "country": "Sweden"
+    },
+    {
+        "city": "Singapore",
+        "state": "Singapore",
+        "country": "Singapore"
+    },
+    {
+        "city": "Shanghai",
+        "state": "Shanghai",
+        "country": "China"
+    },
+    {
+        "city": "Santiago",
+        "state": "Santiago Metropolitan",
+        "country": "Chile"
+    },
+    {
+        "city": "Reykjavik",
+        "state": "Capital Region",
+        "country": "Iceland"
+    },
+    {
+        "city": "Yangon",
+        "state": "Yangon",
+        "country": "Myanmar"
+    },
+    {
+        "city": "Prague",
+        "state": "Praha",
+        "country": "Czech Republic"
+    },
+    {
+        "city": "Perth",
+        "state": "Western Australia",
+        "country": "Australia"
+    },
+    {
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "country": "France"
+    },
+    {
+        "city": "Oslo",
+        "state": "Oslo",
+        "country": "Norway"
+    },
+    {
+        "city": "Osaka",
+        "state": "Osaka",
+        "country": "Japan"
+    },
+    {
+        "city": "Kyiv",
+        "state": "Kyiv",
+        "country": "Ukraine"
+    },
+    {
+        "city": "New Delhi",
+        "state": "Delhi",
+        "country": "India"
+    },
+    {
+        "city": "Nanjing",
+        "state": "Jiangsu",
+        "country": "China"
+    },
     {
         "city": "Aberdeen",
         "state": "Scotland",
-        "country": "uk"
+        "country": "UK"
     },
     {
         "city": "Adelaide",
@@ -40,14 +161,205 @@
         "country": "Spain"
     },
     {
+        "city": "Beijing",
+        "state": "Beijing",
+        "country": "China"
+    },
+    {
+        "city": "Belgrade",
+        "state": "Central Serbia",
+        "country": "Serbia"
+    },
+    {
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "Germany"
+    },
+    {
+        "city": "Birmingham",
+        "state": "England",
+        "country": "UK"
+    },
+
+    {
         "city": "Mumbai",
         "state": "Maharashtra",
         "country": "India"
     },
     {
+        "city": "Bordeaux",
+        "state": "Nouvelle-Aquitaine",
+        "country": "France"
+    },
+    {
+        "city": "Bremen",
+        "state": "Bremen",
+        "country": "Germany"
+    },
+    {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia"
+    },
+    {
         "city": "Bristol",
         "state": "England",
-        "country": "uk"
+        "country": "UK"
+    },
+    {
+        "city": "Brussels",
+        "state": "Brussels Capital",
+        "country": "Belgium"
+    },
+    {
+        "city": "Bucharest",
+        "state": "Bucuresti",
+        "country": "Romania"
+    },
+    {
+        "city": "Budapest",
+        "state": "Central Hungary",
+        "country": "Hungary"
+    },
+    {
+        "city": "Buenos Aires",
+        "state": "Buenos Aires",
+        "country": "Argentina"
+    },
+    {
+        "city": "Cairo",
+        "state": "Cairo",
+        "country": "Egypt"
+    },
+    {
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "country": "India"
+    },
+    {
+        "city": "Guangzhou",
+        "state": "Guangdong",
+        "country": "China"
+    },
+    {
+        "city": "Cape Town",
+        "state": "Western Cape",
+        "country": "South Africa"
+    },
+    {
+        "city": "Chihuahua",
+        "state": "Chihuahua",
+        "country": "Mexico"
+    },
+    {
+        "city": "Chongqing",
+        "state": "Chongqing",
+        "country": "China"
+    },
+    {
+        "city": "Copenhagen",
+        "state": "Capital Region",
+        "country": "Denmark"
+    },
+    {
+        "city": "Darwin",
+        "state": "Northern Territory",
+        "country": "Australia"
+    },
+    {
+        "city": "Djibouti",
+        "state": "Djibouti",
+        "country": "Djibouti"
+    },
+    {
+        "city": "Dublin",
+        "state": "Leinster",
+        "country": "Ireland"
+    },
+    {
+        "city": "Durban",
+        "state": "KwaZulu-Natal",
+        "country": "South Africa"
+    },
+    {
+        "city": "Edinburgh",
+        "state": "Scotland",
+        "country": "UK"
+    },
+    {
+        "city": "Frankfurt am Main",
+        "state": "Hessen",
+        "country": "Germany"
+    },
+    {
+        "city": "Georgetown",
+        "state": "Demerara-Mahaica",
+        "country": "Guyana"
+    },
+    {
+        "city": "Glasgow",
+        "state": "Scotland",
+        "country": "UK"
+    },
+    {
+        "city": "Flores",
+        "state": "Peten",
+        "country": "Guatemala"
+    },
+    {
+        "city": "Puerto Baquerizo Moreno",
+        "state": "Galapagos",
+        "country": "Ecuador"
+    },
+    {
+        "city": "Hamburg",
+        "state": "Hamburg",
+        "country": "Germany"
+    },
+    {
+        "city": "Oslo",
+        "state": "Oslo",
+        "country": "Norway"
+    },
+    {
+        "city": "Tromso",
+        "state": "Troms",
+        "country": "Norway"
+    },
+    {
+        "city": "Havana",
+        "state": "La Habana",
+        "country": "Cuba"
+    },
+    {
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "country": "Finland"
+    },
+    {
+        "city": "Hobart",
+        "state": "Tasmania",
+        "country": "Australia"
+    },
+    {
+        "city": "Hong Kong",
+        "state": "Hong Kong",
+        "country": "Hong Kong"
+    },
+    {
+        "city": "Alto Hospicio",
+        "state": "Tarapaca",
+        "country": "Chile"
+    },
+    {
+        "city": "Jakarta",
+        "state": "Jakarta",
+        "country": "Indonesia"
+    },
+    {
+        "city": "Johannesburg",
+        "state": "Gauteng",
+        "country": "South Africa"
     }
-    
 ]
+}
