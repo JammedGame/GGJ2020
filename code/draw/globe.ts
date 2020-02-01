@@ -26,8 +26,9 @@ class Globe
         this._sphereGeometry = new Three.SphereGeometry(
             GLOBE_SCALE,
             GLOBE_PRECISION,
-            GLOBE_PRECISION / 2 + 1
+            GLOBE_PRECISION / 2
         );
+        
         this._mesh = new Three.Mesh(this._sphereGeometry, this._material);
         this._mesh.name = 'Globe';
     }
