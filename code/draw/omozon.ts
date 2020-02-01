@@ -4,6 +4,7 @@ import * as Three from 'three';
 import { OZONE_SCALE, GLOBE_PRECISION, MAPS } from '../data/constants';
 import { Settings } from '../settings';
 import THREE = require('three');
+import { Colors } from 'three';
 
 class Omozon
 {
@@ -18,18 +19,13 @@ class Omozon
     public get instance(): Three.Mesh { return this._mesh; }
     public constructor()
     {
-        let uniforms = {
-            colorB: {type: 'vec3', value: new THREE.Color(0x000000)},
-            colorA: {type: 'vec3', value: new THREE.Color(0xFFFFFF)}
-        }
-
         this._material = new THREE.ShaderMaterial({
-            uniforms: uniforms,
             fragmentShader: this.fragmentShader(),
             vertexShader: this.vertexShader(),
             transparent: true,
             depthWrite: false,
             depthTest: false,
+            vertexColors: Three.FaceColors
         });
 
         this._geometry = new THREE.Geometry();
@@ -48,34 +44,10 @@ class Omozon
                 this.addQuad(quad_longitude, quad_latitude);
             }
 
+        this._geometry.colorsNeedUpdate = true;
         this._mesh = new Three.Mesh(this._geometry, this._material);
         this._mesh.name = 'Omozon';
         this._mesh.renderOrder = -999;
-    }
-
-    vertexShader() {
-        return `
-          varying float alpha;
-
-          void main() {
-            alpha = 0.5;
-
-            vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
-            gl_Position = projectionMatrix * modelViewPosition;
-          }
-        `
-      }
-
-    fragmentShader() {
-      return `
-      uniform vec3 colorA;
-      uniform vec3 colorB;
-      varying float alpha;
-
-      void main() {
-        gl_FragColor = vec4(1, 1, 1, alpha);
-      }
-    `
     }
 
     addQuad(x : number, y : number)
@@ -90,11 +62,36 @@ class Omozon
             spherical2Cartesion(x - this._quad_size_x * 0.5, y - this._quad_size_y * 0.5, OZONE_SCALE),
         );
 
+        let color = new Three.Color(0.5, 0.5, 0.5);
+
         this._geometry.faces.push
         (
-            new THREE.Face3( quad_start + 1, quad_start + 0, quad_start + 2),
-            new THREE.Face3( quad_start + 3, quad_start + 2, quad_start + 0),
+            new THREE.Face3( quad_start + 1, quad_start + 0, quad_start + 2, null, color),
+            new THREE.Face3( quad_start + 3, quad_start + 2, quad_start + 0, null, color),
         );
+    }
+
+    vertexShader() {
+        return `
+          varying vec3 vColor;
+
+          void main() {
+            vColor = color;
+
+            vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
+            gl_Position = projectionMatrix * modelViewPosition;
+          }
+        `
+      }
+
+    fragmentShader() {
+      return `
+      varying vec3 vColor;
+
+      void main() {
+        gl_FragColor = vec4(1, 1, 1, vColor.r);
+      }
+    `
     }
 }
 
