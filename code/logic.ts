@@ -1,6 +1,6 @@
 import { Renderer } from "./draw/renderer"
 import { Scene } from "./draw/scene";
-import { Tile, Tilemap } from "./logic/tilemap"
+import { Tilemap } from "./logic/tilemap"
 import { World } from "./draw/world";
 import { Api } from "./data/api";
 import { Input } from "./input";
