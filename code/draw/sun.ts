@@ -10,5 +10,6 @@ class Sun
     {
         this._light = new Three.DirectionalLight( 0xffffff, 0.8);
         this._light.position.set( 0, 1.5, 1.5 );
+        this._light.name = 'Sun';
     }
 }
