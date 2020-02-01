@@ -20,7 +20,8 @@ class GameLogic
     {
         this._input = new Input();
         this._renderer = new Renderer('canvas-parent');
-
+        this._world = new World(this._renderer.camera);
+        this._renderer.setActiveScene(this._world);
 		this._tilemap = new Tilemap();
 		this._tilemap.setPollutionAt(54, 18, 10); // temp
 		this._tilemap.setPollutionAt(55, 18, 10); // temp
@@ -37,7 +38,6 @@ class GameLogic
 
         this._apiData = new Api();
         this._apiData.getApiData();
-        console.log(this._apiData.allCities);
     }
 
     public run()
@@ -52,6 +52,7 @@ class GameLogic
             this._tilemap.simulate();
             this._world.update();
             this._world.omozon.update(this._tilemap);
+            this._world.player.move(this._input.direction);
         }
         requestAnimationFrame(this.update.bind(this));
     }

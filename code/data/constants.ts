@@ -15,7 +15,7 @@ export {    DEFAULT_FOV,
             EARTH_HEAL_RATE,
             OZONE_SCALE
 }
-const DEFAULT_FOV = 30;
+const DEFAULT_FOV = 45;
 const RESOLUTION =
 {
     X: 1366,
@@ -34,7 +34,7 @@ const MAPS =
     SPECULAR: '../../resources/specular.jpg'
 }
 const GLOBE_SCALE = 1.0;
-const GLOBE_PRECISION = 256;
+const GLOBE_PRECISION = 36;
 const PLAYER_SCALE = 0.05;
 
 const WORLD_WIDTH: number = 72;
