@@ -48,6 +48,7 @@ class Tilemap {
 
 	enableLogging(): void {
 		this.log();
+		console.log("press SPACE to advance simulation step-by-step");
 		document.onkeydown = e => {
 			if (e.key == " ") {
 				this.simulate();
