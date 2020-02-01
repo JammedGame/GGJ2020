@@ -1,55 +1,5 @@
-[
-    {
-        "city": "Aberdeen",
-        "state": "Scotland",
-        "country": "uk"
-    },
-    {
-        "city": "Adelaide",
-        "state": "South Australia",
-        "country": "Australia"
-    },
-    {    
-        "city": "Algiers",
-        "state": "Algiers",
-        "country": "Algeria"
-    },
-    {
-        "city": "Amsterdam",
-        "state": "North Holland",
-        "country": "Netherlands"
-    },
-    {
-        "city": "Ankara",
-        "state": "Ankara",
-        "country": "Turkey"
-    },
-    {
-        "city": "Auckland City Centre",
-        "state": "Auckland",
-        "country": "New Zealand"
-    },
-    {
-        "city": "Bangkok",
-        "state": "Bangkok",
-        "country": "Thailand"
-    },
-    {
-        "city": "Barcelona",
-        "state": "Catalunya",
-        "country": "Spain"
-    },
-    {
-        "city": "Mumbai",
-        "state": "Maharashtra",
-        "country": "India"
-    },
-    {
-        "city": "Bristol",
-        "state": "England",
-        "country": "United Kingdom"
-    },
-
+{
+    "Cities": [
     {
         "city": "Zurich",
         "state": "Zurich",
@@ -169,5 +119,247 @@
         "city": "Nanjing",
         "state": "Jiangsu",
         "country": "China"
+    },
+    {
+        "city": "Aberdeen",
+        "state": "Scotland",
+        "country": "UK"
+    },
+    {
+        "city": "Adelaide",
+        "state": "South Australia",
+        "country": "Australia"
+    },
+    {    
+        "city": "Algiers",
+        "state": "Algiers",
+        "country": "Algeria"
+    },
+    {
+        "city": "Amsterdam",
+        "state": "North Holland",
+        "country": "Netherlands"
+    },
+    {
+        "city": "Ankara",
+        "state": "Ankara",
+        "country": "Turkey"
+    },
+    {
+        "city": "Auckland City Centre",
+        "state": "Auckland",
+        "country": "New Zealand"
+    },
+    {
+        "city": "Bangkok",
+        "state": "Bangkok",
+        "country": "Thailand"
+    },
+    {
+        "city": "Barcelona",
+        "state": "Catalunya",
+        "country": "Spain"
+    },
+    {
+        "city": "Beijing",
+        "state": "Beijing",
+        "country": "China"
+    },
+    {
+        "city": "Belgrade",
+        "state": "Central Serbia",
+        "country": "Serbia"
+    },
+    {
+        "city": "Berlin",
+        "state": "Berlin",
+        "country": "Germany"
+    },
+    {
+        "city": "Birmingham",
+        "state": "England",
+        "country": "UK"
+    },
+
+    {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "country": "India"
+    },
+    {
+        "city": "Bordeaux",
+        "state": "Nouvelle-Aquitaine",
+        "country": "France"
+    },
+    {
+        "city": "Bremen",
+        "state": "Bremen",
+        "country": "Germany"
+    },
+    {
+        "city": "Brisbane",
+        "state": "Queensland",
+        "country": "Australia"
+    },
+    {
+        "city": "Bristol",
+        "state": "England",
+        "country": "UK"
+    },
+    {
+        "city": "Brussels",
+        "state": "Brussels Capital",
+        "country": "Belgium"
+    },
+    {
+        "city": "Bucharest",
+        "state": "Bucuresti",
+        "country": "Romania"
+    },
+    {
+        "city": "Budapest",
+        "state": "Central Hungary",
+        "country": "Hungary"
+    },
+    {
+        "city": "Buenos Aires",
+        "state": "Buenos Aires",
+        "country": "Argentina"
+    },
+    {
+        "city": "Cairo",
+        "state": "Cairo",
+        "country": "Egypt"
+    },
+    {
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "country": "India"
+    },
+    {
+        "city": "Guangzhou",
+        "state": "Guangdong",
+        "country": "China"
+    },
+    {
+        "city": "Cape Town",
+        "state": "Western Cape",
+        "country": "South Africa"
+    },
+    {
+        "city": "Chihuahua",
+        "state": "Chihuahua",
+        "country": "Mexico"
+    },
+    {
+        "city": "Chongqing",
+        "state": "Chongqing",
+        "country": "China"
+    },
+    {
+        "city": "Copenhagen",
+        "state": "Capital Region",
+        "country": "Denmark"
+    },
+    {
+        "city": "Darwin",
+        "state": "Northern Territory",
+        "country": "Australia"
+    },
+    {
+        "city": "Djibouti",
+        "state": "Djibouti",
+        "country": "Djibouti"
+    },
+    {
+        "city": "Dublin",
+        "state": "Leinster",
+        "country": "Ireland"
+    },
+    {
+        "city": "Durban",
+        "state": "KwaZulu-Natal",
+        "country": "South Africa"
+    },
+    {
+        "city": "Edinburgh",
+        "state": "Scotland",
+        "country": "UK"
+    },
+    {
+        "city": "Frankfurt am Main",
+        "state": "Hessen",
+        "country": "Germany"
+    },
+    {
+        "city": "Georgetown",
+        "state": "Demerara-Mahaica",
+        "country": "Guyana"
+    },
+    {
+        "city": "Glasgow",
+        "state": "Scotland",
+        "country": "UK"
+    },
+    {
+        "city": "Flores",
+        "state": "Peten",
+        "country": "Guatemala"
+    },
+    {
+        "city": "Puerto Baquerizo Moreno",
+        "state": "Galapagos",
+        "country": "Ecuador"
+    },
+    {
+        "city": "Hamburg",
+        "state": "Hamburg",
+        "country": "Germany"
+    },
+    {
+        "city": "Oslo",
+        "state": "Oslo",
+        "country": "Norway"
+    },
+    {
+        "city": "Tromso",
+        "state": "Troms",
+        "country": "Norway"
+    },
+    {
+        "city": "Havana",
+        "state": "La Habana",
+        "country": "Cuba"
+    },
+    {
+        "city": "Helsinki",
+        "state": "Uusimaa",
+        "country": "Finland"
+    },
+    {
+        "city": "Hobart",
+        "state": "Tasmania",
+        "country": "Australia"
+    },
+    {
+        "city": "Hong Kong",
+        "state": "Hong Kong",
+        "country": "Hong Kong"
+    },
+    {
+        "city": "Alto Hospicio",
+        "state": "Tarapaca",
+        "country": "Chile"
+    },
+    {
+        "city": "Jakarta",
+        "state": "Jakarta",
+        "country": "Indonesia"
+    },
+    {
+        "city": "Johannesburg",
+        "state": "Gauteng",
+        "country": "South Africa"
     }
 ]
+}
