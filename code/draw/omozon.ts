@@ -29,8 +29,8 @@ class Omozon
             vertexShader: this.vertexShader(),
             transparent: true,
             depthWrite: false,
-            depthTest: false
-        })
+            depthTest: false,
+        });
 
         this._geometry = new THREE.Geometry();
 
@@ -55,10 +55,10 @@ class Omozon
 
     vertexShader() {
         return `
-          varying vec3 vUv;
+          varying float alpha;
 
           void main() {
-            vUv = position;
+            alpha = 0.5;
 
             vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
             gl_Position = projectionMatrix * modelViewPosition;
@@ -70,10 +70,10 @@ class Omozon
       return `
       uniform vec3 colorA;
       uniform vec3 colorB;
-      varying vec3 vUv;
+      varying float alpha;
 
       void main() {
-        gl_FragColor = vec4(1, 1, 1, 0.2);
+        gl_FragColor = vec4(1, 1, 1, alpha);
       }
     `
     }
