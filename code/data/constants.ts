@@ -21,7 +21,7 @@ const RESOLUTION =
 };
 const CLIPPING =
 {
-    NEAR: 0.1,
+    NEAR: 0.01,
     FAR: 1000
 }
 const MAPS =
@@ -38,7 +38,7 @@ const PLAYER_SCALE = 0.05;
 const WORLD_WIDTH = 72;
 const WORLD_HEIGHT = 36;
 
-const OZONE_SCALE: number = 1.1;
+const OZONE_SCALE: number = 1.01;
 const POLLUTION_SPREAD_RATE: number = 0.1;
 const OZONE_DAMAGE_RATE: number = 0.02;
 const EARTH_SCORCH_RATE: number = 0.01;

@@ -49,7 +49,7 @@ class Globe
                 normalMap: this._normalMap,
                 emissiveMap: this._specularMap,
                 displacementMap: this._bumpMap,
-                displacementScale: 0.1
+                displacementScale: 0.01
             });
         }
         else

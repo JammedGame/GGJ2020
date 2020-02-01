@@ -25,9 +25,9 @@ class World extends Scene
         this._player = new Player();
         this._omozon = new Omozon();
         this._scene.add(this._sun.instance);
+        this._scene.add(this._omozon.instance);
         this._scene.add(this._globe.instance);
         this._scene.add(this._player.instance);
-        this._scene.add(this._omozon.instance);
     }
     public update()
     {

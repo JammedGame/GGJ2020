@@ -27,7 +27,9 @@ class Omozon
             uniforms: uniforms,
             fragmentShader: this.fragmentShader(),
             vertexShader: this.vertexShader(),
-            transparent: true
+            transparent: true,
+            depthWrite: false,
+            depthTest: false
         })
 
         this._geometry = new THREE.Geometry();
@@ -39,10 +41,16 @@ class Omozon
 
         for (let i : number = 0; i < this._quadsX; i++)
             for (let j : number = 0; j < this._quadsY; j++)
-                this.addQuad(i * this._quad_size_x, -90 + j * this._quad_size_y);
+            {
+                let quad_longitude : number = i * this._quad_size_x;
+                let quad_latitude : number = -90 + (0.5 + j) * this._quad_size_y;
+
+                this.addQuad(quad_longitude, quad_latitude);
+            }
 
         this._mesh = new Three.Mesh(this._geometry, this._material);
         this._mesh.name = 'Omozon';
+        this._mesh.renderOrder = -999;
     }
 
     vertexShader() {
@@ -65,7 +73,7 @@ class Omozon
       varying vec3 vUv;
 
       void main() {
-        gl_FragColor = vec4(0, 0, 1, 0.5);
+        gl_FragColor = vec4(1, 1, 1, 0.5);
       }
     `
     }
