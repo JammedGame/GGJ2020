@@ -10,8 +10,8 @@ class GameLogic
 {
     private _scene: Scene;
 	private _renderer: Renderer;
-    private _tilemap: Tilemap;
-    private _apiData: any;
+	private _tilemap: Tilemap;
+	private _apiData: any;
     public constructor()
     {
         this._renderer = new Renderer('canvas-parent');
@@ -26,16 +26,25 @@ class GameLogic
     {
         this._renderer.start();
 		this._tilemap = new Tilemap(4, 4);
-		// this._tilemap.setPollutionAt(0, 0, 10);
-		// for (var x = 0; x < 4; x++) {
-		// 	for (var y = 0; y < 4; y++) {
-		// 		this._tilemap.setWindAt(x, y, 1, 1);
-		// 	}
-		// }
-		// this._tilemap.enableLogging();
     }
     private key(event)
     {
-        //console.log(event);
+        // console.log(event);
+		if (event == "t") {
+			if (!this._tilemap.debuggingEnabled) {
+				this._tilemap.debuggingEnabled = true;
+				this._tilemap.setPollutionAt(0, 0, 10);
+				for (var x = 0; x < 4; x++) {
+					for (var y = 0; y < 4; y++) {
+						this._tilemap.setWindAt(x, y, 1, 1);
+					}
+				}
+				this._tilemap.log();
+				console.log("press T to advance simulation step-by-step");
+			} else {
+				this._tilemap.simulate();
+				this._tilemap.log();
+			}
+		}
     }
 }
