@@ -1,6 +1,6 @@
 import { Renderer } from "./draw/renderer"
 import { Scene } from "./draw/scene";
-import { Tile, Tilemap } from "./logic/tilemap"
+import { Tilemap } from "./logic/tilemap"
 import { World } from "./draw/world";
 import { Api } from "./data/api";
 import { Input } from "./input";
@@ -22,7 +22,12 @@ class GameLogic
         this._renderer = new Renderer('canvas-parent');
         this._scene = new World(this._renderer.camera);
         this._renderer.setActiveScene(this._scene);
-        this._tilemap = new Tilemap(64, 32);
+		this._tilemap = new Tilemap();
+		this._tilemap.setPollutionAt(0, 0, 10); // temp
+		this._tilemap.setWindAt(0, 0, 1, 1); // temp
+		this._tilemap.setWindAt(3, 3, -0.5, -0.5); // temp
+		this._tilemap.interpolateWind();
+		Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
         this._apiData = new Api();
         this._apiData.getApiData();
     }
@@ -30,7 +35,6 @@ class GameLogic
     {
         this._renderer.start();
         this.update();
-		this._tilemap = new Tilemap(4, 4);
     }
     public update()
     {

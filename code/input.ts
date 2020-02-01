@@ -21,7 +21,8 @@ class Input
     {
         this._actions = {
             pause: () => Settings.pause = !Settings.pause,
-            debug_globe: () => Settings.debugGlobe = !Settings.debugGlobe,
+			debug_globe: () => Settings.debugGlobe = !Settings.debugGlobe,
+			debug_tilemap: () => { if (typeof Settings.debugTilemap == 'function') Settings.debugTilemap(); }
         }
         this._movement = { direction: MovementDirection.none };
         document.addEventListener('keydown', event => this.keyDown(event.key));

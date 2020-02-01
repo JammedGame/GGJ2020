@@ -7,6 +7,13 @@ export {    DEFAULT_FOV,
             PLAYER_SCALE,
             WORLD_WIDTH,
             WORLD_HEIGHT,
+            WIND_INTERPOLATION_GRADIENT,
+            WIND_INTERPOLATION_MAX_DISTANCE,
+            POLLUTION_SPREAD_RATE,
+            OZONE_DAMAGE_RATE,
+            EARTH_SCORCH_RATE,
+            EARTH_HEAL_RATE,
+            OZONE_SCALE
 }
 const DEFAULT_FOV = 45;
 const RESOLUTION =
@@ -16,12 +23,12 @@ const RESOLUTION =
 };
 const CLIPPING =
 {
-    NEAR: 0.1,
+    NEAR: 0.01,
     FAR: 1000
 }
 const MAPS =
 {
-    COLOR: '../../resources/earth.jpg',
+    COLOR: '../../resources/earth-map-1.png',
     NORMAL: '../../resources/normal.jpg',
     BUMP: '../../resources/bump.jpg',
     SPECULAR: '../../resources/specular.jpg'
@@ -30,5 +37,13 @@ const GLOBE_SCALE = 1.0;
 const GLOBE_PRECISION = 36;
 const PLAYER_SCALE = 0.05;
 
-const WORLD_WIDTH = 72;
-const WORLD_HEIGHT = 36;
+const WORLD_WIDTH: number = 72;
+const WORLD_HEIGHT: number = 36;
+
+const WIND_INTERPOLATION_GRADIENT: number = 0.5;
+const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
+const OZONE_SCALE: number = 1.1;
+const POLLUTION_SPREAD_RATE: number = 0.1;
+const OZONE_DAMAGE_RATE: number = 0.02;
+const EARTH_SCORCH_RATE: number = 0.01;
+const EARTH_HEAL_RATE: number = 0.005;

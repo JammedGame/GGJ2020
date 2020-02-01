@@ -1,9 +1,15 @@
-export { Tile, Tilemap }
+import {
+	WORLD_WIDTH,
+	WORLD_HEIGHT,
+	WIND_INTERPOLATION_GRADIENT,
+	WIND_INTERPOLATION_MAX_DISTANCE,
+	POLLUTION_SPREAD_RATE,
+	OZONE_DAMAGE_RATE,
+	EARTH_SCORCH_RATE,
+	EARTH_HEAL_RATE
+} from "../data/constants";
 
-const POLLUTION_SPREAD_RATE: number = 0.1;
-const OZONE_DAMAGE_RATE: number = 0.02;
-const EARTH_SCORCH_RATE: number = 0.01;
-const EARTH_HEAL_RATE: number = 0.005;
+export { Tilemap }
 
 class Tile {
 	x: number; // 0..width
@@ -12,8 +18,20 @@ class Tile {
 	pollutionDiff: number;
 	ozone: number; // 0..1
 	trail: boolean;
-	wind: [number, number]; // [-1..1, -1..1]
+	wind: [number, number]; // [-INF..INF, -INF..INF]
+	interpolatedWind: [number, number];
 	scorch: number; // 0..1
+
+	distanceWrapped(other: Tile): number {
+		let xDistance = Math.abs(this.x - other.x);
+		xDistance = Math.min(xDistance, WORLD_WIDTH - xDistance);
+		let yDistance = this.y - other.y;
+		return Math.sqrt(xDistance * xDistance + yDistance * yDistance);
+	}
+
+	getWindiness(): number {
+		return Math.sqrt(this.wind[0] * this.wind[0] + this.wind[1] * this.wind[1]);
+	}
 
 	toString(): string {
 		return "pollution:" + this.pollution.toFixed(2) + " | ozone:" + this.ozone.toFixed(2) + "\nwind:[" + this.wind[0].toFixed(2) + "," + this.wind[1].toFixed(2) + "] | scorch:" + this.scorch.toFixed(2);
@@ -21,18 +39,18 @@ class Tile {
 }
 
 class Tilemap {
-	readonly width: number;
-	readonly height: number;
-	readonly matrix: Tile[][];
-	debuggingEnabled: boolean;
+	private readonly width: number;
+	private readonly height: number;
+	private readonly matrix: Tile[][];
+	private debuggingEnabled: boolean;
 
-	constructor(width: number, height: number) {
-		this.width = width;
-		this.height = height;
+	constructor() {
+		this.width = WORLD_WIDTH;
+		this.height = WORLD_HEIGHT;
 		this.matrix = [];
-		for (let x = 0; x < width; x++) {
+		for (let x = 0; x < this.width; x++) {
 			this.matrix[x] = [];
-			for (let y = 0; y < height; y++) {
+			for (let y = 0; y < this.height; y++) {
 				let newTile: Tile = new Tile();
 				newTile.x = x;
 				newTile.y = y;
@@ -41,6 +59,7 @@ class Tilemap {
 				newTile.ozone = 1;
 				newTile.trail = false;
 				newTile.wind = [0, 0];
+				newTile.interpolatedWind = [0, 0];
 				newTile.scorch = 0;
 				this.matrix[x][y] = newTile;
 			}
@@ -50,9 +69,20 @@ class Tilemap {
 	log(): void {
 		let logMatrix: string[][] = this.matrix.map(column => column.map(tile => tile.toString()));
 		console.table(logMatrix);
+		console.log("press T to advance simulation step-by-step");
 	}
 
-	getTileWrapped(x: number, y: number): Tile {
+	debug(): void {
+		if (!this.debuggingEnabled) {
+			this.debuggingEnabled = true;
+			this.log();
+		} else {
+			this.simulate();
+			this.log();
+		}
+	}
+
+	private getTileWrapped(x: number, y: number): Tile {
 		if (x < 0) x += this.width;
 		else if (x >= this.width) x -= this.width;
 
@@ -78,6 +108,65 @@ class Tilemap {
 	setTrailAt(x: number, y: number, value: boolean): void { this.matrix[x][y].trail = value; };
 	clearTrail(): void { this.matrix.forEach(column => column.forEach(tile => tile.trail = false)); }
 	repairOzoneAt(x: number, y: number): void { this.matrix[x][y].ozone = 1; }
+
+	interpolateWind(): void {
+		// interpolate wind values based on closest windy neighbour
+		for (let x = 0; x < this.width; x++) {
+			for (let y = 0; y < this.height; y++) {
+				let tile: Tile = this.matrix[x][y];
+				if (tile.wind[0] != 0 || tile.wind[1] != 0) continue;
+
+				let closestTile: Tile = this.findClosestWindyTile(tile);
+				if (closestTile == null) continue;
+
+				let distance: number = tile.distanceWrapped(closestTile);
+				let coefficient = Math.pow(WIND_INTERPOLATION_GRADIENT, distance);
+				tile.interpolatedWind[0] = coefficient * closestTile.wind[0];
+				tile.interpolatedWind[1] = coefficient * closestTile.wind[1];
+			}
+		}
+
+		// apply interpolated wind values
+		for (let x = 0; x < this.width; x++) {
+			for (let y = 0; y < this.height; y++) {
+				let tile: Tile = this.matrix[x][y];
+				if (tile.wind[0] != 0 || tile.wind[1] != 0) continue;
+
+				tile.wind = tile.interpolatedWind;
+			}
+		}
+	}
+
+	private findClosestWindyTile(tile: Tile): Tile {
+		for (let radius = 1; radius <= WIND_INTERPOLATION_MAX_DISTANCE; radius++) {
+			// find all candidate tiles at the current radius
+			let candidateTiles: Tile[] = [];
+			for (let x = tile.x - radius; x < tile.x + radius; x++) {
+				for (let y = tile.y - radius; y < tile.y + radius; y++) {
+					let otherTile: Tile = this.getTileWrapped(x, y);
+					if (otherTile != tile && (otherTile.wind[0] != 0 || otherTile.wind[1] != 0)) candidateTiles.push(otherTile);
+				}
+			}
+
+			// return the windiest candidate tile
+			if (candidateTiles.length > 0) {
+				let windiestTile = candidateTiles[0];
+				let maxWindiness = windiestTile.getWindiness();
+				for (let i = 1; i < candidateTiles.length; i++) {
+					let otherTile: Tile = candidateTiles[i];
+					let windiness = otherTile.getWindiness()
+					if (windiness > maxWindiness) {
+						windiestTile = otherTile;
+						maxWindiness = windiness;
+					}
+				}
+
+				return windiestTile;
+			}
+		}
+		
+		return null;
+	}
 
 	simulate(): void {
 		// earth is scorched or healed where necessary
@@ -109,23 +198,23 @@ class Tilemap {
 				let tile: Tile = this.matrix[x][y];
 				if (tile.wind[0] == 0 && tile.wind[1] == 0) continue;
 
-				let spreadAmount: number = POLLUTION_SPREAD_RATE * tile.pollution;
 				let totalWind: number = Math.abs(tile.wind[0]) + Math.abs(tile.wind[1]);
+				let spreadAmount: number = POLLUTION_SPREAD_RATE * tile.pollution * totalWind;
 
 				if (tile.wind[0] > 0) {
-					let tile: Tile = this.getTileWrapped(x + 1, y);
-					tile.pollutionDiff += spreadAmount * tile.wind[0] / totalWind; // spread east
+					let otherTile: Tile = this.getTileWrapped(x + 1, y);
+					otherTile.pollutionDiff += spreadAmount * tile.wind[0] / totalWind; // spread east
 				} else if (tile.wind[0] < 0) {
-					let tile: Tile = this.getTileWrapped(x - 1, y);
-					tile.pollutionDiff -= spreadAmount * tile.wind[0] / totalWind // spread west
+					let otherTile: Tile = this.getTileWrapped(x - 1, y);
+					otherTile.pollutionDiff -= spreadAmount * tile.wind[0] / totalWind // spread west
 				}
 
 				if (tile.wind[1] > 0) {
-					let tile: Tile = this.getTileWrapped(x, y + 1);
-					tile.pollutionDiff += spreadAmount * tile.wind[1] / totalWind // spread north
+					let otherTile: Tile = this.getTileWrapped(x, y + 1);
+					otherTile.pollutionDiff += spreadAmount * tile.wind[1] / totalWind // spread north
 				} else if (tile.wind[1] < 0) {
-					let tile: Tile = this.getTileWrapped(x, y - 1);
-					tile.pollutionDiff -= spreadAmount * tile.wind[1] / totalWind // spread south
+					let otherTile: Tile = this.getTileWrapped(x, y - 1);
+					otherTile.pollutionDiff -= spreadAmount * tile.wind[1] / totalWind // spread south
 				}
 
 				tile.pollution -= spreadAmount;
