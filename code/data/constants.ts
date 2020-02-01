@@ -13,6 +13,7 @@ export {    DEFAULT_FOV,
             OZONE_DAMAGE_RATE,
             EARTH_SCORCH_RATE,
             EARTH_HEAL_RATE,
+            OZONE_SCALE
 }
 const DEFAULT_FOV = 75;
 const RESOLUTION =
@@ -22,7 +23,7 @@ const RESOLUTION =
 };
 const CLIPPING =
 {
-    NEAR: 0.1,
+    NEAR: 0.01,
     FAR: 1000
 }
 const MAPS =
@@ -41,6 +42,7 @@ const WORLD_HEIGHT = 36;
 
 const WIND_INTERPOLATION_GRADIENT: number = 0.5;
 const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
+const OZONE_SCALE: number = 1.01;
 const POLLUTION_SPREAD_RATE: number = 0.1;
 const OZONE_DAMAGE_RATE: number = 0.02;
 const EARTH_SCORCH_RATE: number = 0.01;
