@@ -37,8 +37,8 @@ const GLOBE_SCALE = 1.0;
 const GLOBE_PRECISION = 256;
 const PLAYER_SCALE = 0.05;
 
-const WORLD_WIDTH = 72;
-const WORLD_HEIGHT = 36;
+const WORLD_WIDTH: number = 72;
+const WORLD_HEIGHT: number = 36;
 
 const WIND_INTERPOLATION_GRADIENT: number = 0.5;
 const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
