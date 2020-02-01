@@ -1,567 +1,379 @@
-[
-  {
-    "Name": "Aberdeen, Scotland",
-    "Latitude": 57,
-    "Longitude": -2
-  },
-  {
-    "Name": "Adelaide, Australia",
-    "Latitude": -34,
-    "Longitude": 138
-  },
-  {
-    "Name": "Algiers, Algeria",
-    "Latitude": 36,
-    "Longitude": 3
-  },
-  {
-    "Name": "Amsterdam, Netherlands",
-    "Latitude": 52,
-    "Longitude": 4
-  },
-  {
-    "Name": "Ankara, Turkey",
-    "Latitude": 39,
-    "Longitude": 32
-  },
-  {
-    "Name": "Athens, Greece",
-    "Latitude": 37,
-    "Longitude": 23
-  },
-  {
-    "Name": "Auckland, New Zealand",
-    "Latitude": -36,
-    "Longitude": 174
-  },
-  {
-    "Name": "Bangkok, Thailand",
-    "Latitude": 13,
-    "Longitude": 100
-  },
-  {
-    "Name": "Barcelona, Spain",
-    "Latitude": 41,
-    "Longitude": 2
-  },
-  {
-    "Name": "Beijing, China",
-    "Latitude": 39,
-    "Longitude": 116
-  },
-  {
-    "Name": "Belfast, Northern Ireland",
-    "Latitude": 54,
-    "Longitude": -5
-  },
-  {
-    "Name": "Belgrade, Serbia",
-    "Latitude": 44,
-    "Longitude": 20
-  },
-  {
-    "Name": "Berlin, Germany",
-    "Latitude": 52,
-    "Longitude": 13
-  },
-  {
-    "Name": "Birmingham, England",
-    "Latitude": 52,
-    "Longitude": -1
-  },
-  {
-    "Name": "Bogota, Colombia",
-    "Latitude": 4,
-    "Longitude": -74
-  },
-  {
-    "Name": "Bombay, India",
-    "Latitude": 19,
-    "Longitude": 72
-  },
-  {
-    "Name": "Bordeaux, France",
-    "Latitude": 44,
-    "Longitude": 0
-  },
-  {
-    "Name": "Bremen, Germany",
-    "Latitude": 53,
-    "Longitude": 8
-  },
-  {
-    "Name": "Brisbane, Australia",
-    "Latitude": -27,
-    "Longitude": 153
-  },
-  {
-    "Name": "Bristol, England",
-    "Latitude": 51,
-    "Longitude": -2
-  },
-  {
-    "Name": "Brussels, Belgium",
-    "Latitude": 50,
-    "Longitude": 4
-  },
-  {
-    "Name": "Bucharest, Romania",
-    "Latitude": 44,
-    "Longitude": 26
-  },
-  {
-    "Name": "Budapest, Hungary",
-    "Latitude": 47,
-    "Longitude": 19
-  },
-  {
-    "Name": "Buenos Aires, Argentina",
-    "Latitude": -34,
-    "Longitude": -58
-  },
-  {
-    "Name": "Cairo, Egypt",
-    "Latitude": 30,
-    "Longitude": 31
-  },
-  {
-    "Name": "Calcutta, India",
-    "Latitude": 22,
-    "Longitude": 88
-  },
-  {
-    "Name": "Canton, China",
-    "Latitude": 23,
-    "Longitude": 113
-  },
-  {
-    "Name": "Cape Town, South Africa",
-    "Latitude": -33,
-    "Longitude": 18
-  },
-  {
-    "Name": "Caracas, Venezuela",
-    "Latitude": 10,
-    "Longitude": -67
-  },
-  {
-    "Name": "Cayenne, French Guiana",
-    "Latitude": 4,
-    "Longitude": -52
-  },
-  {
-    "Name": "Chihuahua, Mexico",
-    "Latitude": 28,
-    "Longitude": -106
-  },
-  {
-    "Name": "Chongqing, China",
-    "Latitude": 29,
-    "Longitude": 106
-  },
-  {
-    "Name": "Copenhagen, Denmark",
-    "Latitude": 55,
-    "Longitude": 12
-  },
-  {
-    "Name": "Dakar, Senegal",
-    "Latitude": 14,
-    "Longitude": -17
-  },
-  {
-    "Name": "Darwin, Australia",
-    "Latitude": -12,
-    "Longitude": 130
-  },
-  {
-    "Name": "Djibouti, Djibouti",
-    "Latitude": 11,
-    "Longitude": 43
-  },
-  {
-    "Name": "Dublin, Ireland",
-    "Latitude": 53,
-    "Longitude": -6
-  },
-  {
-    "Name": "Durban, South Africa",
-    "Latitude": -29,
-    "Longitude": 30
-  },
-  {
-    "Name": "Edinburgh, Scotland",
-    "Latitude": 55,
-    "Longitude": -3
-  },
-  {
-    "Name": "Frankfurt, Germany",
-    "Latitude": 50,
-    "Longitude": 8
-  },
-  {
-    "Name": "Georgetown, Guyana",
-    "Latitude": 6,
-    "Longitude": -58
-  },
-  {
-    "Name": "Glasgow, Scotland",
-    "Latitude": 55,
-    "Longitude": -4
-  },
-  {
-    "Name": "Guatemala City, Guatemala",
-    "Latitude": 14,
-    "Longitude": -90
-  },
-  {
-    "Name": "Guayaquil, Ecuador",
-    "Latitude": -2,
-    "Longitude": -79
-  },
-  {
-    "Name": "Hamburg, Germany",
-    "Latitude": 53,
-    "Longitude": 10
-  },
-  {
-    "Name": "Hammerfest, Norway",
-    "Latitude": 70,
-    "Longitude": 23
-  },
-  {
-    "Name": "Havana, Cuba",
-    "Latitude": 23,
-    "Longitude": -82
-  },
-  {
-    "Name": "Helsinki, Finland",
-    "Latitude": 60,
-    "Longitude": 25
-  },
-  {
-    "Name": "Hobart, Tasmania",
-    "Latitude": -42,
-    "Longitude": 147
-  },
-  {
-    "Name": "Hong Kong, China",
-    "Latitude": 22,
-    "Longitude": 114
-  },
-  {
-    "Name": "Iquique, Chile",
-    "Latitude": -20,
-    "Longitude": -70
-  },
-  {
-    "Name": "Irkutsk, Russia",
-    "Latitude": 52,
-    "Longitude": 104
-  },
-  {
-    "Name": "Jakarta, Indonesia",
-    "Latitude": -6,
-    "Longitude": 106
-  },
-  {
-    "Name": "Johannesburg, South Africa",
-    "Latitude": -26,
-    "Longitude": 28
-  },
-  {
-    "Name": "Kingston, Jamaica",
-    "Latitude": 17,
-    "Longitude": -76
-  },
-  {
-    "Name": "Kinshasa, Congo",
-    "Latitude": -4,
-    "Longitude": 15
-  },
-  {
-    "Name": "Kuala Lumpur, Malaysia",
-    "Latitude": 3,
-    "Longitude": 101
-  },
-  {
-    "Name": "La Paz, Bolivia",
-    "Latitude": -16,
-    "Longitude": -68
-  },
-  {
-    "Name": "Leeds, England",
-    "Latitude": 53,
-    "Longitude": -1
-  },
-  {
-    "Name": "Lima, Peru",
-    "Latitude": -12,
-    "Longitude": -77
-  },
-  {
-    "Name": "Lisbon, Portugal",
-    "Latitude": 38,
-    "Longitude": -9
-  },
-  {
-    "Name": "Liverpool, England",
-    "Latitude": 53,
-    "Longitude": -3
-  },
-  {
-    "Name": "London, England",
-    "Latitude": 51,
-    "Longitude": 0
-  },
-  {
-    "Name": "Lyons, France",
-    "Latitude": 45,
-    "Longitude": 4
-  },
-  {
-    "Name": "Madrid, Spain",
-    "Latitude": 40,
-    "Longitude": -3
-  },
-  {
-    "Name": "Manchester, England",
-    "Latitude": 53,
-    "Longitude": -2
-  },
-  {
-    "Name": "Manila, Philippines",
-    "Latitude": 14,
-    "Longitude": 120
-  },
-  {
-    "Name": "Marseilles, France",
-    "Latitude": 43,
-    "Longitude": 5
-  },
-  {
-    "Name": "Mecca, Saudi Arabia",
-    "Latitude": 21,
-    "Longitude": 39
-  },
-  {
-    "Name": "Melbourne, Australia",
-    "Latitude": -37,
-    "Longitude": 144
-  },
-  {
-    "Name": "Mexico City, Mexico",
-    "Latitude": 19,
-    "Longitude": -99
-  },
-  {
-    "Name": "Milan, Italy",
-    "Latitude": 45,
-    "Longitude": 9
-  },
-  {
-    "Name": "Montevideo, Uruguay",
-    "Latitude": -34,
-    "Longitude": -56
-  },
-  {
-    "Name": "Moscow, Russia",
-    "Latitude": 55,
-    "Longitude": 37
-  },
-  {
-    "Name": "Munich, Germany",
-    "Latitude": 48,
-    "Longitude": 11
-  },
-  {
-    "Name": "Nagasaki, Japan",
-    "Latitude": 32,
-    "Longitude": 129
-  },
-  {
-    "Name": "Nagoya, Japan",
-    "Latitude": 35,
-    "Longitude": 136
-  },
-  {
-    "Name": "Nairobi, Kenya",
-    "Latitude": -1,
-    "Longitude": 36
-  },
-  {
-    "Name": "Nanjing (Nanking), China",
-    "Latitude": 32,
-    "Longitude": 118
-  },
-  {
-    "Name": "Naples, Italy",
-    "Latitude": 40,
-    "Longitude": 14
-  },
-  {
-    "Name": "New Delhi, India",
-    "Latitude": 28,
-    "Longitude": 77
-  },
-  {
-    "Name": "Odessa, Ukraine",
-    "Latitude": 46,
-    "Longitude": 30
-  },
-  {
-    "Name": "Osaka, Japan",
-    "Latitude": 34,
-    "Longitude": 135
-  },
-  {
-    "Name": "Oslo, Norway",
-    "Latitude": 59,
-    "Longitude": 10
-  },
-  {
-    "Name": "Panama City, Panama",
-    "Latitude": 8,
-    "Longitude": -79
-  },
-  {
-    "Name": "Paramaribo, Suriname",
-    "Latitude": 5,
-    "Longitude": -55
-  },
-  {
-    "Name": "Paris, France",
-    "Latitude": 48,
-    "Longitude": 2
-  },
-  {
-    "Name": "Perth, Australia",
-    "Latitude": -31,
-    "Longitude": 115
-  },
-  {
-    "Name": "Port Moresby, Papua New Guinea",
-    "Latitude": -9,
-    "Longitude": 147
-  },
-  {
-    "Name": "Prague, Czech Republic",
-    "Latitude": 50,
-    "Longitude": 14
-  },
-  {
-    "Name": "Rangoon, Myanmar",
-    "Latitude": 16,
-    "Longitude": 96
-  },
-  {
-    "Name": "Reykjavik, Iceland",
-    "Latitude": 64,
-    "Longitude": -21
-  },
-  {
-    "Name": "Rio de Janeiro, Brazil",
-    "Latitude": -22,
-    "Longitude": -43
-  },
-  {
-    "Name": "Rome, Italy",
-    "Latitude": 41,
-    "Longitude": 12
-  },
-  {
-    "Name": "Salvador, Brazil",
-    "Latitude": -12,
-    "Longitude": -38
-  },
-  {
-    "Name": "Santiago, Chile",
-    "Latitude": -33,
-    "Longitude": -70
-  },
-  {
-    "Name": "St. Petersburg, Russia",
-    "Latitude": 59,
-    "Longitude": 30
-  },
-  {
-    "Name": "Sao Paulo, Brazil",
-    "Latitude": -23,
-    "Longitude": -46
-  },
-  {
-    "Name": "Shanghai, China",
-    "Latitude": 31,
-    "Longitude": 121
-  },
-  {
-    "Name": "Singapore, Singapore",
-    "Latitude": 1,
-    "Longitude": 103
-  },
-  {
-    "Name": "Stockholm, Sweden",
-    "Latitude": 59,
-    "Longitude": 18
-  },
-  {
-    "Name": "Sydney, Australia",
-    "Latitude": -34,
-    "Longitude": 151
-  },
-  {
-    "Name": "Tananarive, Madagascar",
-    "Latitude": -18,
-    "Longitude": 47
-  },
-  {
-    "Name": "Teheran, Iran",
-    "Latitude": 35,
-    "Longitude": 51
-  },
-  {
-    "Name": "Tokyo, Japan",
-    "Latitude": 35,
-    "Longitude": 139
-  },
-  {
-    "Name": "Tripoli, Libya",
-    "Latitude": 32,
-    "Longitude": 13
-  },
-  {
-    "Name": "Venice, Italy",
-    "Latitude": 45,
-    "Longitude": 12
-  },
-  {
-    "Name": "Veracruz, Mexico",
-    "Latitude": 19,
-    "Longitude": -96
-  },
-  {
-    "Name": "Vienna, Austria",
-    "Latitude": 48,
-    "Longitude": 16
-  },
-  {
-    "Name": "Vladivostok, Russia",
-    "Latitude": 43,
-    "Longitude": 132
-  },
-  {
-    "Name": "Warsaw, Poland",
-    "Latitude": 52,
-    "Longitude": 21
-  },
-  {
-    "Name": "Wellington, New Zealand",
-    "Latitude": -41,
-    "Longitude": 174
-  },
-  {
-    "Name": "Zurich, Switzerland",
-    "Latitude": 47,
-    "Longitude": 8
-  }
-]
+{
+  "Cities": [
+      {
+          "Name": "New York, N.Y.",
+          "Latitude": 40.0,
+          "Longitude": -73.0
+      },
+      {
+          "Name": "Anchorage, Alaska",
+          "Latitude": 61.0,
+          "Longitude": -149.0
+      },
+      {
+          "Name": "New Orleans, La.",
+          "Latitude": 29.0,
+          "Longitude": -90.0
+      },
+      {
+          "Name": "Chicago, Ill.",
+          "Latitude": 41.0,
+          "Longitude": -87.0
+      },
+      {
+          "Name": "Washington, D.C.",
+          "Latitude": 38.0,
+          "Longitude": -77.0
+      },
+      {
+          "Name": "Honolulu, Hawaii",
+          "Latitude": 21.0,
+          "Longitude": -157.0
+      },
+      {
+          "Name": "Dallas, Tex.",
+          "Latitude": 32.0,
+          "Longitude": -96.0
+      },
+      {
+          "Name": "Los Angeles, Calif.",
+          "Latitude": 34.0,
+          "Longitude": -118.0
+      },
+      {
+          "Name": "Montreal, Que., Can.",
+          "Latitude": 45.0,
+          "Longitude": -73.0
+      },
+      {
+          "Name": "Omaha, Neb.",
+          "Latitude": 41.0,
+          "Longitude": -95.0
+      },
+      {
+          "Name": "San Francisco, Calif.",
+          "Latitude": 37.0,
+          "Longitude": -122.0
+      },
+      {
+          "Name": "Seattle, Wash.",
+          "Latitude": 47.0,
+          "Longitude": -122.0
+      },
+      {
+          "Name": "Salt Lake City, Utah",
+          "Latitude": 40.0,
+          "Longitude": -111.0
+      },
+      {
+          "Name": "Algiers, Algeria",
+          "Latitude": 36.0,
+          "Longitude": 3.0
+      },
+      {
+          "Name": "Ankara, Turkey",
+          "Latitude": 39.0,
+          "Longitude": 32.0
+      },
+      {
+          "Name": "Athens, Greece",
+          "Latitude": 37.0,
+          "Longitude": 23.0
+      },
+      {
+          "Name": "Auckland, New Zealand",
+          "Latitude": -36.0,
+          "Longitude": 174.0
+      },
+      {
+          "Name": "Bangkok, Thailand",
+          "Latitude": 13.0,
+          "Longitude": 100.0
+      },
+      {
+          "Name": "Beijing, China",
+          "Latitude": 39.0,
+          "Longitude": 116.0
+      },
+      {
+          "Name": "Belgrade, Serbia",
+          "Latitude": 44.0,
+          "Longitude": 20.0
+      },
+      {
+          "Name": "Berlin, Germany",
+          "Latitude": 52.0,
+          "Longitude": 13.0
+      },
+      {
+          "Name": "Bogota, Colombia",
+          "Latitude": 4.0,
+          "Longitude": -74.0
+      },
+      {
+          "Name": "Bombay, India",
+          "Latitude": 19.0,
+          "Longitude": 72.0
+      },
+      {
+          "Name": "Buenos Aires, Argentina",
+          "Latitude": -34.0,
+          "Longitude": -58.0
+      },
+      {
+          "Name": "Cairo, Egypt",
+          "Latitude": 30.0,
+          "Longitude": 31.0
+      },
+      {
+          "Name": "Calcutta, India",
+          "Latitude": 22.0,
+          "Longitude": 88.0
+      },
+      {
+          "Name": "Cape Town, South Africa",
+          "Latitude": -33.0,
+          "Longitude": 18.0
+      },
+      {
+          "Name": "Caracas, Venezuela",
+          "Latitude": 10.0,
+          "Longitude": -67.0
+      },
+      {
+          "Name": "Chihuahua, Mexico",
+          "Latitude": 28.0,
+          "Longitude": -106.0
+      },
+      {
+          "Name": "Chongqing, China",
+          "Latitude": 29.0,
+          "Longitude": 106.0
+      },
+      {
+          "Name": "Dakar, Senegal",
+          "Latitude": 14.0,
+          "Longitude": -17.0
+      },
+      {
+          "Name": "Darwin, Australia",
+          "Latitude": -12.0,
+          "Longitude": 130.0
+      },
+      {
+          "Name": "Djibouti, Djibouti",
+          "Latitude": 11.0,
+          "Longitude": 43.0
+      },
+      {
+          "Name": "Dublin, Ireland",
+          "Latitude": 53.0,
+          "Longitude": -6.0
+      },
+      {
+          "Name": "Edinburgh, Scotland",
+          "Latitude": 55.0,
+          "Longitude": -3.0
+      },
+      {
+          "Name": "Georgetown, Guyana",
+          "Latitude": 6.0,
+          "Longitude": -58.0
+      },
+      {
+          "Name": "Guatemala City, Guatemala",
+          "Latitude": 14.0,
+          "Longitude": -90.0
+      },
+      {
+          "Name": "Guayaquil, Ecuador",
+          "Latitude": -2.0,
+          "Longitude": -79.0
+      },
+      {
+          "Name": "Havana, Cuba",
+          "Latitude": 23.0,
+          "Longitude": -82.0
+      },
+      {
+          "Name": "Hong Kong, China",
+          "Latitude": 22.0,
+          "Longitude": 114.0
+      },
+      {
+          "Name": "Irkutsk, Russia",
+          "Latitude": 52.0,
+          "Longitude": 104.0
+      },
+      {
+          "Name": "Jakarta, Indonesia",
+          "Latitude": -6.0,
+          "Longitude": 106.0
+      },
+      {
+          "Name": "Johannesburg, South Africa",
+          "Latitude": -26.0,
+          "Longitude": 28.0
+      },
+      {
+          "Name": "Kinshasa, Congo",
+          "Latitude": -4.0,
+          "Longitude": 15.0
+      },
+      {
+          "Name": "La Paz, Bolivia",
+          "Latitude": -16.0,
+          "Longitude": -68.0
+      },
+      {
+          "Name": "Lima, Peru",
+          "Latitude": -12.0,
+          "Longitude": -77.0
+      },
+      {
+          "Name": "Lisbon, Portugal",
+          "Latitude": 38.0,
+          "Longitude": -9.0
+      },
+      {
+          "Name": "London, England",
+          "Latitude": 51.0,
+          "Longitude": 0.0
+      },
+      {
+          "Name": "Madrid, Spain",
+          "Latitude": 40.0,
+          "Longitude": -3.0
+      },
+      {
+          "Name": "Manila, Philippines",
+          "Latitude": 14.0,
+          "Longitude": 120.0
+      },
+      {
+          "Name": "Mecca, Saudi Arabia",
+          "Latitude": 21.0,
+          "Longitude": 39.0
+      },
+      {
+          "Name": "Melbourne, Australia",
+          "Latitude": -37.0,
+          "Longitude": 144.0
+      },
+      {
+          "Name": "Mexico City, Mexico",
+          "Latitude": 19.0,
+          "Longitude": -99.0
+      },
+      {
+          "Name": "Moscow, Russia",
+          "Latitude": 55.0,
+          "Longitude": 37.0
+      },
+      {
+          "Name": "Nairobi, Kenya",
+          "Latitude": -1.0,
+          "Longitude": 36.0
+      },
+      {
+          "Name": "New Delhi, India",
+          "Latitude": 28.0,
+          "Longitude": 77.0
+      },
+      {
+          "Name": "Odessa, Ukraine",
+          "Latitude": 46.0,
+          "Longitude": 30.0
+      },
+      {
+          "Name": "Oslo, Norway",
+          "Latitude": 59.0,
+          "Longitude": 10.0
+      },
+      {
+          "Name": "Paris, France",
+          "Latitude": 48.0,
+          "Longitude": 2.0
+      },
+      {
+          "Name": "Perth, Australia",
+          "Latitude": -31.0,
+          "Longitude": 115.0
+      },
+      {
+          "Name": "Rio de Janeiro, Brazil",
+          "Latitude": -22.0,
+          "Longitude": -43.0
+      },
+      {
+          "Name": "Rome, Italy",
+          "Latitude": 41.0,
+          "Longitude": 12.0
+      },
+      {
+          "Name": "Salvador, Brazil",
+          "Latitude": -12.0,
+          "Longitude": -38.0
+      },
+      {
+          "Name": "Santiago, Chile",
+          "Latitude": -33.0,
+          "Longitude": -70.0
+      },
+      {
+          "Name": "St. Petersburg, Russia",
+          "Latitude": 59.0,
+          "Longitude": 30.0
+      },
+      {
+          "Name": "Shanghai, China",
+          "Latitude": 31.0,
+          "Longitude": 121.0
+      },
+      {
+          "Name": "Singapore, Singapore",
+          "Latitude": 1.0,
+          "Longitude": 103.0
+      },
+      {
+          "Name": "Stockholm, Sweden",
+          "Latitude": 59.0,
+          "Longitude": 18.0
+      },
+      {
+          "Name": "Sydney, Australia",
+          "Latitude": -34.0,
+          "Longitude": 151.0
+      },
+      {
+          "Name": "Teheran, Iran",
+          "Latitude": 35.0,
+          "Longitude": 51.0
+      },
+      {
+          "Name": "Tokyo, Japan",
+          "Latitude": 35.0,
+          "Longitude": 139.0
+      },
+      {
+          "Name": "Tripoli, Libya",
+          "Latitude": 32.0,
+          "Longitude": 13.0
+      },
+      {
+          "Name": "Vienna, Austria",
+          "Latitude": 48.0,
+          "Longitude": 16.0
+      },
+      {
+          "Name": "Vladivostok, Russia",
+          "Latitude": 43.0,
+          "Longitude": 132.0
+      },
+      {
+          "Name": "Warsaw, Poland",
+          "Latitude": 52.0,
+          "Longitude": 21.0
+      }
+  ]
+}
