@@ -15,10 +15,17 @@ class GameLogic
         this._renderer = new Renderer('canvas-parent');
         this._scene = new World();
 		this._renderer.setActiveScene(this._scene);
-		this._tilemap = new Tilemap(64, 32);
     }
     public run()
     {
         this._renderer.start();
+		this._tilemap = new Tilemap(4, 4);
+		// this._tilemap.setPollutionAt(0, 0, 10);
+		// for (var x = 0; x < 4; x++) {
+		// 	for (var y = 0; y < 4; y++) {
+		// 		this._tilemap.setWindAt(x, y, 1, 1);
+		// 	}
+		// }
+		// this._tilemap.enableLogging();
     }
 }
