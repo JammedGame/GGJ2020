@@ -73,7 +73,7 @@ class Tilemap {
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
 				let tile = this.matrix[x][y];
-				if (tile.wind[0] == 0 && tile.wind[1] == 1) continue;
+				if (tile.wind[0] == 0 && tile.wind[1] == 0) continue;
 
 				let spreadAmount = POLLUTION_SPREAD_RATE * tile.pollution;
 				let totalWind = Math.abs(tile.wind[0]) + Math.abs(tile.wind[1]);
