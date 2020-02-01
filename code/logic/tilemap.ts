@@ -9,7 +9,7 @@ import {
 	EARTH_HEAL_RATE
 } from "../data/constants";
 
-export { Tile, Tilemap }
+export { Tilemap }
 
 class Tile {
 	x: number; // 0..width
@@ -39,10 +39,10 @@ class Tile {
 }
 
 class Tilemap {
-	readonly width: number;
-	readonly height: number;
-	readonly matrix: Tile[][];
-	debuggingEnabled: boolean;
+	private readonly width: number;
+	private readonly height: number;
+	private readonly matrix: Tile[][];
+	private debuggingEnabled: boolean;
 
 	constructor() {
 		this.width = WORLD_WIDTH;
@@ -82,7 +82,7 @@ class Tilemap {
 		}
 	}
 
-	getTileWrapped(x: number, y: number): Tile {
+	private getTileWrapped(x: number, y: number): Tile {
 		if (x < 0) x += this.width;
 		else if (x >= this.width) x -= this.width;
 
@@ -137,7 +137,7 @@ class Tilemap {
 		}
 	}
 
-	findClosestWindyTile(tile: Tile): Tile {
+	private findClosestWindyTile(tile: Tile): Tile {
 		for (let radius = 1; radius <= WIND_INTERPOLATION_MAX_DISTANCE; radius++) {
 			// find all candidate tiles at the current radius
 			let candidateTiles: Tile[] = [];
@@ -198,23 +198,23 @@ class Tilemap {
 				let tile: Tile = this.matrix[x][y];
 				if (tile.wind[0] == 0 && tile.wind[1] == 0) continue;
 
-				let spreadAmount: number = POLLUTION_SPREAD_RATE * tile.pollution;
 				let totalWind: number = Math.abs(tile.wind[0]) + Math.abs(tile.wind[1]);
+				let spreadAmount: number = POLLUTION_SPREAD_RATE * tile.pollution * totalWind;
 
 				if (tile.wind[0] > 0) {
-					let tile: Tile = this.getTileWrapped(x + 1, y);
-					tile.pollutionDiff += spreadAmount * tile.wind[0] / totalWind; // spread east
+					let otherTile: Tile = this.getTileWrapped(x + 1, y);
+					otherTile.pollutionDiff += spreadAmount * tile.wind[0] / totalWind; // spread east
 				} else if (tile.wind[0] < 0) {
-					let tile: Tile = this.getTileWrapped(x - 1, y);
-					tile.pollutionDiff -= spreadAmount * tile.wind[0] / totalWind // spread west
+					let otherTile: Tile = this.getTileWrapped(x - 1, y);
+					otherTile.pollutionDiff -= spreadAmount * tile.wind[0] / totalWind // spread west
 				}
 
 				if (tile.wind[1] > 0) {
-					let tile: Tile = this.getTileWrapped(x, y + 1);
-					tile.pollutionDiff += spreadAmount * tile.wind[1] / totalWind // spread north
+					let otherTile: Tile = this.getTileWrapped(x, y + 1);
+					otherTile.pollutionDiff += spreadAmount * tile.wind[1] / totalWind // spread north
 				} else if (tile.wind[1] < 0) {
-					let tile: Tile = this.getTileWrapped(x, y - 1);
-					tile.pollutionDiff -= spreadAmount * tile.wind[1] / totalWind // spread south
+					let otherTile: Tile = this.getTileWrapped(x, y - 1);
+					otherTile.pollutionDiff -= spreadAmount * tile.wind[1] / totalWind // spread south
 				}
 
 				tile.pollution -= spreadAmount;

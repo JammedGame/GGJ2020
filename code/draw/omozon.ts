@@ -1,7 +1,7 @@
 export { Omozon }
 
 import * as Three from 'three';
-import { OZONE_SCALE, GLOBE_PRECISION, MAPS } from '../data/constants';
+import { OZONE_SCALE, GLOBE_PRECISION, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '../data/constants';
 import { Settings } from '../settings';
 import THREE = require('three');
 import { Colors } from 'three';
@@ -30,8 +30,8 @@ class Omozon
 
         this._geometry = new THREE.Geometry();
 
-        this._quadsX = 72;
-        this._quadsY = 36;
+        this._quadsX = WORLD_WIDTH;
+        this._quadsY = WORLD_HEIGHT;
         this._quad_size_x = 360.0 / this._quadsX;
         this._quad_size_y = 180.0 / this._quadsY;
 
