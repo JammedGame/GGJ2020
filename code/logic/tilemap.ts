@@ -1,9 +1,13 @@
-export { Tile, Tilemap }
+import {
+	WORLD_WIDTH,
+	WORLD_HEIGHT,
+	POLLUTION_SPREAD_RATE,
+	OZONE_DAMAGE_RATE,
+	EARTH_SCORCH_RATE,
+	EARTH_HEAL_RATE
+} from "../data/constants";
 
-const POLLUTION_SPREAD_RATE: number = 0.1;
-const OZONE_DAMAGE_RATE: number = 0.02;
-const EARTH_SCORCH_RATE: number = 0.01;
-const EARTH_HEAL_RATE: number = 0.005;
+export { Tile, Tilemap }
 
 class Tile {
 	x: number; // 0..width
@@ -12,7 +16,7 @@ class Tile {
 	pollutionDiff: number;
 	ozone: number; // 0..1
 	trail: boolean;
-	wind: [number, number]; // [-1..1, -1..1]
+	wind: [number, number]; // [-INF..INF, -INF..INF]
 	scorch: number; // 0..1
 
 	toString(): string {
@@ -26,13 +30,13 @@ class Tilemap {
 	readonly matrix: Tile[][];
 	debuggingEnabled: boolean;
 
-	constructor(width: number, height: number) {
-		this.width = width;
-		this.height = height;
+	constructor() {
+		this.width = WORLD_WIDTH;
+		this.height = WORLD_HEIGHT;
 		this.matrix = [];
-		for (let x = 0; x < width; x++) {
+		for (let x = 0; x < this.width; x++) {
 			this.matrix[x] = [];
-			for (let y = 0; y < height; y++) {
+			for (let y = 0; y < this.height; y++) {
 				let newTile: Tile = new Tile();
 				newTile.x = x;
 				newTile.y = y;

@@ -22,7 +22,7 @@ class GameLogic
         this._renderer = new Renderer('canvas-parent');
         this._scene = new World();
 		this._renderer.setActiveScene(this._scene);
-        this._tilemap = new Tilemap(64, 32);
+        this._tilemap = new Tilemap();
         this._apiData = new Api();
         this._apiData.getApiData();
 
@@ -33,7 +33,6 @@ class GameLogic
     {
         this._renderer.start();
         this.update();
-		this._tilemap = new Tilemap(4, 4);
     }
     public update()
     {
