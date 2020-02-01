@@ -24,6 +24,7 @@ class Tilemap {
 	width: number;
 	height: number;
 	matrix: Tile[][];
+	debuggingEnabled: boolean;
 
 	constructor(width: number, height: number) {
 		this.width = width;
@@ -46,16 +47,6 @@ class Tilemap {
 		}
 	}
 
-	enableLogging(): void {
-		this.log();
-		console.log("press SPACE to advance simulation step-by-step");
-		document.onkeydown = e => {
-			if (e.key == " ") {
-				this.simulate();
-				this.log();
-			}
-		};
-	}
 	log(): void {
 		let logMatrix: string[][] = this.matrix.map(column => column.map(tile => tile.toString()));
 		console.table(logMatrix);
