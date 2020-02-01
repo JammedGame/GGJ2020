@@ -5,6 +5,7 @@ import { World } from "./draw/world";
 import { Api } from "./data/api";
 import { Input } from "./input";
 import { Settings } from "./settings";
+import { convertCoordinatesGeographicToPlanar, convertCoordinatesPolarToPlanar } from "./util/converter";
 
 export { GameLogic }
 

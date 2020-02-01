@@ -4,7 +4,9 @@ export {    DEFAULT_FOV,
             MAPS,
             GLOBE_SCALE,
             GLOBE_PRECISION,
-            PLAYER_SCALE
+            PLAYER_SCALE,
+            WORLD_WIDTH,
+            WORLD_HEIGHT,
 }
 const DEFAULT_FOV = 75;
 const RESOLUTION =
@@ -27,3 +29,6 @@ const MAPS =
 const GLOBE_SCALE = 1.0;
 const GLOBE_PRECISION = 256;
 const PLAYER_SCALE = 0.05;
+
+const WORLD_WIDTH = 72;
+const WORLD_HEIGHT = 36;
