@@ -21,7 +21,7 @@ class Api {
     }
 
     getApiData() {
-        citiesTest.forEach(element => {
+        citiesTest.map(element => {
             this.getSingleApiResponse(element.city, element.state, element.country);
         });
     }
