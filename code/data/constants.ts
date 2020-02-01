@@ -8,7 +8,7 @@ export {    DEFAULT_FOV,
             WORLD_WIDTH,
             WORLD_HEIGHT,
 }
-const DEFAULT_FOV = 75;
+const DEFAULT_FOV = 45;
 const RESOLUTION =
 {
     X: 1366,
@@ -27,7 +27,7 @@ const MAPS =
     SPECULAR: '../../resources/specular.jpg'
 }
 const GLOBE_SCALE = 1.0;
-const GLOBE_PRECISION = 256;
+const GLOBE_PRECISION = 36;
 const PLAYER_SCALE = 0.05;
 
 const WORLD_WIDTH = 72;

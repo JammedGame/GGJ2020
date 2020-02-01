@@ -11,6 +11,7 @@ class Api {
     }
 
     getSingleApiResponse(city:String, state:String, country:String) {
+        return;
         let url: string = 'https://api.airvisual.com/v2/city?'+
             'city='+city+
             '&state='+state+
