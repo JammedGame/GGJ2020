@@ -12,8 +12,6 @@ class Omozon
     private _geometry: Three.Geometry;
     private _mesh: Three.Mesh;
     private _material: Three.Material;
-    private _quadsX: number;
-    private _quadsY: number;
     private _quad_size_x: number;
     private _quad_size_y: number;
 
@@ -31,13 +29,11 @@ class Omozon
 
         this._geometry = new THREE.Geometry();
 
-        this._quadsX = WORLD_WIDTH;
-        this._quadsY = WORLD_HEIGHT;
-        this._quad_size_x = 360.0 / this._quadsX;
-        this._quad_size_y = 180.0 / this._quadsY;
+        this._quad_size_x = 360.0 / WORLD_WIDTH;
+        this._quad_size_y = 180.0 / WORLD_HEIGHT;
 
-        for (let j : number = 0; j < this._quadsY; j++)
-            for (let i : number = 0; i < this._quadsX; i++)
+        for (let j : number = 0; j < WORLD_HEIGHT; j++)
+            for (let i : number = 0; i < WORLD_WIDTH; i++)
             {
                 let quad_longitude : number = i * this._quad_size_x;
                 let quad_latitude : number = -90 + (0.5 + j) * this._quad_size_y;

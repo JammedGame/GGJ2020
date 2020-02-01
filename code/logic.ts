@@ -20,8 +20,6 @@ class GameLogic
     {
         this._input = new Input();
         this._renderer = new Renderer('canvas-parent');
-        this._world = new World(this._renderer.camera);
-        this._renderer.setActiveScene(this._world);
 		this._tilemap = new Tilemap();
 		this._tilemap.setPollutionAt(54, 18, 10); // temp
 		this._tilemap.setPollutionAt(55, 18, 10); // temp
@@ -32,7 +30,7 @@ class GameLogic
         this._tilemap.interpolateWind();
         Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
 
-        this._world = new World();
+        this._world = new World(this._renderer.camera);
         this._renderer.setActiveScene(this._world);
         (<World>this._world).player.hookCamera(this._renderer.camera);
 
