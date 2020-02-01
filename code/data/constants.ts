@@ -11,6 +11,7 @@ export {    DEFAULT_FOV,
             OZONE_DAMAGE_RATE,
             EARTH_SCORCH_RATE,
             EARTH_HEAL_RATE,
+            OZONE_SCALE
 }
 const DEFAULT_FOV = 75;
 const RESOLUTION =
@@ -37,6 +38,7 @@ const PLAYER_SCALE = 0.05;
 const WORLD_WIDTH = 72;
 const WORLD_HEIGHT = 36;
 
+const OZONE_SCALE: number = 1.1;
 const POLLUTION_SPREAD_RATE: number = 0.1;
 const OZONE_DAMAGE_RATE: number = 0.02;
 const EARTH_SCORCH_RATE: number = 0.01;
