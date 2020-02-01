@@ -16,7 +16,12 @@ class Player
         this._material = new Three.MeshBasicMaterial({ color: 0xdddddd });
         this._geometry = new Three.BoxGeometry(PLAYER_SCALE, PLAYER_SCALE);
         this._mesh = new Three.Mesh(this._geometry, this._material);
-        this._mesh.position.z = 0.6;
+        this._mesh.position.z = -0.2;
         this._mesh.name = 'Player';
+    }
+    public hookCamera(camera: Camera)
+    {
+        this._camera = camera;
+        this._camera.instance.add(this._mesh);
     }
 }

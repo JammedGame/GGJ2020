@@ -1,5 +1,6 @@
 import axios from 'axios';
 import citiesTest from './CitiesApiReqTest.json';
+import { Log } from '../util/log';
 
 class Api {
 
@@ -17,11 +18,11 @@ class Api {
             '&key=2fe3077d-98dd-4a19-b8e6-5eacaf614e36';
         axios.get(url).then((result) => {
             this._allCities.push(result);
-        });
+        }).catch(error => Log.error(error));
     }
 
     getApiData() {
-        citiesTest.map(element => {
+        citiesTest.Cities.map(element => {
             this.getSingleApiResponse(element.city, element.state, element.country);
         });
     }
