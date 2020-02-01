@@ -13,6 +13,7 @@ class Renderer
     private _camera: Camera;
     private _canvasParent: HTMLDivElement;
     private _renderer: Three.Renderer;
+    public get camera(): Camera { return this._camera; }
     public constructor(canvasID: string)
     {
         this._canvasParent = <HTMLDivElement> document.getElementById(canvasID);
