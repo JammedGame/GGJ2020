@@ -169,6 +169,8 @@ class Tilemap {
 	}
 
 	simulate(): void {
+		let simulateStart: number = performance.now();
+
 		// earth is scorched or healed where necessary
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
@@ -228,6 +230,11 @@ class Tilemap {
 				tile.pollution += tile.pollutionDiff;
 				tile.pollutionDiff = 0;
 			}
+		}
+
+		let simulateEnd: number = performance.now();
+		if (this.debuggingEnabled) {
+			console.log("simulate execution time " + (simulateEnd - simulateStart) + " milliseconds");
 		}
 	}
 }
