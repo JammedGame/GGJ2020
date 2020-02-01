@@ -16,6 +16,6 @@ class Camera
             RESOLUTION.X / RESOLUTION.Y,
             CLIPPING.NEAR,
             CLIPPING.FAR);
-        this._camera.position.z = 1.5;
+        this._camera.position.z = 4;
     }
 }

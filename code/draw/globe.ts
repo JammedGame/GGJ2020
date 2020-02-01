@@ -46,9 +46,10 @@ class Globe
         {
             this._material = new Three.MeshStandardMaterial({
                 map: this._colorMap,
-                normalMap: this._normalMap,
-                emissiveMap: this._specularMap,
-                displacementMap: this._bumpMap,
+                // todo temp disabled
+                //normalMap: this._normalMap,
+                //emissiveMap: this._specularMap,
+                //displacementMap: this._bumpMap,
                 displacementScale: 0.01
             });
         }

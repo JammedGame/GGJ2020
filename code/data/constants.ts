@@ -13,7 +13,7 @@ export {    DEFAULT_FOV,
             EARTH_HEAL_RATE,
             OZONE_SCALE
 }
-const DEFAULT_FOV = 75;
+const DEFAULT_FOV = 30;
 const RESOLUTION =
 {
     X: 1366,
@@ -26,7 +26,7 @@ const CLIPPING =
 }
 const MAPS =
 {
-    COLOR: '../../resources/earth.jpg',
+    COLOR: '../../resources/earth-map-1.png',
     NORMAL: '../../resources/normal.jpg',
     BUMP: '../../resources/bump.jpg',
     SPECULAR: '../../resources/specular.jpg'
@@ -38,7 +38,7 @@ const PLAYER_SCALE = 0.05;
 const WORLD_WIDTH = 72;
 const WORLD_HEIGHT = 36;
 
-const OZONE_SCALE: number = 1.01;
+const OZONE_SCALE: number = 0.01;
 const POLLUTION_SPREAD_RATE: number = 0.1;
 const OZONE_DAMAGE_RATE: number = 0.02;
 const EARTH_SCORCH_RATE: number = 0.01;
