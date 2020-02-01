@@ -3,7 +3,7 @@ module.exports = {
   mode: "development",
   entry:
   {
-    app: ["./Code/App.ts"]
+    app: ["./code/app.ts"]
   },
   optimization:
   {
@@ -13,7 +13,7 @@ module.exports = {
   {
     path: path.resolve(__dirname, "build"),
     filename: "app.js",
-    publicPath: "/Resources/"
+    publicPath: "/resources/"
   },
   resolve:
   {
