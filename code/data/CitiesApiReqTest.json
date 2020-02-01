@@ -360,6 +360,51 @@
         "city": "Johannesburg",
         "state": "Gauteng",
         "country": "South Africa"
+    },
+    {
+        "city": "Cochabamba",
+        "state": "Cochabamba",
+        "country": "Bolivia"
+    },
+    {
+        "city": "Lima",
+        "state": "Lima",
+        "country": "Peru"
+    },
+    {
+        "city": "Lisbon",
+        "state": "Lisbon",
+        "country": "Portugal"
+    },
+    {
+        "city": "London",
+        "state": "England",
+        "country": "UK"
+    },
+    {
+        "city": "Moscow",
+        "state": "Moscow",
+        "country": "Russia"
+    },
+    {
+        "city": "Madrid",
+        "state": "Madrid",
+        "country": "Spain"
+    },
+    {
+        "city": "Manila",
+        "state": "National Capital Region",
+        "country": "Philippines"
+    },
+    {
+        "city": "Melbourne",
+        "state": "Victoria",
+        "country": "Australia"
+    },
+    {
+        "city": "Mexico City",
+        "state": "Mexico City",
+        "country": "Mexico"
     }
 ]
 }
