@@ -10,8 +10,8 @@ class GameLogic
 {
     private _scene: Scene;
 	private _renderer: Renderer;
-	private _tilemap: Tilemap;
-	private _apiData: any;
+    private _tilemap: Tilemap;
+    private _apiData: Api;
     public constructor()
     {
         this._renderer = new Renderer('canvas-parent');
@@ -19,8 +19,11 @@ class GameLogic
 		this._renderer.setActiveScene(this._scene);
         this._tilemap = new Tilemap(64, 32);
         document.addEventListener('keydown', event => this.key(event.key));
-        let api = new Api();
-        this._apiData = api.getApiData('Belgrade', 'Central Serbia', 'Serbia');
+        this._apiData = new Api();
+        this._apiData.getApiData();
+
+        console.log(this._apiData.allCities);
+
     }
     public run()
     {

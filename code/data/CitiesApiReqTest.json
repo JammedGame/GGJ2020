@@ -2,7 +2,7 @@
     {
         "city": "Aberdeen",
         "state": "Scotland",
-        "country": "United Kingdom"
+        "country": "uk"
     },
     {
         "city": "Adelaide",
@@ -47,10 +47,7 @@
     {
         "city": "Bristol",
         "state": "England",
-        "country": "United Kingdom"
-    },
-    {
-        
+        "country": "uk"
     }
     
 ]
