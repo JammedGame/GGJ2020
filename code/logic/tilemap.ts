@@ -1,6 +1,8 @@
 import {
 	WORLD_WIDTH,
 	WORLD_HEIGHT,
+	WIND_INTERPOLATION_GRADIENT,
+	WIND_INTERPOLATION_MAX_DISTANCE,
 	POLLUTION_SPREAD_RATE,
 	OZONE_DAMAGE_RATE,
 	EARTH_SCORCH_RATE,
@@ -17,7 +19,18 @@ class Tile {
 	ozone: number; // 0..1
 	trail: boolean;
 	wind: [number, number]; // [-INF..INF, -INF..INF]
+	interpolatedWind: [number, number];
 	scorch: number; // 0..1
+
+	distanceTo(other: Tile): number {
+		let xDistance = this.x - other.x;
+		let yDistance = this.y - other.y;
+		return Math.sqrt(xDistance * xDistance + yDistance * yDistance);
+	}
+
+	getWindiness(): number {
+		return Math.sqrt(this.wind[0] * this.wind[0] + this.wind[1] * this.wind[1]);
+	}
 
 	toString(): string {
 		return "pollution:" + this.pollution.toFixed(2) + " | ozone:" + this.ozone.toFixed(2) + "\nwind:[" + this.wind[0].toFixed(2) + "," + this.wind[1].toFixed(2) + "] | scorch:" + this.scorch.toFixed(2);
@@ -45,6 +58,7 @@ class Tilemap {
 				newTile.ozone = 1;
 				newTile.trail = false;
 				newTile.wind = [0, 0];
+				newTile.interpolatedWind = [0, 0];
 				newTile.scorch = 0;
 				this.matrix[x][y] = newTile;
 			}
@@ -82,6 +96,63 @@ class Tilemap {
 	setTrailAt(x: number, y: number, value: boolean): void { this.matrix[x][y].trail = value; };
 	clearTrail(): void { this.matrix.forEach(column => column.forEach(tile => tile.trail = false)); }
 	repairOzoneAt(x: number, y: number): void { this.matrix[x][y].ozone = 1; }
+
+	interpolateWind(): void {
+		// interpolate wind values based on closest windy neighbour
+		for (let x = 0; x < this.width; x++) {
+			for (let y = 0; y < this.height; y++) {
+				let tile: Tile = this.matrix[x][y];
+				if (tile.wind[0] != 0 || tile.wind[1] != 0) continue;
+
+				let closestTile: Tile = this.findClosestWindyTile(tile);
+				if (closestTile == null) continue;
+
+				let distance: number = tile.distanceTo(closestTile);
+				let coefficient = Math.pow(WIND_INTERPOLATION_GRADIENT, distance);
+				tile.interpolatedWind[0] = coefficient * closestTile.wind[0];
+				tile.interpolatedWind[1] = coefficient * closestTile.wind[1];
+			}
+		}
+
+		// apply interpolated wind values
+		for (let x = 0; x < this.width; x++) {
+			for (let y = 0; y < this.height; y++) {
+				let tile: Tile = this.matrix[x][y];
+				tile.wind = tile.interpolatedWind;
+			}
+		}
+	}
+
+	findClosestWindyTile(tile: Tile): Tile {
+		for (let radius = 1; radius < WIND_INTERPOLATION_MAX_DISTANCE; radius++) {
+			// find all candidate tiles at the current radius
+			let candidateTiles: Tile[] = [];
+			for (let x = tile.x - radius; x < tile.x + radius; x++) {
+				for (let y = tile.y - radius; y < tile.y + radius; y++) {
+					let otherTile: Tile = this.getTileWrapped(x, y);
+					if (otherTile != tile && (otherTile.wind[0] != 0 || otherTile.wind[1] != 0)) candidateTiles.push(otherTile);
+				}
+			}
+
+			// return the windiest candidate tile
+			if (candidateTiles.length > 0) {
+				let windiestTile = candidateTiles[0];
+				let maxWindiness = windiestTile.getWindiness();
+				for (let i = 1; i < candidateTiles.length; i++) {
+					let otherTile: Tile = candidateTiles[i];
+					let windiness = otherTile.getWindiness()
+					if (windiness > maxWindiness) {
+						windiestTile = otherTile;
+						maxWindiness = windiness;
+					}
+				}
+
+				return windiestTile;
+			}
+		}
+		
+		return null;
+	}
 
 	simulate(): void {
 		// earth is scorched or healed where necessary
