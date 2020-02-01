@@ -47,7 +47,127 @@
     {
         "city": "Bristol",
         "state": "England",
-        "country": "uk"
+        "country": "United Kingdom"
+    },
+
+    {
+        "city": "Zurich",
+        "state": "Zurich",
+        "country": "Switzerland"
+    },
+    {
+        "city": "Wellington",
+        "state": "Wellington",
+        "country": "New Zealand"
+    },
+    {
+        "city": "Warsaw",
+        "state": "Mazovia",
+        "country": "Poland"
+    },
+    {
+        "city": "Vladivostok",
+        "state": "Primorskiy",
+        "country": "Russia"
+    },
+    {
+        "city": "Vienna",
+        "state": "Vienna",
+        "country": "Austria"
+    },
+    {
+        "city": "Veracruz",
+        "state": "Veracruz",
+        "country": "Mexico"
+    },
+    {
+        "city": "Venice",
+        "state": "Veneto",
+        "country": "Italy"
+    },
+    {
+        "city": "Tokyo",
+        "state": "Tokyo",
+        "country": "Japan"
+    },
+    {
+        "city": "Teheran",
+        "state": "Tehran",
+        "country": "Iran"
+    },
+    {
+        "city": "Sydney",
+        "state": "New South Wales",
+        "country": "Australia"
+    },
+    {
+        "city": "Stockholm",
+        "state": "Stockholm",
+        "country": "Sweden"
+    },
+    {
+        "city": "Singapore",
+        "state": "Singapore",
+        "country": "Singapore"
+    },
+    {
+        "city": "Shanghai",
+        "state": "Shanghai",
+        "country": "China"
+    },
+    {
+        "city": "Santiago",
+        "state": "Santiago Metropolitan",
+        "country": "Chile"
+    },
+    {
+        "city": "Reykjavik",
+        "state": "Capital Region",
+        "country": "Iceland"
+    },
+    {
+        "city": "Yangon",
+        "state": "Yangon",
+        "country": "Myanmar"
+    },
+    {
+        "city": "Prague",
+        "state": "Praha",
+        "country": "Czech Republic"
+    },
+    {
+        "city": "Perth",
+        "state": "Western Australia",
+        "country": "Australia"
+    },
+    {
+        "city": "Paris",
+        "state": "Ile-de-France",
+        "country": "France"
+    },
+    {
+        "city": "Oslo",
+        "state": "Oslo",
+        "country": "Norway"
+    },
+    {
+        "city": "Osaka",
+        "state": "Osaka",
+        "country": "Japan"
+    },
+    {
+        "city": "Kyiv",
+        "state": "Kyiv",
+        "country": "Ukraine"
+    },
+    {
+        "city": "New Delhi",
+        "state": "Delhi",
+        "country": "India"
+    },
+    {
+        "city": "Nanjing",
+        "state": "Jiangsu",
+        "country": "China"
     }
-    
 ]
