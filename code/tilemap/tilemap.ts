@@ -41,12 +41,12 @@ class Tilemap {
 		}
 	}
 
-	getTileAt(x: number, y: number): Tile {
+	getTileWrapped(x: number, y: number): Tile {
 		if (x < 0) x += this.width;
-		else if (x >= this.width) x += this.width;
+		else if (x >= this.width) x -= this.width;
 
-		if (y < 0) { y = 1 - y; x = (x + this.width / 2) % this.width; }
-		else if (y >= this.height) { y = 2 * this.height - y - 1; x = (x + this.width / 2) % this.width; }
+		if (y < 0) { y = 0 }
+		else if (y >= this.height) { y = this.height - 1; }
 
 		return this.matrix[x][y];
 	}
@@ -66,14 +66,10 @@ class Tilemap {
 	setWindAt(x: number, y: number, vx: number, vy: number): void { this.matrix[x][y].wind = [vx, vy]; };
 	setTrailAt(x: number, y: number, value: boolean): void { this.matrix[x][y].trail = value; };
 	clearTrail(): void { this.matrix.forEach(column => column.forEach(tile => tile.trail = false)); }
-	restoreOzoneAt(x: number, y: number): void { this.matrix[x][y].ozone = 1; }
+	repairOzoneAt(x: number, y: number): void { this.matrix[x][y].ozone = 1; }
 
 	simulate(): void {
-		this.spreadPollution();
-		this.damageOzone();
-		this.scorchOrHealEarth();
-	}
-	spreadPollution(): void {
+		// wind spreads pollution
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
 				let tile = this.matrix[x][y];
@@ -82,16 +78,17 @@ class Tilemap {
 				let spreadAmount = POLLUTION_SPREAD_RATE * tile.pollution;
 				let totalWind = Math.abs(tile.wind[0]) + Math.abs(tile.wind[1]);
 
-				if (tile.wind[0] > 0) this.getTileAt(x + 1, y).pollutionDiff += spreadAmount * tile.wind[0] / totalWind; // spread east
-				else if (tile.wind[0] < 0) this.getTileAt(x - 1, y).pollutionDiff -= spreadAmount * tile.wind[0] / totalWind // spread west
+				if (tile.wind[0] > 0) this.getTileWrapped(x + 1, y).pollutionDiff += spreadAmount * tile.wind[0] / totalWind; // spread east
+				else if (tile.wind[0] < 0) this.getTileWrapped(x - 1, y).pollutionDiff -= spreadAmount * tile.wind[0] / totalWind // spread west
 
-				if (tile.wind[1] > 0) this.getTileAt(x, y + 1).pollutionDiff += spreadAmount * tile.wind[1] / totalWind // spread north
-				else if (tile.wind[1] < 0) this.getTileAt(x, y - 1).pollutionDiff -= spreadAmount * tile.wind[1] / totalWind // spread south
+				if (tile.wind[1] > 0) this.getTileWrapped(x, y + 1).pollutionDiff += spreadAmount * tile.wind[1] / totalWind // spread north
+				else if (tile.wind[1] < 0) this.getTileWrapped(x, y - 1).pollutionDiff -= spreadAmount * tile.wind[1] / totalWind // spread south
 
 				tile.pollution -= spreadAmount;
 			}
 		}
 
+		// pollution is resolved
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
 				let tile = this.matrix[x][y];
@@ -99,8 +96,8 @@ class Tilemap {
 				tile.pollutionDiff = 0;
 			}
 		}
-	}
-	damageOzone(): void {
+
+		// ozone is damaged
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
 				let tile = this.matrix[x][y];
@@ -108,8 +105,8 @@ class Tilemap {
 				if (tile.ozone < 0) tile.ozone = 0;
 			}
 		}
-	}
-	scorchOrHealEarth(): void {
+
+		// earth is scorched or healed where necessary
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
 				let tile = this.matrix[x][y];
