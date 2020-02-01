@@ -5,6 +5,7 @@ import { OZONE_SCALE, GLOBE_PRECISION, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '.
 import { Settings } from '../settings';
 import THREE = require('three');
 import { Colors } from 'three';
+import { Tilemap } from '../logic/tilemap';
 
 class Omozon
 {
@@ -35,8 +36,8 @@ class Omozon
         this._quad_size_x = 360.0 / this._quadsX;
         this._quad_size_y = 180.0 / this._quadsY;
 
-        for (let i : number = 0; i < this._quadsX; i++)
-            for (let j : number = 0; j < this._quadsY; j++)
+        for (let j : number = 0; j < this._quadsY; j++)
+            for (let i : number = 0; i < this._quadsX; i++)
             {
                 let quad_longitude : number = i * this._quad_size_x;
                 let quad_latitude : number = -90 + (0.5 + j) * this._quad_size_y;
@@ -62,13 +63,29 @@ class Omozon
             spherical2Cartesion(x - this._quad_size_x * 0.5, y - this._quad_size_y * 0.5, OZONE_SCALE),
         );
 
-        let color = new Three.Color(0.5, 0.5, 0.5);
-
         this._geometry.faces.push
         (
-            new THREE.Face3( quad_start + 1, quad_start + 0, quad_start + 2, null, color),
-            new THREE.Face3( quad_start + 3, quad_start + 2, quad_start + 0, null, color),
+            new THREE.Face3( quad_start + 1, quad_start + 0, quad_start + 2),
+            new THREE.Face3( quad_start + 3, quad_start + 2, quad_start + 0),
         );
+    }
+
+    update(tileMap: Tilemap)
+    {
+        for(let x = 0; x < WORLD_WIDTH; x++)
+        {
+            for(let y = 0; y < WORLD_HEIGHT; y++)
+            {
+                let ozone : number = tileMap.getOzoneAt(x, y);
+                let index = x + y * WORLD_WIDTH;
+                let alpha = ozone * 0.5;
+
+                this._geometry.faces[index * 2 + 0].color = new Three.Color(alpha, alpha, alpha);
+                this._geometry.faces[index * 2 + 1].color = new Three.Color(alpha, alpha, alpha);
+            }
+        }
+
+        this._geometry.elementsNeedUpdate = true;
     }
 
     vertexShader() {
