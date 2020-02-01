@@ -7,6 +7,8 @@ export {    DEFAULT_FOV,
             PLAYER_SCALE,
             WORLD_WIDTH,
             WORLD_HEIGHT,
+            WIND_INTERPOLATION_GRADIENT,
+            WIND_INTERPOLATION_MAX_DISTANCE,
             POLLUTION_SPREAD_RATE,
             OZONE_DAMAGE_RATE,
             EARTH_SCORCH_RATE,
@@ -37,6 +39,8 @@ const PLAYER_SCALE = 0.05;
 const WORLD_WIDTH = 72;
 const WORLD_HEIGHT = 36;
 
+const WIND_INTERPOLATION_GRADIENT: number = 0.5;
+const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
 const POLLUTION_SPREAD_RATE: number = 0.1;
 const OZONE_DAMAGE_RATE: number = 0.02;
 const EARTH_SCORCH_RATE: number = 0.01;
