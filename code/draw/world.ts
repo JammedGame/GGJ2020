@@ -13,6 +13,7 @@ class World extends Scene
     private _player: Player;
     private _omozon: Omozon;
     public get player(): Player { return this._player; }
+    public get omozon(): Omozon { return this._omozon; }
     public constructor()
     {
         super();
@@ -29,6 +30,7 @@ class World extends Scene
         this._scene.add(this._globe.instance);
         this._scene.add(this._player.instance);
     }
+
     public update()
     {
         // override
