@@ -8,6 +8,7 @@ class Tile {
 	pollution: number; // 0..INF
 	pollutionDiff: number;
 	ozone: number; // 0..1
+	ozonaTakeDiffuseDamage: boolean;
 	trail: boolean;
 	wind: [number, number]; // [-INF..INF, -INF..INF]
 	interpolatedWind: [number, number];
