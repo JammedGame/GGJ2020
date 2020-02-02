@@ -36,13 +36,13 @@ class Input
     {
         Log.message('Key ' + key + ' down', 'Input');
         for(let direction in MovementDirection) {
-            if(key === Settings.controls['move_'+direction]) {
+            if(key.toLowerCase() === Settings.controls['move_'+direction]) {
                 this._movement[direction] = true;
                 this._movement.direction = direction;
             }
         }
         for(let actionName in this._actions) {
-            if(key === Settings.controls[actionName]) {
+            if(key.toLowerCase() === Settings.controls[actionName]) {
                 this._actions[actionName]();
             }
         }
