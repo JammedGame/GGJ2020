@@ -1,7 +1,7 @@
 export { Globe }
 
 import * as Three from 'three';
-import { GLOBE_SCALE, GLOBE_PRECISION, MAPS } from '../data/constants';
+import { GLOBE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '../data/constants';
 import { Settings } from '../settings';
 
 class Globe
@@ -25,9 +25,10 @@ class Globe
         this.generateMaterial();
         this._sphereGeometry = new Three.SphereGeometry(
             GLOBE_SCALE,
-            GLOBE_PRECISION,
-            GLOBE_PRECISION / 2 + 1
+            WORLD_WIDTH,
+            WORLD_HEIGHT
         );
+        
         this._mesh = new Three.Mesh(this._sphereGeometry, this._material);
         this._mesh.name = 'Globe';
     }
@@ -44,12 +45,13 @@ class Globe
     {
         if(!Settings.debugGlobe)
         {
-            this._material = new Three.MeshStandardMaterial({
+            this._material = new Three.MeshBasicMaterial({
                 map: this._colorMap,
-                normalMap: this._normalMap,
-                emissiveMap: this._specularMap,
-                displacementMap: this._bumpMap,
-                displacementScale: 0.1
+                // todo temp disabled
+                //normalMap: this._normalMap,
+                //emissiveMap: this._specularMap,
+                //displacementMap: this._bumpMap,
+                //displacementScale: 0.01
             });
         }
         else
