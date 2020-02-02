@@ -106,6 +106,21 @@ class Tilemap {
 		}
 	};
 
+	checkIfTrailBroken() : void {
+		for(let i = 0; i < WORLD_WIDTH; i++)
+		{
+			for(let j = 0; j < WORLD_HEIGHT; j++)
+			{
+				let tile = this.getTileWrapped(i, j);
+				if (tile.trail && tile.ozone <= OZONE_THRESHOLD)
+				{
+					this.clearTrail();
+					return;
+				}
+			}
+		}
+	}
+
 	checkIfTrailsFormLoop() : void {
 		let hotEscapedTiles : Tile[] = [];
 		let trailBroken : boolean = false;
@@ -342,6 +357,9 @@ class Tilemap {
 				tile.pollutionDiff = 0;
 			}
 		}
+
+		// clear trail if pollution broke it.
+		this.checkIfTrailBroken();
 
 		let simulateEnd: number = performance.now();
 		if (this.debuggingEnabled) {
