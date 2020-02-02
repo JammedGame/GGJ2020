@@ -21,12 +21,7 @@ class GameLogic
         this._input = new Input();
         this._renderer = new Renderer('canvas-parent');
 		this._tilemap = new Tilemap();
-		this._tilemap.setPollutionAt(54, 18, 10); // temp
-		this._tilemap.setPollutionAt(55, 18, 10); // temp
-		this._tilemap.setPollutionAt(56, 18, 10); // temp
-		this._tilemap.setPollutionAt(57, 18, 10); // temp
-		this._tilemap.setWindAt(54, 18, 1, 1); // temp
-		this._tilemap.setWindAt(54, 24, -1, 0); // temp
+		this._tilemap.setPollutionAt(0, 18, 10); // temp
         this._tilemap.interpolateWind();
         Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
 
