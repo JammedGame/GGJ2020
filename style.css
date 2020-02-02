@@ -72,8 +72,9 @@
 }
 
 #tutorial-div .gif-container {
-	position: absolute;
-	left: 50%;
+	position: fixed;
+    right: 3%;
+    top: 15%;
 	width: 50%;
 	display: flex;
 	align-items: center;
