@@ -167,6 +167,16 @@ class Tilemap {
 			for(let i = 0; i < loopedTiles.length; i++)
 				this.repairOzoneAt(loopedTiles[i].x, loopedTiles[i].y);
 
+			for(let i = 0; i < WORLD_WIDTH; i++)
+				for(let j = 0; j < WORLD_HEIGHT; j++)
+				{
+					let tile = this.getTileWrapped(i, j);
+					if (tile.trail)
+					{
+						tile.ozone = 1;
+					}
+				}
+
 			this.clearTrail();
 		}
 	}
