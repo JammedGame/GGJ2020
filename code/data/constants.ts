@@ -35,7 +35,7 @@ const MAPS =
     SPECULAR: '../../resources/specular.jpg'
 }
 const GLOBE_SCALE = 1.0;
-const PLAYER_SCALE = 0.05;
+const PLAYER_SCALE = 0.02;
 const OZONE_SCALE: number = 1.05;
 const PLAYER_Z_POSITION: number = 1.12;
 

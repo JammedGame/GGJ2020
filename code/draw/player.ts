@@ -29,12 +29,17 @@ class Player
         this._zoom = false;
         this._moveCooldown = 0;
         this._position = new Three.Vector2(WORLD_WIDTH / 2, WORLD_HEIGHT / 2);
-        this._material = new Three.MeshBasicMaterial({ color: 0xeecccc });
+        this._material = new Three.MeshBasicMaterial({
+            color: 0xeecccc,
+            transparent: true,
+            depthTest: false
+        });
         this._geometry = new Three.BoxGeometry(PLAYER_SCALE, PLAYER_SCALE);
         this._mesh = new Three.Mesh(this._geometry, this._material);
         this._mesh.rotateZ((45 / 180) * Math.PI);
         this._mesh.position.z = PLAYER_Z_POSITION;
         this._mesh.name = 'Player';
+        this._mesh.renderOrder = 1000;
     }
     public hookCamera(camera: Camera) : void
     {
@@ -143,12 +148,14 @@ class Player
         if(Settings.zoom)
         {
             this._speed = 16;
-            this._camera.instance.position.z = 1.5;
+            this._mesh.position.z = 0.7;
+            this._camera.instance.position.z = 1.8;
             Log.message('Zoom in', 'Zoom');
         }
         else
         {
             this._speed = 4;
+            this._mesh.position.z = PLAYER_Z_POSITION;
             this._camera.instance.position.z = 2.2;
             Log.message('Zoom out', 'Zoom');
         }
