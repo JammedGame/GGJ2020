@@ -25,7 +25,7 @@ class Player
     public get position(): Three.Vector2 { return this._position; }
     public constructor()
     {
-        this._speed = 20;
+        this._speed = 4;
         this._zoom = false;
         this._moveCooldown = 0;
         this._position = new Three.Vector2(WORLD_WIDTH / 2, WORLD_HEIGHT / 2);
