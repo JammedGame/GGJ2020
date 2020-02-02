@@ -51,12 +51,13 @@ class Omozon
     {
         let quad_start = this._geometry.vertices.length;
 
+        let factor = 0.48;
         this._geometry.vertices.push
         (
-            spherical2Cartesion(x - this._quad_size_x * 0.5, y + this._quad_size_y * 0.5, OZONE_SCALE),
-            spherical2Cartesion(x + this._quad_size_x * 0.5, y + this._quad_size_y * 0.5, OZONE_SCALE),
-            spherical2Cartesion(x + this._quad_size_x * 0.5, y - this._quad_size_y * 0.5, OZONE_SCALE),
-            spherical2Cartesion(x - this._quad_size_x * 0.5, y - this._quad_size_y * 0.5, OZONE_SCALE),
+            spherical2Cartesion(x - this._quad_size_x * factor, y + this._quad_size_y * factor, OZONE_SCALE),
+            spherical2Cartesion(x + this._quad_size_x * factor, y + this._quad_size_y * factor, OZONE_SCALE),
+            spherical2Cartesion(x + this._quad_size_x * factor, y - this._quad_size_y * factor, OZONE_SCALE),
+            spherical2Cartesion(x - this._quad_size_x * factor, y - this._quad_size_y * factor, OZONE_SCALE),
         );
 
         this._geometry.faces.push
@@ -77,7 +78,7 @@ class Omozon
                 let index = x + y * WORLD_WIDTH;
                 let alpha = ozone * 0.6;
                 let color = trail
-                    ? new Three.Color(alpha, 1, 0.2)
+                    ? new Three.Color(alpha, 0.8, 0.2)
                     : new Three.Color(alpha, 1, 1);
 
                 this._geometry.faces[index * 2 + 0].color = color;
