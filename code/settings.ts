@@ -18,6 +18,6 @@ class Settings
         pause: ' ',
 		debug_globe: 'o',
         debug_tilemap: 't',
-        reset_game: 'r',
+        reset_game: 'escape',
     }
 }

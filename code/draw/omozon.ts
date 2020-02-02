@@ -82,7 +82,7 @@ class Omozon
                 let color = (trail || glow)
                     ? (trail
                         ? new Three.Color(alpha, 0.8, 0.2)
-                        : new Three.Color(alpha, 1, 0.9))
+                        : new Three.Color(alpha, 1, 0.75))
                     : new Three.Color(alpha, 1, 1);
 
                 if (ozone <= OZONE_THRESHOLD)

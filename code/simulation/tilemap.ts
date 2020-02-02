@@ -94,7 +94,7 @@ class Tilemap {
 	repairOzoneAt(x: number, y: number): void
 	{
 		this.matrix[x][y].ozone = 1;
-		this.matrix[x][y].ozoneRepairGlow = 30; // in frames
+		this.matrix[x][y].ozoneRepairGlow = 15; // in frames
 	}
 
 	setTrailAt(x: number, y: number, value: boolean): void
