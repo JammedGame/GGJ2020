@@ -4,20 +4,11 @@ import { Scene } from "./scene";
 import { Camera } from "./camera";
 import { CANVAS_PARENT, MENU_DIV } from "../data/constants";
 import { Settings } from "../settings";
-import { Howl, Howler } from 'howler';
+import { GameSound } from '../data/sound';
+import { audioMenuBackground, audioButton, audioInGameBackgtound } from '../data/sound'
 
-const audioMenuBackground = new Howl({
-	src: ['resources/MenuBackground.mp3'],
-	loop: true
-});
-const audioInGameBackgtound = new Howl({
-	src: ['resources/InGameBackgtound.mp3'],
-	loop: true,
-	volume: 0.3
-});
-const audioButton = new Howl({
-	src: ['resources/Button.wav'],
-});  
+
+const gameSound = GameSound.getInstance();
 
 class Menu extends Scene
 {
@@ -52,7 +43,6 @@ class Menu extends Scene
 		this._tutorialDiv.style.display = "none";
 		this._creditsDiv.style.display = "none";
 		Settings.menuClick = this.onClick.bind(this);
-		audioMenuBackground.play();
     }
 
     public update()
@@ -75,9 +65,21 @@ class Menu extends Scene
 				Settings.inMenu = false;
 				this.toggleShown(false);
 				audioMenuBackground.stop();
-				audioButton.play();
-				audioInGameBackgtound.play();
-				break;	
+	
+				if(!gameSound.isMutedMusic) {
+					audioInGameBackgtound.play();
+				}
+				
+				if(!gameSound.isMutedSfx) {
+					audioButton.play();
+				}
+				break;
+			case 'menu-sfx-toggle':
+				gameSound.toggleSfx();
+				break;
+			case 'menu-music-toggle':
+				gameSound.toggleMusic();
+				break;
 			case 'cover-div':
 				this._coverDiv.style.display = "none";
 				this._story1Div.style.display = "block";
