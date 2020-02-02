@@ -54,8 +54,8 @@ const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
 const POLLUTION_SPREAD_RATE: number = 0.0005;
 const OZONE_HOLE_DIFFUSE_SPREAD_RATE: number = 0.00008;
 const OZONE_DAMAGE_RATE: number = 0.00001;
-const EARTH_SCORCH_RATE: number = 0.01;
-const EARTH_HEAL_RATE: number = 0.005;
+const EARTH_SCORCH_RATE: number = 1;
+const EARTH_HEAL_RATE: number = 1;
 
 const CANVAS_PARENT: string = 'canvas-parent';
 const MENU_DIV: string = 'menu-div';
