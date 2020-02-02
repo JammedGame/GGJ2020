@@ -5,7 +5,7 @@ import { PLAYER_SCALE, WORLD_WIDTH, PLAYER_ART,
     WORLD_HEIGHT, PLAYER_Z_POSITION, WORLD_POLE_HEIGHT } from '../data/constants';
 import { Camera } from './camera';
 import { MovementDirection } from '../input';
-import { Tilemap } from '../logic/tilemap';
+import { Tilemap } from '../simulation/tilemap';
 import { Settings } from '../settings';
 import { Log } from '../util/log';
 
