@@ -17,7 +17,8 @@ export {    DEFAULT_FOV,
             PLAYER_Z_POSITION,
 			PLAYER_ART,
 			CANVAS_PARENT,
-			MENU_DIV,
+            MENU_DIV,
+            OZONE_THRESHOLD
 }
 const DEFAULT_FOV = 45;
 const RESOLUTION =
@@ -41,6 +42,7 @@ const PLAYER_ART = '../../resources/satelite.png';
 const GLOBE_SCALE = 1.0;
 const PLAYER_SCALE = 0.02;
 const OZONE_SCALE: number = 1.05;
+const OZONE_THRESHOLD: number = 0.1;
 const PLAYER_Z_POSITION: number = 1.12;
 
 const WORLD_WIDTH: number = 120;

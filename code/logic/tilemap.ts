@@ -7,7 +7,8 @@ import {
 	POLLUTION_SPREAD_RATE,
 	OZONE_DAMAGE_RATE,
 	EARTH_SCORCH_RATE,
-	EARTH_HEAL_RATE
+	EARTH_HEAL_RATE,
+	OZONE_THRESHOLD
 } from "../data/constants";
 import { Vector2 } from "three";
 
@@ -278,7 +279,7 @@ class Tilemap {
 
 				let tile: Tile = this.matrix[x][y];
 				tile.ozone -= tile.pollution * OZONE_DAMAGE_RATE;
-				if (tile.ozone < 0) tile.ozone = 0;
+				if (tile.ozone < OZONE_THRESHOLD) tile.ozone = 0;
 			}
 		}
 
