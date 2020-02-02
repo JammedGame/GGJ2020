@@ -36,14 +36,14 @@ const MAPS =
 const GLOBE_SCALE = 1.0;
 const GLOBE_PRECISION = 36;
 const PLAYER_SCALE = 0.05;
+const OZONE_SCALE: number = 1.1;
 
 const WORLD_WIDTH: number = 72;
 const WORLD_HEIGHT: number = 36;
 
 const WIND_INTERPOLATION_GRADIENT: number = 0.5;
 const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
-const OZONE_SCALE: number = 1.1;
 const POLLUTION_SPREAD_RATE: number = 0.1;
-const OZONE_DAMAGE_RATE: number = 0.02;
+const OZONE_DAMAGE_RATE: number = 0.002;
 const EARTH_SCORCH_RATE: number = 0.01;
 const EARTH_HEAL_RATE: number = 0.005;
