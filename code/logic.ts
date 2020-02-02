@@ -43,9 +43,12 @@ class GameLogic
 		// 	this._tilemap.setPollutionAt(cityLocationPlanar[0], cityLocationPlanar[1], cityPollution);
 		// }
 		let london = convertCoordinatesGeographicToPlanar(0, 51.5);
-		let equator = convertCoordinatesGeographicToPlanar(0, 0);
-        this._tilemap.setPollutionAt(london[0], london[1], 300);
-        this._tilemap.setPollutionAt(equator[0], equator[1], 300);
+		this._tilemap.setPollutionAt(london[0], london[1], 300);
+		// this._tilemap.setWindAt(london[0], london[1], 1, 1);
+		let belgrade = convertCoordinatesGeographicToPlanar(20, 44);
+		this._tilemap.setPollutionAt(belgrade[0], belgrade[1], 300);
+		// let equator = convertCoordinatesGeographicToPlanar(0, 0);
+        // this._tilemap.setPollutionAt(equator[0], equator[1], 300);
         this._tilemap.interpolateWind();
         Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
         console.log(this._apiData.allCities);
