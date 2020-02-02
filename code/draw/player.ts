@@ -1,7 +1,8 @@
 export { Player }
 
 import * as Three from 'three';
-import { PLAYER_SCALE, GLOBE_PRECISION, PLAYER_Z_POSITION } from '../data/constants';
+import { PLAYER_SCALE, WORLD_WIDTH, 
+    WORLD_HEIGHT, PLAYER_Z_POSITION } from '../data/constants';
 import { Camera } from './camera';
 import { MovementDirection } from '../input';
 
@@ -21,7 +22,7 @@ class Player
     public constructor()
     {
         this._moveCooldown = 0;
-        this._position = new Three.Vector2(36, 28);
+        this._position = new Three.Vector2(WORLD_WIDTH / 2, WORLD_HEIGHT / 2);
         this._material = new Three.MeshBasicMaterial({ color: 0xeecccc });
         this._geometry = new Three.BoxGeometry(PLAYER_SCALE, PLAYER_SCALE);
         this._mesh = new Three.Mesh(this._geometry, this._material);
@@ -65,7 +66,7 @@ class Player
         if(direction == MovementDirection.none) return;
         if(direction == MovementDirection.up)
         {
-            if(this._position.y < GLOBE_PRECISION / 2 - 1)
+            if(this._position.y < WORLD_HEIGHT - 1)
             {
                 this._position.y++;
                 this._yEaseFactor = -1;
@@ -81,7 +82,7 @@ class Player
         }
         else if(direction == MovementDirection.left)
         {
-            if(this._position.x < GLOBE_PRECISION - 1)
+            if(this._position.x < WORLD_WIDTH - 1)
             {
                 this._position.x++;
             }
@@ -99,29 +100,30 @@ class Player
             }
             else
             {
-                this._position.x = GLOBE_PRECISION - 1;
+                this._position.x = WORLD_WIDTH - 1;
             }
             this._xEaseFactor = 1;
         }
         this._moveCooldown = DEBOUNCE;
         this.updatePosition(this._position);
     }
-    private updatePosition(playerPos: Three.Vector2) : void
+    public updatePosition(playerPos: Three.Vector2) : void
     {
         let radf = Math.PI / 180;
-        let angleFactor = 180 / (GLOBE_PRECISION / 2);
+        let xAngleFactor = 180 / (WORLD_WIDTH / 2);
+        let yAngleFactor = 180 / WORLD_HEIGHT;
         let x: number = playerPos.x;
-        let wx: number = GLOBE_PRECISION / 2 - 1;
+        let wx: number = WORLD_WIDTH  / 2 - 1;
         let kx: number = (x > wx) ? (wx - x) : -(x - wx);
-        kx += GLOBE_PRECISION / 4;
-        kx = kx % GLOBE_PRECISION;
+        kx += WORLD_WIDTH  / 4;
+        kx = kx % WORLD_WIDTH ;
         kx -= this._xEaseFactor;
-        let rx: number = (kx + 0.5) * angleFactor;
+        let rx: number = (kx + 0.5) * xAngleFactor;
         let y: number = playerPos.y;
-        let wy: number = (GLOBE_PRECISION / 2) / 2 - 1;
+        let wy: number = WORLD_HEIGHT / 2 - 1;
         let ky: number = (y > wy) ? (wy - y) : -(y - wy);
         ky -= this._yEaseFactor;
-        let ry: number = (ky + 0.5) * angleFactor;
+        let ry: number = (ky + 0.5) * yAngleFactor;
         let euler = new Three.Euler(ry * radf, rx * radf, 0, 'YXZ');
         this._camera.pivot.setRotationFromEuler(euler);
     }

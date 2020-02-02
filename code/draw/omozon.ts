@@ -1,7 +1,7 @@
 export { Omozon }
 
 import * as Three from 'three';
-import { OZONE_SCALE, GLOBE_PRECISION, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '../data/constants';
+import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '../data/constants';
 import { Settings } from '../settings';
 import THREE = require('three');
 import { Colors } from 'three';
