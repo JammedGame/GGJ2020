@@ -34,12 +34,12 @@ const CLIPPING =
 }
 const MAPS =
 {
-    COLOR: '../../resources/earthAlt.jpg',
-    NORMAL: '../../resources/normal.jpg',
-    BUMP: '../../resources/bump.jpg',
-    SPECULAR: '../../resources/specular.jpg'
+    COLOR: 'resources/earthAlt.jpg',
+    NORMAL: 'resources/normal.jpg',
+    BUMP: 'resources/bump.jpg',
+    SPECULAR: 'resources/specular.jpg'
 }
-const PLAYER_ART = '../../resources/satelite.png';
+const PLAYER_ART = 'resources/satelite.png';
 const GLOBE_SCALE = 1.0;
 const PLAYER_SCALE = 0.02;
 const OZONE_SCALE: number = 1.05;

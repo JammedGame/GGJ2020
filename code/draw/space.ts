@@ -12,7 +12,7 @@ class Space
     {
         this._material = new Three.MeshBasicMaterial({
             color: 0x888888,
-            map: new Three.TextureLoader().load('../../resources/space.png'),
+            map: new Three.TextureLoader().load('resources/space.png'),
         });
         this._geometry = new Three.BoxGeometry(8.9, 5);
         this._mesh = new Three.Mesh(this._geometry, this._material);

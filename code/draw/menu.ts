@@ -7,16 +7,16 @@ import { Settings } from "../settings";
 import { Howl, Howler } from 'howler';
 
 const audioMenuBackground = new Howl({
-	src: ['./resources/MenuBackground.mp3'],
+	src: ['resources/MenuBackground.mp3'],
 	loop: true
 });
 const audioInGameBackgtound = new Howl({
-	src: ['./resources/InGameBackgtound.mp3'],
+	src: ['resources/InGameBackgtound.mp3'],
 	loop: true,
 	volume: 0.3
 });
 const audioButton = new Howl({
-	src: ['./resources/Button.wav'],
+	src: ['resources/Button.wav'],
 });  
 
 class Menu extends Scene
