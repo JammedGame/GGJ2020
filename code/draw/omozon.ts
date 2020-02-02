@@ -74,7 +74,7 @@ class Omozon
             {
                 let ozone : number = tileMap.getOzoneAt(x, y);
                 let index = x + y * WORLD_WIDTH;
-                let alpha = ozone * 0.5;
+                let alpha = ozone * 0.6;
 
                 this._geometry.faces[index * 2 + 0].color = new Three.Color(alpha, alpha, alpha);
                 this._geometry.faces[index * 2 + 1].color = new Three.Color(alpha, alpha, alpha);
@@ -102,7 +102,7 @@ class Omozon
       varying vec3 vColor;
 
       void main() {
-        gl_FragColor = vec4(1, 1, 1, vColor.r);
+        gl_FragColor = vec4(1, 0.9, 0.9, vColor.r);
       }
     `
     }

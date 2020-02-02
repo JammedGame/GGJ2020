@@ -37,7 +37,7 @@ const MAPS =
 const GLOBE_SCALE = 1.0;
 const GLOBE_PRECISION = 72;
 const PLAYER_SCALE = 0.05;
-const OZONE_SCALE: number = 1.1;
+const OZONE_SCALE: number = 1.05;
 const PLAYER_Z_POSITION: number = 1.12;
 
 const WORLD_WIDTH: number = 72;
