@@ -15,6 +15,7 @@ import * as Three from 'three';
 
 class GameLogic
 {
+    private _zoom: boolean;
     private _input: Input;
 	private _menu: Menu;
 	private _world: World;
@@ -23,6 +24,7 @@ class GameLogic
     private _apiData: Api;
     public constructor()
     {
+        this._zoom = false;
         this._input = new Input();
         this._renderer = new Renderer(CANVAS_PARENT);
 
@@ -67,11 +69,17 @@ class GameLogic
 			// render menu
 		} else if(!Settings.pause)
         {
+            
 			if (this._renderer.isActiveScene(this._menu)) {
 				this._renderer.setActiveScene(this._world);
 			}
 
             this._tilemap.simulate();
+
+            if(this._zoom != Settings.zoom) {
+                this._zoom = Settings.zoom;
+                this._tilemap.clearTrail();
+            }
             
             this._world.omozon.update(this._tilemap);
             this._world.player.move(this._input.direction);
