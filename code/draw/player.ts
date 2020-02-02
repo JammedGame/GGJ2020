@@ -49,6 +49,8 @@ class Player
     }
     public update() : void
     {
+        this._geometry.rotateZ(0.01*this._speed/4);
+
         if(Settings.zoom != this._zoom && this._zoomEaseFactor == 0)
         {
             this._zoom = Settings.zoom;
