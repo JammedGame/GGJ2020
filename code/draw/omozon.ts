@@ -5,7 +5,7 @@ import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT, WORLD_POLE_HEIGHT } from 
 import { Settings } from '../settings';
 import THREE = require('three');
 import { Colors, Color } from 'three';
-import { Tilemap } from '../logic/tilemap';
+import { Tilemap } from '../simulation/tilemap';
 
 class Omozon
 {
