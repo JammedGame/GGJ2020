@@ -89,7 +89,7 @@ class GameLogic
             this._world.update();
             if(Settings.zoom)
             {
-                this._tilemap.setTrailAt(WORLD_WIDTH - this._world.player.position.x,
+                this._tilemap.setTrailAt(WORLD_WIDTH - this._world.player.position.x - 1,
                     this._world.player.position.y, true);
             }
         }
