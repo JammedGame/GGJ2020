@@ -121,7 +121,6 @@ class Tilemap {
 	};
 
 	checkIfTrailsFormLoop() : void {
-		let escapedTiles : Tile[] = [];
 		let hotEscapedTiles : Tile[] = [];
 
 		for(let i = 0; i < WORLD_WIDTH; i++)
@@ -144,8 +143,6 @@ class Tilemap {
 
 			if (!hasTrail)
 			{
-				escapedTiles.push(tile);
-
 				let leftTile = this.getTileWrapped(tile.x - 1, tile.y);
 				let leftUpTile = this.getTileWrapped(tile.x - 1, tile.y + 1);
 				let rightTile = this.getTileWrapped(tile.x + 1, tile.y);
@@ -171,7 +168,7 @@ class Tilemap {
 			for(let j = 0; j < WORLD_HEIGHT; j++)
 			{
 				let tile = this.getTileWrapped(i, j);
-				if (!tile.trail && escapedTiles.indexOf(tile) == -1)
+				if (!tile.trail && !tile.visited)
 				{
 					loopedTiles.push(new Vector2(i, j));
 				}
