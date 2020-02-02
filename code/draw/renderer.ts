@@ -24,8 +24,12 @@ class Renderer
     }
     public setActiveScene(scene: Scene) : void
     {
-        this._scene = scene;
-    }
+		this._scene = scene;
+		this._canvasParent.style.display = scene.hideRenderer() ? 'none' : 'block';
+	}
+	public isActiveScene(scene: Scene) : boolean {
+		return this._scene === scene;
+	}
     public start() : void
     {
         if(!this._scene)
