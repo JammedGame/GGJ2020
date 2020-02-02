@@ -1,5 +1,6 @@
 import axios from 'axios';
 import citiesTest from './CitiesApiReqTest.json';
+import scrapedData from './ScrapedData.json';
 import { Log } from '../util/log';
 
 class Api {
@@ -7,7 +8,7 @@ class Api {
     private _allCities:any[] = [];
 
     private _apiKeys:String[] = [
-        '3fb98c43-56ef-4779-8e91-31b74f07dacd',
+        '69c53d22-d5dd-415c-9dde-c20f9729cc66',//'3fb98c43-56ef-4779-8e91-31b74f07dacd',
         'ba24528d-1e9b-48ed-94ee-28157ef29af7',//'69c53d22-d5dd-415c-9dde-c20f9729cc66',
         'ca950887-5086-4f54-a7ec-d8fdb73b6f4b',
         '17b8dc77-8b78-4957-a2cf-4c93abb88c0b',
@@ -62,6 +63,10 @@ class Api {
             } 
             apiKeyCounter++;
         });
+    }
+
+    setScrapedData() {
+        this._allCities = scrapedData;
     }
    
 }

@@ -1,0 +1,3062 @@
+[
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Wellington",
+                "state": "Wellington",
+                "country": "New Zealand",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        174.77557,
+                        -41.28664
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 19,
+                        "pr": 1010,
+                        "hu": 72,
+                        "ws": 5.1,
+                        "wd": 180,
+                        "ic": "04d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 38,
+                        "mainus": "p2",
+                        "aqicn": 13,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Wellington&state=Wellington&country=New Zealand&key=69c53d22-d5dd-415c-9dde-c20f9729cc66",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Vladivostok",
+                "state": "Primorskiy",
+                "country": "Russia",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        131.91496143,
+                        43.11524722
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": -11,
+                        "pr": 1020,
+                        "hu": 66,
+                        "ws": 6,
+                        "wd": 360,
+                        "ic": "02n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T22:00:00.000Z",
+                        "aqius": 41,
+                        "mainus": "p2",
+                        "aqicn": 14,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Vladivostok&state=Primorskiy&country=Russia&key=69c53d22-d5dd-415c-9dde-c20f9729cc66",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Zurich",
+                "state": "Zurich",
+                "country": "Switzerland",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        8.55,
+                        47.36667
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 3,
+                        "pr": 1020,
+                        "hu": 75,
+                        "ws": 2.6,
+                        "wd": 250,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T22:00:00.000Z",
+                        "aqius": 24,
+                        "mainus": "o3",
+                        "aqicn": 19,
+                        "maincn": "o3"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Zurich&state=Zurich&country=Switzerland&key=69c53d22-d5dd-415c-9dde-c20f9729cc66",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Veracruz",
+                "state": "Veracruz",
+                "country": "Mexico",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -96.1429,
+                        19.18095
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 25,
+                        "pr": 1016,
+                        "hu": 65,
+                        "ws": 7.7,
+                        "wd": 350,
+                        "ic": "03d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 25,
+                        "mainus": "p2",
+                        "aqicn": 9,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Veracruz&state=Veracruz&country=Mexico&key=69c53d22-d5dd-415c-9dde-c20f9729cc66",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Tokyo",
+                "state": "Tokyo",
+                "country": "Japan",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        139.69171,
+                        35.6895
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 6,
+                        "pr": 999,
+                        "hu": 66,
+                        "ws": 1,
+                        "wd": 0,
+                        "ic": "02n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 17,
+                        "mainus": "p2",
+                        "aqicn": 11,
+                        "maincn": "n2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Tokyo&state=Tokyo&country=Japan&key=ba24528d-1e9b-48ed-94ee-28157ef29af7",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Warsaw",
+                "state": "Mazovia",
+                "country": "Poland",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        20.9605,
+                        52.2816
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 2,
+                        "pr": 1001,
+                        "hu": 86,
+                        "ws": 3.6,
+                        "wd": 250,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 43,
+                        "mainus": "p2",
+                        "aqicn": 15,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Warsaw&state=Mazovia&country=Poland&key=69c53d22-d5dd-415c-9dde-c20f9729cc66",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Sydney",
+                "state": "New South Wales",
+                "country": "Australia",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        151.185934,
+                        -33.886374
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 20,
+                        "pr": 1017,
+                        "hu": 78,
+                        "ws": 0.96,
+                        "wd": 283,
+                        "ic": "04d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 80,
+                        "mainus": "p2",
+                        "aqicn": 40,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Sydney&state=New South Wales&country=Australia&key=ba24528d-1e9b-48ed-94ee-28157ef29af7",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Yangon",
+                "state": "Yangon",
+                "country": "Myanmar",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        96.15611,
+                        16.80528
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 18,
+                        "pr": 1011,
+                        "hu": 93,
+                        "ws": 1,
+                        "wd": 300,
+                        "ic": "50n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 155,
+                        "mainus": "p2",
+                        "aqicn": 86,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Yangon&state=Yangon&country=Myanmar&key=ca950887-5086-4f54-a7ec-d8fdb73b6f4b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Singapore",
+                "state": "Singapore",
+                "country": "Singapore",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        103.83350372,
+                        1.3669815
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 23,
+                        "pr": 1011,
+                        "hu": 94,
+                        "ws": 1.5,
+                        "wd": 330,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 67,
+                        "mainus": "p2",
+                        "aqicn": 30,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Singapore&state=Singapore&country=Singapore&key=ca950887-5086-4f54-a7ec-d8fdb73b6f4b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Oslo",
+                "state": "Oslo",
+                "country": "Norway",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        10.683366,
+                        59.9374561
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 0,
+                        "pr": 991,
+                        "hu": 97,
+                        "ws": 0.79,
+                        "wd": 286,
+                        "ic": "50n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 22,
+                        "mainus": "p2",
+                        "aqicn": 10,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Oslo&state=Oslo&country=Norway&key=17b8dc77-8b78-4957-a2cf-4c93abb88c0b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Perth",
+                "state": "Western Australia",
+                "country": "Australia",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        115.8614,
+                        -31.95224
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 19,
+                        "pr": 1007,
+                        "hu": 72,
+                        "ws": 9.3,
+                        "wd": 240,
+                        "ic": "09d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 13,
+                        "mainus": "p2",
+                        "aqicn": 4,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Perth&state=Western Australia&country=Australia&key=17b8dc77-8b78-4957-a2cf-4c93abb88c0b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Santiago",
+                "state": "Santiago Metropolitan",
+                "country": "Chile",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -70.72019259999999,
+                        -33.4242189
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 29,
+                        "pr": 1013,
+                        "hu": 32,
+                        "ws": 6.2,
+                        "wd": 210,
+                        "ic": "02d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 32,
+                        "mainus": "o3",
+                        "aqicn": 24,
+                        "maincn": "o3"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Santiago&state=Santiago Metropolitan&country=Chile&key=ca950887-5086-4f54-a7ec-d8fdb73b6f4b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Vienna",
+                "state": "Vienna",
+                "country": "Austria",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        16.43455,
+                        48.20306
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 2,
+                        "pr": 1012,
+                        "hu": 90,
+                        "ws": 4.6,
+                        "wd": 280,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T22:00:00.000Z",
+                        "aqius": 28,
+                        "mainus": "o3",
+                        "aqicn": 21,
+                        "maincn": "o3"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Vienna&state=Vienna&country=Austria&key=69c53d22-d5dd-415c-9dde-c20f9729cc66",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Nanjing",
+                "state": "Jiangsu",
+                "country": "China",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        118.9207246044,
+                        32.0926314474
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 2,
+                        "pr": 1023,
+                        "hu": 74,
+                        "ws": 2,
+                        "wd": 310,
+                        "ic": "50n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 59,
+                        "mainus": "p2",
+                        "aqicn": 23,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Nanjing&state=Jiangsu&country=China&key=57c443f5-6513-4d6c-b904-bf005211e22d",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Beijing",
+                "state": "Beijing",
+                "country": "China",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        116.462153,
+                        39.941674
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": -4,
+                        "pr": 1026,
+                        "hu": 85,
+                        "ws": 1,
+                        "wd": 0,
+                        "ic": "01n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 121,
+                        "mainus": "p2",
+                        "aqicn": 61,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Beijing&state=Beijing&country=China&key=5da54936-8643-4f72-9bfa-40457b8f04f9",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Berlin",
+                "state": "Berlin",
+                "country": "Germany",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        13.31825,
+                        52.463611
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 4,
+                        "pr": 1008,
+                        "hu": 86,
+                        "ws": 6.2,
+                        "wd": 270,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 22,
+                        "mainus": "o3",
+                        "aqicn": 17,
+                        "maincn": "o3"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Berlin&state=Berlin&country=Germany&key=5da54936-8643-4f72-9bfa-40457b8f04f9",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Adelaide",
+                "state": "South Australia",
+                "country": "Australia",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        138.5832,
+                        -34.9256
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 25,
+                        "pr": 1008,
+                        "hu": 13,
+                        "ws": 4.6,
+                        "wd": 30,
+                        "ic": "01d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 17,
+                        "mainus": "p2",
+                        "aqicn": 14,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Adelaide&state=South Australia&country=Australia&key=57c443f5-6513-4d6c-b904-bf005211e22d",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Kyiv",
+                "state": "Kyiv",
+                "country": "Ukraine",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        30.5913925,
+                        50.4916301
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 0,
+                        "pr": 998,
+                        "hu": 100,
+                        "ws": 6,
+                        "wd": 280,
+                        "ic": "10n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 71,
+                        "mainus": "p2",
+                        "aqicn": 31,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Kyiv&state=Kyiv&country=Ukraine&key=57c443f5-6513-4d6c-b904-bf005211e22d",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Budapest",
+                "state": "Central Hungary",
+                "country": "Hungary",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        19.0527,
+                        47.4985
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 2,
+                        "pr": 1012,
+                        "hu": 87,
+                        "ws": 2.1,
+                        "wd": 310,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 55,
+                        "mainus": "p2",
+                        "aqicn": 22,
+                        "maincn": "n2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Budapest&state=Central Hungary&country=Hungary&key=875e433f-0d3b-4145-bc0f-256573e0affd",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Brussels",
+                "state": "Brussels Capital",
+                "country": "Belgium",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        4.38296325223672,
+                        50.8835598135965
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 5,
+                        "pr": 1013,
+                        "hu": 81,
+                        "ws": 6.2,
+                        "wd": 230,
+                        "ic": "02n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 41,
+                        "mainus": "p2",
+                        "aqicn": 25,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Brussels&state=Brussels Capital&country=Belgium&key=875e433f-0d3b-4145-bc0f-256573e0affd",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Cairo",
+                "state": "Cairo",
+                "country": "Egypt",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        31.24967,
+                        30.06263
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 16,
+                        "pr": 1024,
+                        "hu": 63,
+                        "ws": 4.6,
+                        "wd": 340,
+                        "ic": "02n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 46,
+                        "mainus": "p2",
+                        "aqicn": 16,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Cairo&state=Cairo&country=Egypt&key=875e433f-0d3b-4145-bc0f-256573e0affd",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Dublin",
+                "state": "Leinster",
+                "country": "Ireland",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -6.24889,
+                        53.333059999999996
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 8,
+                        "pr": 1004,
+                        "hu": 87,
+                        "ws": 5.1,
+                        "wd": 230,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 4,
+                        "mainus": "n2",
+                        "aqicn": 13,
+                        "maincn": "n2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Dublin&state=Leinster&country=Ireland&key=fc3927c3-b55e-437e-8dc0-32317e5da4c2",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Oslo",
+                "state": "Oslo",
+                "country": "Norway",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        10.683366,
+                        59.9374561
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 0,
+                        "pr": 991,
+                        "hu": 97,
+                        "ws": 0.79,
+                        "wd": 286,
+                        "ic": "50n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 22,
+                        "mainus": "p2",
+                        "aqicn": 10,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Oslo&state=Oslo&country=Norway&key=24b8ddbd-ecc7-4959-986b-db664c5f7aec",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Darwin",
+                "state": "Northern Territory",
+                "country": "Australia",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        130.84185,
+                        -12.46113
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 29,
+                        "pr": 1004,
+                        "hu": 83,
+                        "ws": 7.7,
+                        "wd": 310,
+                        "ic": "03d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T22:00:00.000Z",
+                        "aqius": 11,
+                        "mainus": "p1",
+                        "aqicn": 12,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Darwin&state=Northern Territory&country=Australia&key=fc3927c3-b55e-437e-8dc0-32317e5da4c2",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Lisbon",
+                "state": "Lisbon",
+                "country": "Portugal",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -9.131168,
+                        38.721676
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 13,
+                        "pr": 1025,
+                        "hu": 93,
+                        "ws": 4.6,
+                        "wd": 190,
+                        "ic": "03n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 91,
+                        "mainus": "p2",
+                        "aqicn": 44,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Lisbon&state=Lisbon&country=Portugal&key=e95587f1-6edc-40e0-8d66-060f59b0dcfb",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Cochabamba",
+                "state": "Cochabamba",
+                "country": "Bolivia",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -66.205882,
+                        -17.388055
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 24,
+                        "pr": 1019,
+                        "hu": 38,
+                        "ws": 2.6,
+                        "wd": 60,
+                        "ic": "04d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T22:00:00.000Z",
+                        "aqius": 46,
+                        "mainus": "p1",
+                        "aqicn": 50,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Cochabamba&state=Cochabamba&country=Bolivia&key=e95587f1-6edc-40e0-8d66-060f59b0dcfb",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Puerto Baquerizo Moreno",
+                "state": "Galapagos",
+                "country": "Ecuador",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -89.6087,
+                        -0.8957
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 29,
+                        "pr": 1009,
+                        "hu": 74,
+                        "ws": 5.7,
+                        "wd": 190,
+                        "ic": "04d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 7,
+                        "mainus": "p2",
+                        "aqicn": 2,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Puerto Baquerizo Moreno&state=Galapagos&country=Ecuador&key=24b8ddbd-ecc7-4959-986b-db664c5f7aec",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Havana",
+                "state": "La Habana",
+                "country": "Cuba",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -82.38304,
+                        23.13302
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 28,
+                        "pr": 1012,
+                        "hu": 58,
+                        "ws": 5.1,
+                        "wd": 200,
+                        "ic": "03d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 29,
+                        "mainus": "p2",
+                        "aqicn": 10,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Havana&state=La Habana&country=Cuba&key=24b8ddbd-ecc7-4959-986b-db664c5f7aec",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Venice",
+                "state": "Veneto",
+                "country": "Italy",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        12.207563,
+                        45.4756216
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 3,
+                        "pr": 1013,
+                        "hu": 100,
+                        "ws": 1.5,
+                        "wd": 30,
+                        "ic": "50n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 89,
+                        "mainus": "p2",
+                        "aqicn": 43,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Venice&state=Veneto&country=Italy&key=ba24528d-1e9b-48ed-94ee-28157ef29af7",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Tehran",
+                "state": "Tehran",
+                "country": "Iran",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        51.499,
+                        35.63
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 3,
+                        "pr": 1018,
+                        "hu": 55,
+                        "ws": 0.94,
+                        "wd": 2,
+                        "ic": "50n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T22:00:00.000Z",
+                        "aqius": 45,
+                        "mainus": "o3",
+                        "aqicn": 63,
+                        "maincn": "n2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Tehran&state=Tehran&country=Iran&key=ba24528d-1e9b-48ed-94ee-28157ef29af7",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Reykjavik",
+                "state": "Capital Region",
+                "country": "Iceland",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -21.89541,
+                        64.13548
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": -5,
+                        "pr": 986,
+                        "hu": 73,
+                        "ws": 3.6,
+                        "wd": 120,
+                        "ic": "01n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 9,
+                        "mainus": "n2",
+                        "aqicn": 28,
+                        "maincn": "n2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Reykjavik&state=Capital Region&country=Iceland&key=ca950887-5086-4f54-a7ec-d8fdb73b6f4b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Osaka",
+                "state": "Osaka",
+                "country": "Japan",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        135.5021651,
+                        34.6937378
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 5,
+                        "pr": 1008,
+                        "hu": 75,
+                        "ws": 7.2,
+                        "wd": 300,
+                        "ic": "03d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 60,
+                        "mainus": "p2",
+                        "aqicn": 23,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Osaka&state=Osaka&country=Japan&key=17b8dc77-8b78-4957-a2cf-4c93abb88c0b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Belgrade",
+                "state": "Central Serbia",
+                "country": "Serbia",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        20.459113,
+                        44.82112
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 0,
+                        "pr": 1015,
+                        "hu": 100,
+                        "ws": 2.1,
+                        "wd": 210,
+                        "ic": "50n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T20:00:00.000Z",
+                        "aqius": 123,
+                        "mainus": "p2",
+                        "aqicn": 62,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Belgrade&state=Central Serbia&country=Serbia&key=5da54936-8643-4f72-9bfa-40457b8f04f9",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Barcelona",
+                "state": "Catalunya",
+                "country": "Spain",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        2.15899,
+                        41.38879
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 9,
+                        "pr": 1022,
+                        "hu": 87,
+                        "ws": 2.1,
+                        "wd": 340,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 18,
+                        "mainus": "p1",
+                        "aqicn": 24,
+                        "maincn": "n2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Barcelona&state=Catalunya&country=Spain&key=5da54936-8643-4f72-9bfa-40457b8f04f9",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "New Delhi",
+                "state": "Delhi",
+                "country": "India",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        77.231,
+                        28.656
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 12,
+                        "pr": 1017,
+                        "hu": 100,
+                        "ws": 2.1,
+                        "wd": 310,
+                        "ic": "50n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 182,
+                        "mainus": "p2",
+                        "aqicn": 151,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=New Delhi&state=Delhi&country=India&key=57c443f5-6513-4d6c-b904-bf005211e22d",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Aberdeen",
+                "state": "Scotland",
+                "country": "United Kingdom",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -2.106472,
+                        57.144555
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 4,
+                        "pr": 991,
+                        "hu": 86,
+                        "ws": 2.6,
+                        "wd": 240,
+                        "ic": "02n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 32,
+                        "mainus": "p2",
+                        "aqicn": 12,
+                        "maincn": "n2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Aberdeen&state=Scotland&country=UK&key=57c443f5-6513-4d6c-b904-bf005211e22d",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Paris",
+                "state": "Ile-de-France",
+                "country": "France",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        2.351666,
+                        48.859425
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 4,
+                        "pr": 1017,
+                        "hu": 81,
+                        "ws": 2.6,
+                        "wd": 180,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 22,
+                        "mainus": "p2",
+                        "aqicn": 17,
+                        "maincn": "o3"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Paris&state=Ile-de-France&country=France&key=17b8dc77-8b78-4957-a2cf-4c93abb88c0b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Bucharest",
+                "state": "Bucuresti",
+                "country": "Romania",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        26.10626,
+                        44.43225
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 3,
+                        "pr": 1009,
+                        "hu": 86,
+                        "ws": 1.12,
+                        "wd": 281,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 26,
+                        "mainus": "p1",
+                        "aqicn": 29,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Bucharest&state=Bucuresti&country=Romania&key=875e433f-0d3b-4145-bc0f-256573e0affd",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Copenhagen",
+                "state": "Capital Region",
+                "country": "Denmark",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        12.553327274871428,
+                        55.69835738152349
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 5,
+                        "pr": 999,
+                        "hu": 86,
+                        "ws": 6.2,
+                        "wd": 250,
+                        "ic": "01n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T22:00:00.000Z",
+                        "aqius": 31,
+                        "mainus": "o3",
+                        "aqicn": 24,
+                        "maincn": "o3"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Copenhagen&state=Capital Region&country=Denmark&key=fc3927c3-b55e-437e-8dc0-32317e5da4c2",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Hamburg",
+                "state": "Hamburg",
+                "country": "Germany",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        9.985195299999999,
+                        53.5327175
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 2,
+                        "pr": 1006,
+                        "hu": 93,
+                        "ws": 5.7,
+                        "wd": 230,
+                        "ic": "03n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 17,
+                        "mainus": "p2",
+                        "aqicn": 6,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Hamburg&state=Hamburg&country=Germany&key=24b8ddbd-ecc7-4959-986b-db664c5f7aec",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Prague",
+                "state": "Praha",
+                "country": "Czech Republic",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        14.411826111111111,
+                        50.042003611111106
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 1,
+                        "pr": 1011,
+                        "hu": 80,
+                        "ws": 8.2,
+                        "wd": 230,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 5,
+                        "mainus": "p2",
+                        "aqicn": 2,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Prague&state=Praha&country=Czech Republic&key=17b8dc77-8b78-4957-a2cf-4c93abb88c0b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Shanghai",
+                "state": "Shanghai",
+                "country": "China",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        121.538305,
+                        31.226833
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 2,
+                        "pr": 1022,
+                        "hu": 74,
+                        "ws": 3,
+                        "wd": 300,
+                        "ic": "01d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 88,
+                        "mainus": "p2",
+                        "aqicn": 43,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Shanghai&state=Shanghai&country=China&key=ca950887-5086-4f54-a7ec-d8fdb73b6f4b",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Stockholm",
+                "state": "Stockholm",
+                "country": "Sweden",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        18.0649,
+                        59.33258000000001
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 2,
+                        "pr": 993,
+                        "hu": 100,
+                        "ws": 1.5,
+                        "wd": 0,
+                        "ic": "03n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 26,
+                        "mainus": "o3",
+                        "aqicn": 20,
+                        "maincn": "o3"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Stockholm&state=Stockholm&country=Sweden&key=ba24528d-1e9b-48ed-94ee-28157ef29af7",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Tromso",
+                "state": "Troms",
+                "country": "Norway",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        18.9672295,
+                        69.6565969
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": -8,
+                        "pr": 1002,
+                        "hu": 67,
+                        "ws": 10.8,
+                        "wd": 160,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 23,
+                        "mainus": "p2",
+                        "aqicn": 8,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Tromso&state=Troms&country=Norway&key=24b8ddbd-ecc7-4959-986b-db664c5f7aec",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Birmingham",
+                "state": "England",
+                "country": "United Kingdom",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -1.829999,
+                        52.437165
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 7,
+                        "pr": 1007,
+                        "hu": 87,
+                        "ws": 4.6,
+                        "wd": 220,
+                        "ic": "03n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T22:00:00.000Z",
+                        "aqius": 31,
+                        "mainus": "p2",
+                        "aqicn": 20,
+                        "maincn": "o3"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Birmingham&state=England&country=UK&key=5da54936-8643-4f72-9bfa-40457b8f04f9",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Djibouti",
+                "state": "Djibouti",
+                "country": "Djibouti",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        43.14503,
+                        11.58901
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 26,
+                        "pr": 1018,
+                        "hu": 74,
+                        "ws": 4.26,
+                        "wd": 105,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T21:00:00.000Z",
+                        "aqius": 53,
+                        "mainus": "p2",
+                        "aqicn": 19,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Djibouti&state=Djibouti&country=Djibouti&key=fc3927c3-b55e-437e-8dc0-32317e5da4c2",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Johannesburg",
+                "state": "Gauteng",
+                "country": "South Africa",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        28.133194,
+                        -26.178611
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 20,
+                        "pr": 1037,
+                        "hu": 33,
+                        "ws": 1.38,
+                        "wd": 303,
+                        "ic": "01n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 98,
+                        "mainus": "p2",
+                        "aqicn": 51,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Johannesburg&state=Gauteng&country=South Africa&key=e95587f1-6edc-40e0-8d66-060f59b0dcfb",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Buenos Aires",
+                "state": "Buenos Aires",
+                "country": "Argentina",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -58.350375,
+                        -34.651446
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 20,
+                        "pr": 1010,
+                        "hu": 78,
+                        "ws": 4.1,
+                        "wd": 170,
+                        "ic": "10d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 1,
+                        "mainus": "n2",
+                        "aqicn": 4,
+                        "maincn": "n2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Buenos Aires&state=Buenos Aires&country=Argentina&key=875e433f-0d3b-4145-bc0f-256573e0affd",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "London",
+                "state": "England",
+                "country": "United Kingdom",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        0.040725,
+                        51.456357
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T23:00:00.000Z",
+                        "tp": 7,
+                        "pr": 1011,
+                        "hu": 76,
+                        "ws": 5.1,
+                        "wd": 240,
+                        "ic": "04n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 30,
+                        "mainus": "p2",
+                        "aqicn": 23,
+                        "maincn": "p1"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=London&state=England&country=UK&key=e95587f1-6edc-40e0-8d66-060f59b0dcfb",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Lima",
+                "state": "Lima",
+                "country": "Peru",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        -76.9689867,
+                        -12.1004219
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 28,
+                        "pr": 1012,
+                        "hu": 61,
+                        "ws": 6.7,
+                        "wd": 180,
+                        "ic": "04d"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 56,
+                        "mainus": "p2",
+                        "aqicn": 21,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Lima&state=Lima&country=Peru&key=e95587f1-6edc-40e0-8d66-060f59b0dcfb",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    },
+    {
+        "data": {
+            "status": "success",
+            "data": {
+                "city": "Durban",
+                "state": "KwaZulu-Natal",
+                "country": "South Africa",
+                "location": {
+                    "type": "Point",
+                    "coordinates": [
+                        30.7850647,
+                        -29.80073039
+                    ]
+                },
+                "current": {
+                    "weather": {
+                        "ts": "2020-01-29T21:00:00.000Z",
+                        "tp": 22,
+                        "pr": 1019,
+                        "hu": 73,
+                        "ws": 5.1,
+                        "wd": 190,
+                        "ic": "10n"
+                    },
+                    "pollution": {
+                        "ts": "2020-02-01T23:00:00.000Z",
+                        "aqius": 12,
+                        "mainus": "p2",
+                        "aqicn": 4,
+                        "maincn": "p2"
+                    }
+                }
+            }
+        },
+        "status": 200,
+        "statusText": "",
+        "headers": {
+            "cache-control": "no-store",
+            "content-type": "application/json",
+            "pragma": "no-cache"
+        },
+        "config": {
+            "url": "https://api.airvisual.com/v2/city?city=Durban&state=KwaZulu-Natal&country=South Africa&key=fc3927c3-b55e-437e-8dc0-32317e5da4c2",
+            "method": "get",
+            "headers": {
+                "Accept": "application/json, text/plain, */*"
+            },
+            "transformRequest": [
+                null
+            ],
+            "transformResponse": [
+                null
+            ],
+            "timeout": 0,
+            "xsrfCookieName": "XSRF-TOKEN",
+            "xsrfHeaderName": "X-XSRF-TOKEN",
+            "maxContentLength": -1
+        },
+        "request": {}
+    }
+]
