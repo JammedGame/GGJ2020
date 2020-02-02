@@ -22,9 +22,11 @@ const audioButton = new Howl({
 class Menu extends Scene
 {
 	private _menuDiv: HTMLDivElement;
-	private _tutorial1Div: HTMLDivElement;
-	private _tutorial2Div: HTMLDivElement;
-	private _tutorial3Div: HTMLDivElement;
+	private _coverDiv: HTMLDivElement;
+	private _story1Div: HTMLDivElement;
+	private _story2Div: HTMLDivElement;
+	private _story3Div: HTMLDivElement;
+	private _tutorialDiv: HTMLDivElement;
 	private _creditsDiv: HTMLDivElement;
     public constructor(camera: Camera)
     {
@@ -34,9 +36,11 @@ class Menu extends Scene
     {
 		// override
 		this._menuDiv = <HTMLDivElement> document.getElementById(MENU_DIV);
-		this._tutorial1Div = this._menuDiv.querySelector('#tutorial-1-div');
-		this._tutorial2Div = this._menuDiv.querySelector('#tutorial-2-div');
-		this._tutorial3Div = this._menuDiv.querySelector('#tutorial-3-div');
+		this._coverDiv = this._menuDiv.querySelector('#cover-div');
+		this._story1Div = this._menuDiv.querySelector('#tutorial-1-div');
+		this._story2Div = this._menuDiv.querySelector('#tutorial-2-div');
+		this._story3Div = this._menuDiv.querySelector('#tutorial-3-div');
+		this._tutorialDiv = this._menuDiv.querySelector('#tutorial-div');
 		this._creditsDiv = this._menuDiv.querySelector('#credits-div');
 		Settings.menuClick = this.onClick.bind(this);
 		audioMenuBackground.play();
@@ -54,9 +58,11 @@ class Menu extends Scene
 	{
 		// override
 		this._menuDiv.style.display = shown ? 'block' : 'none';
-		this._tutorial1Div.style.display = "none";
-		this._tutorial2Div.style.display = "none";
-		this._tutorial3Div.style.display = "none";
+		this._coverDiv.style.display = "block";
+		this._story1Div.style.display = "none";
+		this._story2Div.style.display = "none";
+		this._story3Div.style.display = "none";
+		this._tutorialDiv.style.display = "none";
 		this._creditsDiv.style.display = "none";
 	}
 	private onClick(target: any): void {
@@ -68,20 +74,27 @@ class Menu extends Scene
 				audioMenuBackground.stop();
 				audioButton.play();
 				audioInGameBackgtound.play();
-				break;				
-			case 'menu-tutorial':
-				this._tutorial1Div.style.display = "block";
+				break;	
+			case 'cover-div':
+				this._coverDiv.style.display = "none";
+				this._story1Div.style.display = "block";
 				break;
 			case 'tutorial-1-div':
-				this._tutorial1Div.style.display = "none";
-				this._tutorial2Div.style.display = "block";
+				this._story1Div.style.display = "none";
+				this._story2Div.style.display = "block";
 				break;
 			case 'tutorial-2-div':
-				this._tutorial2Div.style.display = "none";
-				this._tutorial3Div.style.display = "block";
+				this._story2Div.style.display = "none";
+				this._story3Div.style.display = "block";
 				break;
 			case 'tutorial-3-div':
-				this._tutorial3Div.style.display = "none";
+				this._story3Div.style.display = "none";
+				break;			
+			case 'menu-tutorial':
+				this._tutorialDiv.style.display = "block";
+				break;
+			case 'tutorial-div':
+				this._tutorialDiv.style.display = "none";
 				break;
 			case 'menu-credits':
 				this._creditsDiv.style.display = "block";
