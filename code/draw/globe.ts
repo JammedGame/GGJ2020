@@ -1,7 +1,7 @@
 export { Globe }
 
 import * as Three from 'three';
-import { GLOBE_SCALE, GLOBE_PRECISION, MAPS } from '../data/constants';
+import { GLOBE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '../data/constants';
 import { Settings } from '../settings';
 
 class Globe
@@ -25,8 +25,8 @@ class Globe
         this.generateMaterial();
         this._sphereGeometry = new Three.SphereGeometry(
             GLOBE_SCALE,
-            GLOBE_PRECISION,
-            GLOBE_PRECISION / 2
+            WORLD_WIDTH,
+            WORLD_HEIGHT
         );
         
         this._mesh = new Three.Mesh(this._sphereGeometry, this._material);
