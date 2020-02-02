@@ -6,7 +6,8 @@ export {    DEFAULT_FOV,
             GLOBE_PRECISION,
             PLAYER_SCALE,
             WORLD_WIDTH,
-            WORLD_HEIGHT,
+			WORLD_HEIGHT,
+			WORLD_POLE_HEIGHT,
             WIND_INTERPOLATION_GRADIENT,
             WIND_INTERPOLATION_MAX_DISTANCE,
             POLLUTION_SPREAD_RATE,
@@ -42,6 +43,7 @@ const PLAYER_Z_POSITION: number = 1.12;
 
 const WORLD_WIDTH: number = 72;
 const WORLD_HEIGHT: number = 36;
+const WORLD_POLE_HEIGHT: number = 3;
 
 const WIND_INTERPOLATION_GRADIENT: number = 0.5;
 const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
