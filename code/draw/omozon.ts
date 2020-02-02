@@ -22,8 +22,8 @@ class Omozon
             fragmentShader: this.fragmentShader(),
             vertexShader: this.vertexShader(),
             transparent: true,
-            depthWrite: false,
             depthTest: false,
+            side: Three.BackSide,
             vertexColors: Three.FaceColors
         });
 
@@ -44,7 +44,7 @@ class Omozon
         this._geometry.colorsNeedUpdate = true;
         this._mesh = new Three.Mesh(this._geometry, this._material);
         this._mesh.name = 'Omozon';
-        this._mesh.renderOrder = -999;
+        this._mesh.renderOrder = 999;
     }
 
     addQuad(x : number, y : number)

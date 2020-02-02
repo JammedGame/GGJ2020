@@ -26,8 +26,9 @@ class World extends Scene
         this._globe = new Globe();
         this._player = new Player();
         this._omozon = new Omozon();
-        this._scene.add(this._omozon.instance);
+
         this._scene.add(this._globe.instance);
+        this._scene.add(this._omozon.instance);
         this._scene.add(camera.pivot);
         camera.pivot.add(this._sun.instance);
         camera.pivot.add(this._player.instance);
