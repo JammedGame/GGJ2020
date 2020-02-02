@@ -65,6 +65,7 @@ class GameLogic
             this._world.update();
             this._world.omozon.update(this._tilemap);
             this._world.player.move(this._input.direction);
+            this._tilemap.setTrailAt(this._world.player.position.x, this._world.player.position.y, true);
         }
         requestAnimationFrame(this.update.bind(this));
     }

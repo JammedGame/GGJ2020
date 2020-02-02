@@ -164,7 +164,7 @@ class Tilemap {
 				return windiestTile;
 			}
 		}
-		
+
 		return null;
 	}
 

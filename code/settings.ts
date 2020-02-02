@@ -12,6 +12,6 @@ class Settings
         move_right: 'd',
         pause: ' ',
 		debug_globe: 'o',
-		debug_tilemap: 't',
+        debug_tilemap: 't',
     }
 }

@@ -4,6 +4,7 @@ import * as Three from 'three';
 import { PLAYER_SCALE, GLOBE_PRECISION, PLAYER_Z_POSITION } from '../data/constants';
 import { Camera } from './camera';
 import { MovementDirection } from '../input';
+import { Tilemap } from '../logic/tilemap';
 
 const DEBOUNCE = 20;
 
@@ -18,6 +19,7 @@ class Player
     private _geometry: Three.Geometry;
     private _camera: Camera;
     public get instance(): Three.Mesh { return this._mesh; }
+    public get position(): Three.Vector2 { return this._position; }
     public constructor()
     {
         this._moveCooldown = 0;
@@ -63,6 +65,7 @@ class Player
             this._yEaseFactor = 0;
         }
         if(direction == MovementDirection.none) return;
+
         if(direction == MovementDirection.up)
         {
             if(this._position.y < GLOBE_PRECISION / 2 - 1)
