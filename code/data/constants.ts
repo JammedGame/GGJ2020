@@ -22,8 +22,8 @@ export {    DEFAULT_FOV,
 const DEFAULT_FOV = 45;
 const RESOLUTION =
 {
-    X: 1366,
-    Y: 768
+    X: 1920,
+    Y: 1080
 };
 const CLIPPING =
 {

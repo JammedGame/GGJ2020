@@ -46,13 +46,12 @@ class GameLogic
 			this._tilemap.setWindAt(cityLocationPlanar[0], cityLocationPlanar[1], cityWind[0], cityWind[1]);
 			this._tilemap.setPollutionAt(cityLocationPlanar[0], cityLocationPlanar[1], cityPollution);
 		}
-		// let london = convertCoordinatesGeographicToPlanar(0, 51.5);
-		// this._tilemap.setPollutionAt(london[0], london[1], 300);
-		// this._tilemap.setWindAt(london[0], london[1], 1, 1);
-		// let belgrade = convertCoordinatesGeographicToPlanar(20, 44);
-		// this._tilemap.setPollutionAt(belgrade[0], belgrade[1], 300);
-		// let equator = convertCoordinatesGeographicToPlanar(0, 0);
-        // this._tilemap.setPollutionAt(equator[0], equator[1], 300);
+        // let london = convertCoordinatesGeographicToPlanar(0, 51.5);
+        // let darwin = convertCoordinatesGeographicToPlanar(130.84185, -12.46113);
+        // this._tilemap.setPollutionAt(darwin[0], darwin[1], 300);
+        // this._tilemap.setWindAt(darwin[0], darwin[1], 1, 1);
+        // this._tilemap.setWindAt(london[0], london[1], 1, 1);
+        // this._tilemap.setPollutionAt(london[0], london[1], 300);
         this._tilemap.interpolateWind();
         Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
         console.log(this._apiData.allCities);
@@ -79,7 +78,7 @@ class GameLogic
             this._world.update();
             if(Settings.zoom)
             {
-                this._tilemap.setTrailAt(this._world.player.position.x,
+                this._tilemap.setTrailAt(WORLD_WIDTH - this._world.player.position.x,
                     this._world.player.position.y, true);
             }
         }

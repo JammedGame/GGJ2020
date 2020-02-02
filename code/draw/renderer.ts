@@ -19,8 +19,9 @@ class Renderer
         this._canvasParent = <HTMLDivElement> document.getElementById(canvasID);
         this._camera = new Camera();
         this._renderer = new Three.WebGLRenderer();
-        this._renderer.setSize(RESOLUTION.X, RESOLUTION.Y);
+        this._renderer.setSize(window.innerWidth, window.innerHeight);
         this._canvasParent.appendChild( this._renderer.domElement );
+        window.addEventListener( 'resize', this.resize.bind(this), false );
     }
     public setActiveScene(scene: Scene) : void
     {
@@ -46,5 +47,10 @@ class Renderer
             this._renderer.render(this._scene.instance, this._camera.instance);
         }
         requestAnimationFrame(this.render.bind(this));
+    }
+    private resize() : void
+    {
+        console.log('resize');
+        this._renderer.setSize( window.innerWidth, window.innerHeight );
     }
 }

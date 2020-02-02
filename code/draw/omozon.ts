@@ -1,7 +1,7 @@
 export { Omozon }
 
 import * as Three from 'three';
-import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '../data/constants';
+import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT, WORLD_POLE_HEIGHT } from '../data/constants';
 import { Settings } from '../settings';
 import THREE = require('three');
 import { Colors } from 'three';
@@ -35,7 +35,7 @@ class Omozon
         for (let j : number = 0; j < WORLD_HEIGHT; j++)
             for (let i : number = 0; i < WORLD_WIDTH; i++)
             {
-                let quad_longitude : number = 180 + (i + 0.5) * this._quad_size_x;
+                let quad_longitude : number = 180 + (0.5 - i) * this._quad_size_x;
                 let quad_latitude : number = -90 + (0.5 + j) * this._quad_size_y;
 
                 this.addQuad(quad_longitude, quad_latitude);
@@ -51,12 +51,14 @@ class Omozon
     {
         let quad_start = this._geometry.vertices.length;
 
+        let factor = 0.48;
+        if(WORLD_HEIGHT - Math.abs(y) < WORLD_POLE_HEIGHT - 8) factor = 0.5;
         this._geometry.vertices.push
         (
-            spherical2Cartesion(x - this._quad_size_x * 0.5, y + this._quad_size_y * 0.5, OZONE_SCALE),
-            spherical2Cartesion(x + this._quad_size_x * 0.5, y + this._quad_size_y * 0.5, OZONE_SCALE),
-            spherical2Cartesion(x + this._quad_size_x * 0.5, y - this._quad_size_y * 0.5, OZONE_SCALE),
-            spherical2Cartesion(x - this._quad_size_x * 0.5, y - this._quad_size_y * 0.5, OZONE_SCALE),
+            spherical2Cartesion(x - this._quad_size_x * factor, y + this._quad_size_y * factor, OZONE_SCALE),
+            spherical2Cartesion(x + this._quad_size_x * factor, y + this._quad_size_y * factor, OZONE_SCALE),
+            spherical2Cartesion(x + this._quad_size_x * factor, y - this._quad_size_y * factor, OZONE_SCALE),
+            spherical2Cartesion(x - this._quad_size_x * factor, y - this._quad_size_y * factor, OZONE_SCALE),
         );
 
         this._geometry.faces.push
@@ -77,7 +79,7 @@ class Omozon
                 let index = x + y * WORLD_WIDTH;
                 let alpha = ozone * 0.6;
                 let color = trail
-                    ? new Three.Color(alpha, 1, 0.2)
+                    ? new Three.Color(alpha, 0.8, 0.2)
                     : new Three.Color(alpha, 1, 1);
 
                 this._geometry.faces[index * 2 + 0].color = color;
