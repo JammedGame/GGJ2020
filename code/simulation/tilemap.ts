@@ -110,7 +110,7 @@ class Tilemap {
 				let tile = this.getTileWrapped(i, j);
 				tile.visited = false;
 
-				if (tile.trail && tile.ozone <= 0)
+				if (tile.trail && tile.ozone <= OZONE_THRESHOLD)
 				{
 					trailBroken = true;
 				}
