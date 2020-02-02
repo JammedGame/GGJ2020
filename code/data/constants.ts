@@ -30,7 +30,7 @@ const CLIPPING =
 }
 const MAPS =
 {
-    COLOR: '../../resources/earth.jpg',
+    COLOR: '../../resources/earthAlt.jpg',
     NORMAL: '../../resources/normal.jpg',
     BUMP: '../../resources/bump.jpg',
     SPECULAR: '../../resources/specular.jpg'
