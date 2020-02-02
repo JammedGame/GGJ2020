@@ -42,6 +42,7 @@ class GameLogic
         {
             this._scene.update();
             (<World>this._scene).player.move(this._input.direction);
+            (<World>this._scene).player.update();
         }
         requestAnimationFrame(this.update.bind(this));
     }
