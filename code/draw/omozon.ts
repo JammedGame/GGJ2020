@@ -76,19 +76,24 @@ class Omozon
             {
                 let ozone : number = tileMap.getOzoneAt(x, y);
                 let trail : boolean = tileMap.getTrailAt(x, y);
+                let glow : boolean = tileMap.getIsGlowing(x, y);
                 let index = x + y * WORLD_WIDTH;
                 let alpha = (Settings.zoom) ? 0.1 + 0.85 * ozone : 0.1 + ozone * 0.3;
-                let color = trail
-                    ? new Three.Color(alpha, 0.8, 0.2)
+                let color = (trail || glow)
+                    ? (trail
+                        ? new Three.Color(alpha, 0.8, 0.2)
+                        : new Three.Color(alpha, 1, 0.9))
                     : new Three.Color(alpha, 1, 1);
-                if(ozone <= OZONE_THRESHOLD) {
+
+                if (ozone <= OZONE_THRESHOLD)
+                {
                     color = Settings.zoom
                         ? new Three.Color(0.0, 1, 1)
                         : new Three.Color(0.8, 0.3, 0.3);
                 }
 
                 let oldColor = this._geometry.faces[index * 2 + 0].color;
-                let finalColor = oldColor.lerp(color, 0.05);
+                let finalColor = oldColor.lerp(color, 0.08);
 
                 this._geometry.faces[index * 2 + 0].color = finalColor;
                 this._geometry.faces[index * 2 + 1].color = finalColor;
