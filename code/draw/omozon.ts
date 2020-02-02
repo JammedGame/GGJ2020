@@ -77,11 +77,13 @@ class Omozon
                 let ozone : number = tileMap.getOzoneAt(x, y);
                 let trail : boolean = tileMap.getTrailAt(x, y);
                 let index = x + y * WORLD_WIDTH;
-                let alpha = ozone * 0.6;
+                let alpha = (Settings.zoom) ? ozone * 0.6 : ozone * 0.4;
                 let color = trail
                     ? new Three.Color(alpha, 0.8, 0.2)
                     : new Three.Color(alpha, 1, 1);
-
+                if(!Settings.zoom && ozone == 0) {
+                    color = new Three.Color(0.8, 0.3, 0.3);
+                }
                 this._geometry.faces[index * 2 + 0].color = color;
                 this._geometry.faces[index * 2 + 1].color = color;
             }
