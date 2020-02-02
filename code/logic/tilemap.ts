@@ -122,6 +122,7 @@ class Tilemap {
 
 	checkIfTrailsFormLoop() : void {
 		let hotEscapedTiles : Tile[] = [];
+		let trailBroken : boolean = false;
 
 		for(let i = 0; i < WORLD_WIDTH; i++)
 		{
@@ -132,7 +133,18 @@ class Tilemap {
 			{
 				let tile = this.getTileWrapped(i, j);
 				tile.visited = false;
+
+				if (tile.trail && tile.ozone <= 0)
+				{
+					trailBroken = true;
+				}
 			}
+		}
+
+		if (trailBroken)
+		{
+			this.clearTrail();
+			return;
 		}
 
 		while(hotEscapedTiles.length > 0)
@@ -179,11 +191,7 @@ class Tilemap {
 			for(let i = 0; i < loopedTiles.length; i++)
 				this.repairOzoneAt(loopedTiles[i].x, loopedTiles[i].y);
 
-			for(let i = 0; i < WORLD_WIDTH; i++)
-				for(let j = 0; j < WORLD_HEIGHT; j++)
-				{
-					this.setTrailAt(i, j, false);
-				}
+			this.clearTrail();
 		}
 	}
 
