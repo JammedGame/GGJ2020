@@ -6,6 +6,7 @@ import { Api } from "./data/api";
 import { Input } from "./input";
 import { Settings } from "./settings";
 import { convertCoordinatesGeographicToPlanar, convertCoordinatesPolarToPlanar } from "./util/converter";
+import { WORLD_WIDTH } from "./data/constants";
 
 export { GameLogic }
 
@@ -20,22 +21,31 @@ class GameLogic
     {
         this._input = new Input();
         this._renderer = new Renderer('canvas-parent');
-		this._tilemap = new Tilemap();
-		this._tilemap.setPollutionAt(0, 18, 10); // temp
-        this._tilemap.interpolateWind();
-        Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
 
         this._world = new World(this._renderer.camera);
         this._renderer.setActiveScene(this._world);
         (<World>this._world).player.hookCamera(this._renderer.camera);
 
         this._apiData = new Api();
-        this._apiData.setScrapedData();
+		this._apiData.setScrapedData();
+		
+		this._tilemap = new Tilemap();
+		// for (let i = 0; i < this._apiData.allCities.length; i++) {
+		// 	let city = this._apiData.allCities[i];
+		// 	let cityLocationGeographic = city.data.data.location.coordinates;
+		// 	let cityLocationPlanar = convertCoordinatesGeographicToPlanar(cityLocationGeographic[0], cityLocationGeographic[1]);
+		// 	let cityWeather = city.data.data.current.weather;
+		// 	let cityWind = convertCoordinatesPolarToPlanar(cityWeather.wd, cityWeather.ws);
+		// 	let cityPollution = city.data.data.current.pollution.aqius;
+		// 	this._tilemap.setWindAt(cityLocationPlanar[0], cityLocationPlanar[1], cityWind[0], cityWind[1]);
+		// 	this._tilemap.setPollutionAt(cityLocationPlanar[0], cityLocationPlanar[1], cityPollution);
+		// }
+		let london = convertCoordinatesGeographicToPlanar(0, 51.5);
+		this._tilemap.setPollutionAt(london[0], london[1], 300);
+        this._tilemap.interpolateWind();
+        Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
 
         console.log(this._apiData.allCities);
-
-        // this._apiData.getApiData();
-        //console.log(this._apiData.allCities);
 
 
     }
