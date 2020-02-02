@@ -39,5 +39,6 @@ class World extends Scene
     {
         // override
         this._globe.update();
+        this._player.update();
     }
 }
