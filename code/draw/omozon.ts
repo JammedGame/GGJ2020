@@ -73,11 +73,15 @@ class Omozon
             for(let y = 0; y < WORLD_HEIGHT; y++)
             {
                 let ozone : number = tileMap.getOzoneAt(x, y);
+                let trail : boolean = tileMap.getTrailAt(x, y);
                 let index = x + y * WORLD_WIDTH;
                 let alpha = ozone * 0.6;
+                let color = trail
+                    ? new Three.Color(alpha, 1, 0.2)
+                    : new Three.Color(alpha, 1, 1);
 
-                this._geometry.faces[index * 2 + 0].color = new Three.Color(alpha, alpha, alpha);
-                this._geometry.faces[index * 2 + 1].color = new Three.Color(alpha, alpha, alpha);
+                this._geometry.faces[index * 2 + 0].color = color;
+                this._geometry.faces[index * 2 + 1].color = color;
             }
         }
 
@@ -102,7 +106,7 @@ class Omozon
       varying vec3 vColor;
 
       void main() {
-        gl_FragColor = vec4(1, 0.9, 0.9, vColor.r);
+        gl_FragColor = vec4(vColor.b, vColor.g, vColor.b, vColor.r);
       }
     `
     }

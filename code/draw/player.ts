@@ -1,15 +1,18 @@
 export { Player }
 
 import * as Three from 'three';
-import { PLAYER_SCALE, WORLD_WIDTH, 
-    WORLD_HEIGHT, PLAYER_Z_POSITION } from '../data/constants';
+import { PLAYER_SCALE, WORLD_WIDTH, PLAYER_ART,
+    WORLD_HEIGHT, PLAYER_Z_POSITION, WORLD_POLE_HEIGHT } from '../data/constants';
 import { Camera } from './camera';
 import { MovementDirection } from '../input';
-
-const DEBOUNCE = 20;
+import { Tilemap } from '../logic/tilemap';
+import { Settings } from '../settings';
+import { Log } from '../util/log';
 
 class Player
 {
+    private _speed;
+    private _zoom: boolean;
     private _xEaseFactor: number = 0;
     private _yEaseFactor: number = 0;
     private _mesh: Three.Mesh;
@@ -19,16 +22,24 @@ class Player
     private _geometry: Three.Geometry;
     private _camera: Camera;
     public get instance(): Three.Mesh { return this._mesh; }
+    public get position(): Three.Vector2 { return this._position; }
     public constructor()
     {
+        this._speed = 4;
+        this._zoom = false;
         this._moveCooldown = 0;
         this._position = new Three.Vector2(WORLD_WIDTH / 2, WORLD_HEIGHT / 2);
-        this._material = new Three.MeshBasicMaterial({ color: 0xeecccc });
+        this._material = new Three.MeshBasicMaterial({
+            color: 0xeecccc,
+            map: new Three.TextureLoader().load(PLAYER_ART),
+            transparent: true,
+            depthTest: false
+        });
         this._geometry = new Three.BoxGeometry(PLAYER_SCALE, PLAYER_SCALE);
         this._mesh = new Three.Mesh(this._geometry, this._material);
-        this._mesh.rotateZ((45 / 180) * Math.PI);
         this._mesh.position.z = PLAYER_Z_POSITION;
         this._mesh.name = 'Player';
+        this._mesh.renderOrder = 1000;
     }
     public hookCamera(camera: Camera) : void
     {
@@ -37,7 +48,11 @@ class Player
     }
     public update() : void
     {
-
+        if(Settings.zoom != this._zoom)
+        {
+            this._zoom = Settings.zoom;
+            this.updateZoom();
+        }
     }
     public move(direction: MovementDirection) : void
     {
@@ -47,13 +62,13 @@ class Player
             if(Math.abs(this._yEaseFactor) > 0)
             {
                 let yFactorSign = this._yEaseFactor / Math.abs(this._yEaseFactor);
-                this._yEaseFactor = yFactorSign * this._moveCooldown / DEBOUNCE;
+                this._yEaseFactor = yFactorSign * this._moveCooldown / this._speed;
                 this.updatePosition(this._position);
             }
             else if(Math.abs(this._xEaseFactor) > 0)
             {
                 let xFactorSign = this._xEaseFactor / Math.abs(this._xEaseFactor);
-                this._xEaseFactor = xFactorSign * this._moveCooldown / DEBOUNCE;
+                this._xEaseFactor = xFactorSign * this._moveCooldown / this._speed;
                 this.updatePosition(this._position);
             }
             return;
@@ -64,9 +79,10 @@ class Player
             this._yEaseFactor = 0;
         }
         if(direction == MovementDirection.none) return;
+
         if(direction == MovementDirection.up)
         {
-            if(this._position.y < WORLD_HEIGHT - 1)
+            if(this._position.y < WORLD_HEIGHT - 1 - WORLD_POLE_HEIGHT)
             {
                 this._position.y++;
                 this._yEaseFactor = -1;
@@ -74,7 +90,7 @@ class Player
         }
         else if(direction == MovementDirection.down)
         {
-            if(this._position.y > 0)
+            if(this._position.y > WORLD_POLE_HEIGHT)
             {
                 this._position.y--;
                 this._yEaseFactor = 1;
@@ -104,7 +120,7 @@ class Player
             }
             this._xEaseFactor = 1;
         }
-        this._moveCooldown = DEBOUNCE;
+        this._moveCooldown = this._speed;
         this.updatePosition(this._position);
     }
     public updatePosition(playerPos: Three.Vector2) : void
@@ -126,5 +142,22 @@ class Player
         let ry: number = (ky + 0.5) * yAngleFactor;
         let euler = new Three.Euler(ry * radf, rx * radf, 0, 'YXZ');
         this._camera.pivot.setRotationFromEuler(euler);
+    }
+    public updateZoom() : void
+    {
+        if(Settings.zoom)
+        {
+            this._speed = 16;
+            this._mesh.position.z = 0.7;
+            this._camera.instance.position.z = 1.5;
+            Log.message('Zoom in', 'Zoom');
+        }
+        else
+        {
+            this._speed = 4;
+            this._mesh.position.z = PLAYER_Z_POSITION;
+            this._camera.instance.position.z = 2.2;
+            Log.message('Zoom out', 'Zoom');
+        }
     }
 }

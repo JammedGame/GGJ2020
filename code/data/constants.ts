@@ -14,7 +14,8 @@ export {    DEFAULT_FOV,
             EARTH_SCORCH_RATE,
             EARTH_HEAL_RATE,
             OZONE_SCALE,
-            PLAYER_Z_POSITION
+            PLAYER_Z_POSITION,
+            PLAYER_ART
 }
 const DEFAULT_FOV = 45;
 const RESOLUTION =
@@ -34,14 +35,15 @@ const MAPS =
     BUMP: '../../resources/bump.jpg',
     SPECULAR: '../../resources/specular.jpg'
 }
+const PLAYER_ART = '../../resources/satelite.png';
 const GLOBE_SCALE = 1.0;
-const PLAYER_SCALE = 0.05;
+const PLAYER_SCALE = 0.02;
 const OZONE_SCALE: number = 1.05;
 const PLAYER_Z_POSITION: number = 1.12;
 
-const WORLD_WIDTH: number = 60;
-const WORLD_HEIGHT: number = 30;
-const WORLD_POLE_HEIGHT: number = 3;
+const WORLD_WIDTH: number = 120;
+const WORLD_HEIGHT: number = 72;
+const WORLD_POLE_HEIGHT: number = 6;
 const WIND_INTERPOLATION_GRADIENT: number = 0.33;
 const WIND_INTERPOLATION_MAX_DISTANCE: number = 3;
 const POLLUTION_SPREAD_RATE: number = 0.0002;

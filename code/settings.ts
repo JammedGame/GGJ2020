@@ -2,6 +2,7 @@ export { Settings }
 
 class Settings
 {
+    public static zoom = false;
     public static pause = false;
 	public static debugGlobe = false;
 	public static debugTilemap = null;
@@ -10,8 +11,9 @@ class Settings
         move_down: 's',
         move_left: 'a',
         move_right: 'd',
+        zoom: 'e',
         pause: ' ',
 		debug_globe: 'o',
-		debug_tilemap: 't',
+        debug_tilemap: 't',
     }
 }

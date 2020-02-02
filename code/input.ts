@@ -20,6 +20,7 @@ class Input
     public constructor()
     {
         this._actions = {
+            zoom: () => Settings.zoom = !Settings.zoom,
             pause: () => Settings.pause = !Settings.pause,
 			debug_globe: () => Settings.debugGlobe = !Settings.debugGlobe,
 			debug_tilemap: () => { if (typeof Settings.debugTilemap == 'function') Settings.debugTilemap(); }

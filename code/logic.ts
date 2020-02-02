@@ -63,9 +63,15 @@ class GameLogic
         if(!Settings.pause)
         {
             this._tilemap.simulate();
-            this._world.update();
+            
             this._world.omozon.update(this._tilemap);
             this._world.player.move(this._input.direction);
+            this._world.update();
+            if(Settings.zoom)
+            {
+                this._tilemap.setTrailAt(this._world.player.position.x,
+                    this._world.player.position.y, true);
+            }
         }
         requestAnimationFrame(this.update.bind(this));
     }
