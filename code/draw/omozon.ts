@@ -1,7 +1,7 @@
 export { Omozon }
 
 import * as Three from 'three';
-import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '../data/constants';
+import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT, WORLD_POLE_HEIGHT } from '../data/constants';
 import { Settings } from '../settings';
 import THREE = require('three');
 import { Colors } from 'three';
@@ -52,6 +52,7 @@ class Omozon
         let quad_start = this._geometry.vertices.length;
 
         let factor = 0.48;
+        if(WORLD_HEIGHT - Math.abs(y) < WORLD_POLE_HEIGHT - 8) factor = 0.5;
         this._geometry.vertices.push
         (
             spherical2Cartesion(x - this._quad_size_x * factor, y + this._quad_size_y * factor, OZONE_SCALE),
