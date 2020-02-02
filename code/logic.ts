@@ -12,7 +12,7 @@ export { GameLogic }
 class GameLogic
 {
     private _input: Input;
-    private _scene: Scene;
+    private _world: World;
 	private _renderer: Renderer;
     private _tilemap: Tilemap;
     private _apiData: Api;
@@ -20,17 +20,24 @@ class GameLogic
     {
         this._input = new Input();
         this._renderer = new Renderer('canvas-parent');
-        this._scene = new World(this._renderer.camera);
-        this._renderer.setActiveScene(this._scene);
 		this._tilemap = new Tilemap();
-		this._tilemap.setPollutionAt(0, 0, 10); // temp
-		this._tilemap.setWindAt(0, 0, 1, 1); // temp
-		this._tilemap.setWindAt(3, 3, -0.5, -0.5); // temp
-		this._tilemap.interpolateWind();
-		Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
+		this._tilemap.setPollutionAt(54, 18, 10); // temp
+		this._tilemap.setPollutionAt(55, 18, 10); // temp
+		this._tilemap.setPollutionAt(56, 18, 10); // temp
+		this._tilemap.setPollutionAt(57, 18, 10); // temp
+		this._tilemap.setWindAt(54, 18, 1, 1); // temp
+		this._tilemap.setWindAt(54, 24, -1, 0); // temp
+        this._tilemap.interpolateWind();
+        Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
+
+        this._world = new World(this._renderer.camera);
+        this._renderer.setActiveScene(this._world);
+        (<World>this._world).player.hookCamera(this._renderer.camera);
+
         this._apiData = new Api();
         this._apiData.getApiData();
     }
+
     public run()
     {
         this._renderer.start();
@@ -40,9 +47,10 @@ class GameLogic
     {
         if(!Settings.pause)
         {
-            this._scene.update();
-            (<World>this._scene).player.move(this._input.direction);
-            (<World>this._scene).player.update();
+            this._tilemap.simulate();
+            this._world.update();
+            this._world.omozon.update(this._tilemap);
+            this._world.player.move(this._input.direction);
         }
         requestAnimationFrame(this.update.bind(this));
     }

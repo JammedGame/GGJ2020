@@ -5,14 +5,13 @@ import { OZONE_SCALE, GLOBE_PRECISION, MAPS, WORLD_WIDTH, WORLD_HEIGHT } from '.
 import { Settings } from '../settings';
 import THREE = require('three');
 import { Colors } from 'three';
+import { Tilemap } from '../logic/tilemap';
 
 class Omozon
 {
     private _geometry: Three.Geometry;
     private _mesh: Three.Mesh;
     private _material: Three.Material;
-    private _quadsX: number;
-    private _quadsY: number;
     private _quad_size_x: number;
     private _quad_size_y: number;
 
@@ -23,20 +22,18 @@ class Omozon
             fragmentShader: this.fragmentShader(),
             vertexShader: this.vertexShader(),
             transparent: true,
-            depthWrite: false,
             depthTest: false,
+            side: Three.BackSide,
             vertexColors: Three.FaceColors
         });
 
         this._geometry = new THREE.Geometry();
 
-        this._quadsX = WORLD_WIDTH;
-        this._quadsY = WORLD_HEIGHT;
-        this._quad_size_x = 360.0 / this._quadsX;
-        this._quad_size_y = 180.0 / this._quadsY;
+        this._quad_size_x = 360.0 / WORLD_WIDTH;
+        this._quad_size_y = 180.0 / WORLD_HEIGHT;
 
-        for (let i : number = 0; i < this._quadsX; i++)
-            for (let j : number = 0; j < this._quadsY; j++)
+        for (let j : number = 0; j < WORLD_HEIGHT; j++)
+            for (let i : number = 0; i < WORLD_WIDTH; i++)
             {
                 let quad_longitude : number = i * this._quad_size_x;
                 let quad_latitude : number = -90 + (0.5 + j) * this._quad_size_y;
@@ -47,7 +44,7 @@ class Omozon
         this._geometry.colorsNeedUpdate = true;
         this._mesh = new Three.Mesh(this._geometry, this._material);
         this._mesh.name = 'Omozon';
-        this._mesh.renderOrder = -999;
+        this._mesh.renderOrder = 999;
     }
 
     addQuad(x : number, y : number)
@@ -62,13 +59,29 @@ class Omozon
             spherical2Cartesion(x - this._quad_size_x * 0.5, y - this._quad_size_y * 0.5, OZONE_SCALE),
         );
 
-        let color = new Three.Color(0.5, 0.5, 0.5);
-
         this._geometry.faces.push
         (
-            new THREE.Face3( quad_start + 1, quad_start + 0, quad_start + 2, null, color),
-            new THREE.Face3( quad_start + 3, quad_start + 2, quad_start + 0, null, color),
+            new THREE.Face3( quad_start + 1, quad_start + 0, quad_start + 2),
+            new THREE.Face3( quad_start + 3, quad_start + 2, quad_start + 0),
         );
+    }
+
+    update(tileMap: Tilemap)
+    {
+        for(let x = 0; x < WORLD_WIDTH; x++)
+        {
+            for(let y = 0; y < WORLD_HEIGHT; y++)
+            {
+                let ozone : number = tileMap.getOzoneAt(x, y);
+                let index = x + y * WORLD_WIDTH;
+                let alpha = ozone * 0.5;
+
+                this._geometry.faces[index * 2 + 0].color = new Three.Color(alpha, alpha, alpha);
+                this._geometry.faces[index * 2 + 1].color = new Three.Color(alpha, alpha, alpha);
+            }
+        }
+
+        this._geometry.elementsNeedUpdate = true;
     }
 
     vertexShader() {
