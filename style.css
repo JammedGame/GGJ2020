@@ -77,14 +77,15 @@
 }
 
 #tutorial-div .gif-container {
-	position: fixed;
-    right: 3%;
-    top: 15%;
+	left: 50%;
 	width: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    flex-direction: column;
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
 }
 
 #tutorial-div .gif-container  > * {
