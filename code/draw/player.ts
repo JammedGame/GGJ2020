@@ -21,7 +21,7 @@ class Player
     public constructor()
     {
         this._moveCooldown = 0;
-        this._position = new Three.Vector2(0, 18);
+        this._position = new Three.Vector2(36, 28);
         this._material = new Three.MeshBasicMaterial({ color: 0xeecccc });
         this._geometry = new Three.BoxGeometry(PLAYER_SCALE, PLAYER_SCALE);
         this._mesh = new Three.Mesh(this._geometry, this._material);
@@ -113,7 +113,7 @@ class Player
         let x: number = playerPos.x;
         let wx: number = GLOBE_PRECISION / 2 - 1;
         let kx: number = (x > wx) ? (wx - x) : -(x - wx);
-        kx  += GLOBE_PRECISION / 4;
+        kx += GLOBE_PRECISION / 4;
         kx = kx % GLOBE_PRECISION;
         kx -= this._xEaseFactor;
         let rx: number = (kx + 0.5) * angleFactor;

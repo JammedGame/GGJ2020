@@ -35,7 +35,7 @@ class Omozon
         for (let j : number = 0; j < WORLD_HEIGHT; j++)
             for (let i : number = 0; i < WORLD_WIDTH; i++)
             {
-                let quad_longitude : number = (i + 0.5) * this._quad_size_x;
+                let quad_longitude : number = 180 + (i + 0.5) * this._quad_size_x;
                 let quad_latitude : number = -90 + (0.5 + j) * this._quad_size_y;
 
                 this.addQuad(quad_longitude, quad_latitude);
