@@ -6,15 +6,13 @@
 }
 
 #menu-div {
-    width: 100%;
-    height: 100vh;
 	position:relative; top:0px; bottom:0px; width:100%; height:100vh;
 	background-image: url('/resources/ui/main-menu-background.png');
 	background-size: cover;
 	background-position: center center;
 }
 
-#menu-div .ui-container {
+#menu-div > .ui-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -25,15 +23,43 @@
 	transform: translate(0,-50%);
 }
 
-#menu-div .ui-container > * {
+#menu-div > .ui-container > * {
 	display: block;
 	margin: 10px 0;
 	max-width: 100%;
 }
 
-#menu-div .button > img {
+#menu-div > .ui-container .button > img {
 	pointer-events: none;
 	max-height: 65px;
 	width: auto;
 	height: auto;
+}
+
+#tutorial-1-div {
+	position:relative; top:0px; bottom:0px; width:100%; height:100vh;
+	background-image: url('/resources/ui/Story-1.png');
+	background-size: cover;
+	background-position: center center;
+}
+
+#tutorial-2-div {
+	position:relative; top:0px; bottom:0px; width:100%; height:100vh;
+	background-image: url('/resources/ui/Story-2.png');
+	background-size: cover;
+	background-position: center center;
+}
+
+#tutorial-3-div {
+	position:relative; top:0px; bottom:0px; width:100%; height:100vh;
+	background-image: url('/resources/ui/Story-3.png');
+	background-size: cover;
+	background-position: center center;
+}
+
+#credits-div {
+	position:relative; top:0px; bottom:0px; width:100%; height:100vh;
+	background-image: url('/resources/ui/credits.png');
+	background-size: cover;
+	background-position: center center;
 }
