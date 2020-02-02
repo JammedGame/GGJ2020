@@ -26,6 +26,7 @@ class Menu extends Scene
 	private _story1Div: HTMLDivElement;
 	private _story2Div: HTMLDivElement;
 	private _story3Div: HTMLDivElement;
+	private _theMenu: HTMLDivElement;
 	private _tutorialDiv: HTMLDivElement;
 	private _creditsDiv: HTMLDivElement;
     public constructor(camera: Camera)
@@ -40,12 +41,14 @@ class Menu extends Scene
 		this._story1Div = this._menuDiv.querySelector('#tutorial-1-div');
 		this._story2Div = this._menuDiv.querySelector('#tutorial-2-div');
 		this._story3Div = this._menuDiv.querySelector('#tutorial-3-div');
+		this._theMenu = this._menuDiv.querySelector('#the-menu');
 		this._tutorialDiv = this._menuDiv.querySelector('#tutorial-div');
 		this._creditsDiv = this._menuDiv.querySelector('#credits-div');
 		this._coverDiv.style.display = "block";
 		this._story1Div.style.display = "none";
 		this._story2Div.style.display = "none";
 		this._story3Div.style.display = "none";
+		this._theMenu.style.display = "none";
 		this._tutorialDiv.style.display = "none";
 		this._creditsDiv.style.display = "none";
 		Settings.menuClick = this.onClick.bind(this);
@@ -89,18 +92,23 @@ class Menu extends Scene
 				break;
 			case 'tutorial-3-div':
 				this._story3Div.style.display = "none";
+				this._theMenu.style.display = "block";
 				break;			
 			case 'menu-tutorial':
+				this._theMenu.style.display = "none";
 				this._tutorialDiv.style.display = "block";
 				break;
 			case 'tutorial-div':
 				this._tutorialDiv.style.display = "none";
+				this._theMenu.style.display = "block";
 				break;
 			case 'menu-credits':
+				this._theMenu.style.display = "none";
 				this._creditsDiv.style.display = "block";
 				break;
 			case 'credits-div':
 				this._creditsDiv.style.display = "none";
+				this._theMenu.style.display = "block";
 				break;
 		}
 	}
