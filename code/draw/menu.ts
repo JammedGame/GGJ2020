@@ -42,6 +42,12 @@ class Menu extends Scene
 		this._story3Div = this._menuDiv.querySelector('#tutorial-3-div');
 		this._tutorialDiv = this._menuDiv.querySelector('#tutorial-div');
 		this._creditsDiv = this._menuDiv.querySelector('#credits-div');
+		this._coverDiv.style.display = "block";
+		this._story1Div.style.display = "none";
+		this._story2Div.style.display = "none";
+		this._story3Div.style.display = "none";
+		this._tutorialDiv.style.display = "none";
+		this._creditsDiv.style.display = "none";
 		Settings.menuClick = this.onClick.bind(this);
 		audioMenuBackground.play();
     }
@@ -58,12 +64,6 @@ class Menu extends Scene
 	{
 		// override
 		this._menuDiv.style.display = shown ? 'block' : 'none';
-		this._coverDiv.style.display = "block";
-		this._story1Div.style.display = "none";
-		this._story2Div.style.display = "none";
-		this._story3Div.style.display = "none";
-		this._tutorialDiv.style.display = "none";
-		this._creditsDiv.style.display = "none";
 	}
 	private onClick(target: any): void {
 		console.log(target);

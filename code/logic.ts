@@ -67,7 +67,11 @@ class GameLogic
     {
         console.log("RESET");
         this._tilemap.reset();
-        this._world.player.reset();
+		this._world.player.reset();
+
+		Settings.inMenu = true;
+		this._menu.toggleShown(true);
+		this._renderer.setActiveScene(this._menu);
     }
 
     public run()
