@@ -13,6 +13,7 @@ class Player
 {
     private _speed;
     private _zoom: boolean;
+    private _zoomEaseFactor: number = 0;
     private _xEaseFactor: number = 0;
     private _yEaseFactor: number = 0;
     private _mesh: Three.Mesh;
@@ -48,9 +49,19 @@ class Player
     }
     public update() : void
     {
-        if(Settings.zoom != this._zoom)
+        if(Settings.zoom != this._zoom && this._zoomEaseFactor == 0)
         {
             this._zoom = Settings.zoom;
+            this._zoomEaseFactor = 1;
+            this.updateZoom();
+        }
+        if(this._zoomEaseFactor > 0)
+        {
+            this._zoomEaseFactor-=0.05;
+            if(this._zoomEaseFactor < 0.05)
+            {
+                this._zoomEaseFactor = 0;
+            }
             this.updateZoom();
         }
     }
@@ -148,15 +159,15 @@ class Player
         if(Settings.zoom)
         {
             this._speed = 16;
-            this._mesh.position.z = 0.7;
-            this._camera.instance.position.z = 1.5;
+            this._mesh.position.z = 0.7 + this._zoomEaseFactor * 0.42;
+            this._camera.instance.position.z = 1.5 + this._zoomEaseFactor * 0.7;
             Log.message('Zoom in', 'Zoom');
         }
         else
         {
             this._speed = 4;
-            this._mesh.position.z = PLAYER_Z_POSITION;
-            this._camera.instance.position.z = 2.2;
+            this._mesh.position.z = 1.12 - this._zoomEaseFactor * 0.42;
+            this._camera.instance.position.z = 2.2  - this._zoomEaseFactor * 0.7;
             Log.message('Zoom out', 'Zoom');
         }
     }
