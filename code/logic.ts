@@ -35,9 +35,15 @@ class GameLogic
         (<World>this._world).player.hookCamera(this._renderer.camera);
 
         this._apiData = new Api();
-        this._apiData.getApiData();
-    }
+        this._apiData.setScrapedData();
 
+        console.log(this._apiData.allCities);
+
+        // this._apiData.getApiData();
+        //console.log(this._apiData.allCities);
+
+
+    }
     public run()
     {
         this._renderer.start();
