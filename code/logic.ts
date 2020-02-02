@@ -41,7 +41,9 @@ class GameLogic
 		// 	this._tilemap.setPollutionAt(cityLocationPlanar[0], cityLocationPlanar[1], cityPollution);
 		// }
 		let london = convertCoordinatesGeographicToPlanar(0, 51.5);
+		let equator = convertCoordinatesGeographicToPlanar(0, 0);
         this._tilemap.setPollutionAt(london[0], london[1], 300);
+        this._tilemap.setPollutionAt(equator[0], equator[1], 300);
         console.log(london);
         this._tilemap.interpolateWind();
         Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
