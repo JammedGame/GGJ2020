@@ -5,6 +5,7 @@ import {
 	WIND_INTERPOLATION_GRADIENT,
 	WIND_INTERPOLATION_MAX_DISTANCE,
 	POLLUTION_SPREAD_RATE,
+	OZONE_HOLE_DIFFUSE_SPREAD_RATE,
 	OZONE_DAMAGE_RATE,
 	EARTH_SCORCH_RATE,
 	EARTH_HEAL_RATE,
@@ -34,6 +35,7 @@ class Tilemap {
 				newTile.pollution = 0;
 				newTile.pollutionDiff = 0;
 				newTile.ozone = 1;
+				newTile.ozonaTakeDiffuseDamage = false;
 				newTile.trail = false;
 				newTile.wind = [0, 0];
 				newTile.interpolatedWind = [0, 0];
@@ -201,8 +203,8 @@ class Tilemap {
 		for (let radius = 1; radius <= WIND_INTERPOLATION_MAX_DISTANCE; radius++) {
 			// find all candidate tiles at the current radius
 			let candidateTiles: Tile[] = [];
-			for (let x = tile.x - radius; x < tile.x + radius; x++) {
-				for (let y = tile.y - radius; y < tile.y + radius; y++) {
+			for (let x = tile.x - radius; x <= tile.x + radius; x++) {
+				for (let y = tile.y - radius; y <= tile.y + radius; y++) {
 					let otherTile: Tile = this.getTileWrapped(x, y);
 					if (otherTile != tile && (otherTile.wind[0] != 0 || otherTile.wind[1] != 0)) candidateTiles.push(otherTile);
 				}
@@ -242,6 +244,33 @@ class Tilemap {
 					tile.scorch -= EARTH_HEAL_RATE;
 					if (tile.scorch < 0) tile.scorch = 0;
 				}
+			}
+		}
+
+		// ozone diffuse spreading
+		for (let x = 0; x < this.width; x++) {
+			for (let y = 0; y < this.height; y++) {
+				let tile: Tile = this.matrix[x][y];
+				if (tile.ozone != 0) continue;
+
+				for (let x = tile.x - 1; x <= tile.x + 1; x++) {
+					for (let y = tile.y - 1; y <= tile.y + 1; y++) {
+						let otherTile: Tile = this.getTileWrapped(x, y);
+						if (otherTile != tile) otherTile.ozonaTakeDiffuseDamage = true;
+					}
+				}
+			}
+		}
+
+		// resolve ozone hole diffuse spreading
+		for (let x = 0; x < this.width; x++) {
+			for (let y = 0; y < this.height; y++) {
+				let tile: Tile = this.matrix[x][y];
+				if (!tile.ozonaTakeDiffuseDamage) continue;
+
+				tile.ozonaTakeDiffuseDamage = false;
+				tile.ozone -= OZONE_HOLE_DIFFUSE_SPREAD_RATE;
+				if (tile.ozone < 0) tile.ozone = 0;
 			}
 		}
 

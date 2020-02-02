@@ -35,7 +35,10 @@ class GameLogic
         (<World>this._world).player.hookCamera(this._renderer.camera);
 
         this._apiData = new Api();
-		this._apiData.setScrapedData();
+        this._apiData.setScrapedData();    
+
+        // this._apiData.getApiData();
+        // setTimeout(() => {  console.log(JSON.stringify(this._apiData.allCities)); }, 10000);
 
 		this._tilemap = new Tilemap();
 		for (let i = 0; i < this._apiData.allCities.length; i++) {
@@ -86,7 +89,7 @@ class GameLogic
             this._world.update();
             if(Settings.zoom)
             {
-                this._tilemap.setTrailAt(WORLD_WIDTH - this._world.player.position.x,
+                this._tilemap.setTrailAt(WORLD_WIDTH - this._world.player.position.x - 1,
                     this._world.player.position.y, true);
             }
         }
