@@ -2,7 +2,7 @@ export { Player }
 
 import * as Three from 'three';
 import { PLAYER_SCALE, WORLD_WIDTH, 
-    WORLD_HEIGHT, PLAYER_Z_POSITION } from '../data/constants';
+    WORLD_HEIGHT, PLAYER_Z_POSITION, WORLD_POLE_HEIGHT } from '../data/constants';
 import { Camera } from './camera';
 import { MovementDirection } from '../input';
 
@@ -66,7 +66,7 @@ class Player
         if(direction == MovementDirection.none) return;
         if(direction == MovementDirection.up)
         {
-            if(this._position.y < WORLD_HEIGHT - 1)
+            if(this._position.y < WORLD_HEIGHT - 1 - WORLD_POLE_HEIGHT)
             {
                 this._position.y++;
                 this._yEaseFactor = -1;
@@ -74,7 +74,7 @@ class Player
         }
         else if(direction == MovementDirection.down)
         {
-            if(this._position.y > 0)
+            if(this._position.y > WORLD_POLE_HEIGHT)
             {
                 this._position.y--;
                 this._yEaseFactor = 1;
