@@ -160,7 +160,7 @@ class Player
     {
         if(Settings.zoom)
         {
-            this._speed = 16;
+            this._speed = 12;
             this._mesh.position.z = 0.7 + this._zoomEaseFactor * 0.42;
             this._camera.instance.position.z = 1.5 + this._zoomEaseFactor * 0.7;
             Log.message('Zoom in', 'Zoom');
