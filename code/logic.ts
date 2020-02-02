@@ -1,12 +1,13 @@
 import { Renderer } from "./draw/renderer"
 import { Scene } from "./draw/scene";
 import { Tilemap } from "./logic/tilemap"
+import { Menu } from "./draw/menu";
 import { World } from "./draw/world";
 import { Api } from "./data/api";
 import { Input } from "./input";
 import { Settings } from "./settings";
 import { convertCoordinatesGeographicToPlanar, convertCoordinatesPolarToPlanar } from "./util/converter";
-import { WORLD_WIDTH } from "./data/constants";
+import { WORLD_WIDTH, CANVAS_PARENT } from "./data/constants";
 
 export { GameLogic }
 
@@ -15,17 +16,20 @@ import * as Three from 'three';
 class GameLogic
 {
     private _input: Input;
-    private _world: World;
+	private _menu: Menu;
+	private _world: World;
 	private _renderer: Renderer;
     private _tilemap: Tilemap;
     private _apiData: Api;
     public constructor()
     {
         this._input = new Input();
-        this._renderer = new Renderer('canvas-parent');
+        this._renderer = new Renderer(CANVAS_PARENT);
 
+		this._menu = new Menu(this._renderer.camera);
+		this._menu.toggleShown(true);
         this._world = new World(this._renderer.camera);
-        this._renderer.setActiveScene(this._world);
+		this._renderer.setActiveScene(this._menu);
         (<World>this._world).player.hookCamera(this._renderer.camera);
 
         this._apiData = new Api();
@@ -59,8 +63,14 @@ class GameLogic
     }
     public update()
     {
-        if(!Settings.pause)
+		if (Settings.inMenu) {
+			// render menu
+		} else if(!Settings.pause)
         {
+			if (this._renderer.isActiveScene(this._menu)) {
+				this._renderer.setActiveScene(this._world);
+			}
+
             this._tilemap.simulate();
             
             this._world.omozon.update(this._tilemap);

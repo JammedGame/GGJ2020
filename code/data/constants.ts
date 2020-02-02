@@ -15,7 +15,9 @@ export {    DEFAULT_FOV,
             EARTH_HEAL_RATE,
             OZONE_SCALE,
             PLAYER_Z_POSITION,
-            PLAYER_ART
+			PLAYER_ART,
+			CANVAS_PARENT,
+			MENU_DIV,
 }
 const DEFAULT_FOV = 45;
 const RESOLUTION =
@@ -50,3 +52,6 @@ const POLLUTION_SPREAD_RATE: number = 0.0005;
 const OZONE_DAMAGE_RATE: number = 0.00001;
 const EARTH_SCORCH_RATE: number = 0.01;
 const EARTH_HEAL_RATE: number = 0.005;
+
+const CANVAS_PARENT: string = 'canvas-parent';
+const MENU_DIV: string = 'menu-div';

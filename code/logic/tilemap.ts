@@ -9,6 +9,7 @@ import {
 	EARTH_SCORCH_RATE,
 	EARTH_HEAL_RATE
 } from "../data/constants";
+import { Vector2 } from "three";
 
 export { Tilemap }
 
@@ -22,6 +23,7 @@ class Tile {
 	wind: [number, number]; // [-INF..INF, -INF..INF]
 	interpolatedWind: [number, number];
 	scorch: number; // 0..1
+	visited: boolean;
 
 	distanceWrapped(other: Tile): number {
 		let xDistance = Math.abs(this.x - other.x);
@@ -106,9 +108,87 @@ class Tilemap {
 
 	setPollutionAt(x: number, y: number, value: number): void { this.matrix[x][y].pollution = value; };
 	setWindAt(x: number, y: number, vx: number, vy: number): void { this.matrix[x][y].wind = [vx, vy]; };
-	setTrailAt(x: number, y: number, value: boolean): void { this.matrix[x][y].trail = value; };
 	clearTrail(): void { this.matrix.forEach(column => column.forEach(tile => tile.trail = false)); }
 	repairOzoneAt(x: number, y: number): void { this.matrix[x][y].ozone = 1; }
+
+	setTrailAt(x: number, y: number, value: boolean): void
+	{
+		if (this.matrix[x][y].trail != value)
+		{
+			this.matrix[x][y].trail = value;
+			if (value) this.checkIfTrailsFormLoop();
+		}
+	};
+
+	checkIfTrailsFormLoop() : void {
+		let escapedTiles : Tile[] = [];
+		let hotEscapedTiles : Tile[] = [];
+
+		for(let i = 0; i < WORLD_WIDTH; i++)
+		{
+			hotEscapedTiles.push(this.getTileWrapped(i, 0));
+			hotEscapedTiles.push(this.getTileWrapped(i, WORLD_HEIGHT - 1));
+
+			for(let j = 0; j < WORLD_HEIGHT; j++)
+			{
+				let tile = this.getTileWrapped(i, j);
+				tile.visited = false;
+			}
+		}
+
+		while(hotEscapedTiles.length > 0)
+		{
+			let tile = hotEscapedTiles.pop();
+			tile.visited = true;
+			let hasTrail = this.getTrailAt(tile.x, tile.y);
+
+			if (!hasTrail)
+			{
+				escapedTiles.push(tile);
+
+				let leftTile = this.getTileWrapped(tile.x - 1, tile.y);
+				let leftUpTile = this.getTileWrapped(tile.x - 1, tile.y + 1);
+				let rightTile = this.getTileWrapped(tile.x + 1, tile.y);
+				let rightUpTile = this.getTileWrapped(tile.x + 1, tile.y + 1);
+				let upTile = this.getTileWrapped(tile.x, tile.y + 1);
+				let leftBottomTile = this.getTileWrapped(tile.x - 1, tile.y - 1);
+				let bottomTile = this.getTileWrapped(tile.x, tile.y - 1);
+				let rightBottomTile = this.getTileWrapped(tile.x + 1, tile.y - 1);
+
+				if (!leftTile.visited) hotEscapedTiles.push(leftTile);
+				if (!leftUpTile.visited) hotEscapedTiles.push(leftUpTile);
+				if (!rightTile.visited) hotEscapedTiles.push(rightTile);
+				if (!rightUpTile.visited) hotEscapedTiles.push(rightUpTile);
+				if (!upTile.visited) hotEscapedTiles.push(upTile);
+				if (!leftBottomTile.visited) hotEscapedTiles.push(leftBottomTile);
+				if (!bottomTile.visited) hotEscapedTiles.push(bottomTile);
+				if (!rightBottomTile.visited) hotEscapedTiles.push(rightBottomTile);
+			}
+		}
+
+		let loopedTiles : Vector2[] = [];
+		for(let i = 0; i < WORLD_WIDTH; i++)
+			for(let j = 0; j < WORLD_HEIGHT; j++)
+			{
+				let tile = this.getTileWrapped(i, j);
+				if (!tile.trail && escapedTiles.indexOf(tile) == -1)
+				{
+					loopedTiles.push(new Vector2(i, j));
+				}
+			}
+
+		if (loopedTiles.length > 0)
+		{
+			for(let i = 0; i < loopedTiles.length; i++)
+				this.repairOzoneAt(loopedTiles[i].x, loopedTiles[i].y);
+
+			for(let i = 0; i < WORLD_WIDTH; i++)
+				for(let j = 0; j < WORLD_HEIGHT; j++)
+				{
+					this.setTrailAt(i, j, false);
+				}
+		}
+	}
 
 	interpolateWind(): void {
 		// interpolate wind values based on closest windy neighbour

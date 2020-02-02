@@ -19,5 +19,14 @@ class Scene
     public update(): void
     {
         // virtual
-    }
+	}
+	public hideRenderer(): boolean
+	{
+		// virtual
+		return false;
+	}
+	public toggleShown(shown: boolean): void
+	{
+		// virtual
+	}
 }
