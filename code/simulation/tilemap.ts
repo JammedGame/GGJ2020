@@ -76,6 +76,7 @@ class Tilemap {
 	getScorchAt(x: number, y: number): number { return this.matrix[x][y].scorch; };
 	getWindAt(x: number, y: number): [number, number] { return this.matrix[x][y].wind; };
 	getTrailAt(x: number, y: number): boolean { return this.matrix[x][y].trail; };
+	getIsGlowing(x: number, y:number): boolean { return this.matrix[x][y].ozoneRepairGlow > 0; }
 
 	getPollutionMatrix(): number[][] { return this.matrix.map(column => column.map(tile => tile.pollution)); };
 	getOzoneMatrix(): number[][] { return this.matrix.map(column => column.map(tile => tile.ozone)); };
@@ -85,7 +86,11 @@ class Tilemap {
 	setPollutionAt(x: number, y: number, value: number): void { this.matrix[x][y].pollution = value; };
 	setWindAt(x: number, y: number, vx: number, vy: number): void { this.matrix[x][y].wind = [vx, vy]; };
 	clearTrail(): void { this.matrix.forEach(column => column.forEach(tile => tile.trail = false)); }
-	repairOzoneAt(x: number, y: number): void { this.matrix[x][y].ozone = 1; }
+	repairOzoneAt(x: number, y: number): void
+	{
+		this.matrix[x][y].ozone = 1;
+		this.matrix[x][y].ozoneRepairGlow = 30; // in frames
+	}
 
 	setTrailAt(x: number, y: number, value: boolean): void
 	{
@@ -171,10 +176,7 @@ class Tilemap {
 				for(let j = 0; j < WORLD_HEIGHT; j++)
 				{
 					let tile = this.getTileWrapped(i, j);
-					if (tile.trail)
-					{
-						tile.ozone = 1;
-					}
+					if (tile.trail) { this.repairOzoneAt(i, j); }
 				}
 
 			this.clearTrail();
@@ -247,6 +249,7 @@ class Tilemap {
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
 				let tile: Tile = this.matrix[x][y];
+				tile.ozoneRepairGlow -= 1;
 				if (tile.ozone == 0) {
 					tile.scorch += EARTH_SCORCH_RATE;
 					if (tile.scorch > 1) tile.scorch = 1;
