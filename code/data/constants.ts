@@ -13,7 +13,8 @@ export {    DEFAULT_FOV,
             OZONE_DAMAGE_RATE,
             EARTH_SCORCH_RATE,
             EARTH_HEAL_RATE,
-            OZONE_SCALE
+            OZONE_SCALE,
+            PLAYER_Z_POSITION
 }
 const DEFAULT_FOV = 45;
 const RESOLUTION =
@@ -34,9 +35,10 @@ const MAPS =
     SPECULAR: '../../resources/specular.jpg'
 }
 const GLOBE_SCALE = 1.0;
-const GLOBE_PRECISION = 36;
+const GLOBE_PRECISION = 72;
 const PLAYER_SCALE = 0.05;
 const OZONE_SCALE: number = 1.1;
+const PLAYER_Z_POSITION: number = 1.12;
 
 const WORLD_WIDTH: number = 72;
 const WORLD_HEIGHT: number = 36;
