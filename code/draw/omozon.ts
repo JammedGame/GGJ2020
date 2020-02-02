@@ -4,7 +4,7 @@ import * as Three from 'three';
 import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT, WORLD_POLE_HEIGHT } from '../data/constants';
 import { Settings } from '../settings';
 import THREE = require('three');
-import { Colors } from 'three';
+import { Colors, Color } from 'three';
 import { Tilemap } from '../simulation/tilemap';
 
 class Omozon
@@ -84,8 +84,12 @@ class Omozon
                 if(!Settings.zoom && ozone == 0) {
                     color = new Three.Color(0.8, 0.3, 0.3);
                 }
-                this._geometry.faces[index * 2 + 0].color = color;
-                this._geometry.faces[index * 2 + 1].color = color;
+
+                let oldColor = this._geometry.faces[index * 2 + 0].color;
+                let finalColor = oldColor.lerp(color, 0.05);
+
+                this._geometry.faces[index * 2 + 0].color = finalColor;
+                this._geometry.faces[index * 2 + 1].color = finalColor;
             }
         }
 
