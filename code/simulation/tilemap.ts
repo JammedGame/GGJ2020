@@ -13,9 +13,14 @@ import {
 } from "../data/constants";
 import { Tile } from "./tile"
 import { Vector2 } from "three";
+import { Howl, Howler } from 'howler';
 
 export { Tilemap }
 
+const audioPathClosed = new Howl({
+	src: ['./resources/PathClosed.mp3'],
+	volume: 1
+});
 class Tilemap {
 	private readonly width: number;
 	private readonly height: number;
@@ -167,7 +172,19 @@ class Tilemap {
 			for(let i = 0; i < loopedTiles.length; i++)
 				this.repairOzoneAt(loopedTiles[i].x, loopedTiles[i].y);
 
+			for(let i = 0; i < WORLD_WIDTH; i++)
+				for(let j = 0; j < WORLD_HEIGHT; j++)
+				{
+					let tile = this.getTileWrapped(i, j);
+					if (tile.trail)
+					{
+						tile.ozone = 1;
+					}
+				}
+
 			this.clearTrail();
+			audioPathClosed.play();
+			console.log(audioPathClosed);
 		}
 	}
 
@@ -325,7 +342,7 @@ class Tilemap {
 
 		let simulateEnd: number = performance.now();
 		if (this.debuggingEnabled) {
-			console.log("simulate execution time " + (simulateEnd - simulateStart) + " milliseconds");
+			// console.log("simulate execution time " + (simulateEnd - simulateStart) + " milliseconds");
 		}
 	}
 }

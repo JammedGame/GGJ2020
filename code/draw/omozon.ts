@@ -1,7 +1,7 @@
 export { Omozon }
 
 import * as Three from 'three';
-import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT, WORLD_POLE_HEIGHT } from '../data/constants';
+import { OZONE_SCALE, MAPS, WORLD_WIDTH, WORLD_HEIGHT, WORLD_POLE_HEIGHT, OZONE_THRESHOLD } from '../data/constants';
 import { Settings } from '../settings';
 import THREE = require('three');
 import { Colors, Color } from 'three';
@@ -77,12 +77,14 @@ class Omozon
                 let ozone : number = tileMap.getOzoneAt(x, y);
                 let trail : boolean = tileMap.getTrailAt(x, y);
                 let index = x + y * WORLD_WIDTH;
-                let alpha = (Settings.zoom) ? ozone * 0.92 : ozone * 0.4;
+                let alpha = (Settings.zoom) ? 0.1 + 0.85 * ozone : 0.1 + ozone * 0.3;
                 let color = trail
                     ? new Three.Color(alpha, 0.8, 0.2)
                     : new Three.Color(alpha, 1, 1);
-                if(!Settings.zoom && ozone == 0) {
-                    color = new Three.Color(0.8, 0.3, 0.3);
+                if(ozone <= OZONE_THRESHOLD) {
+                    color = Settings.zoom
+                        ? new Three.Color(0.0, 1, 1)
+                        : new Three.Color(0.8, 0.3, 0.3);
                 }
 
                 let oldColor = this._geometry.faces[index * 2 + 0].color;
