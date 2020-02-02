@@ -30,7 +30,7 @@ const CLIPPING =
 }
 const MAPS =
 {
-    COLOR: '../../resources/earth.jpg',
+    COLOR: '../../resources/earthAlt.jpg',
     NORMAL: '../../resources/normal.jpg',
     BUMP: '../../resources/bump.jpg',
     SPECULAR: '../../resources/specular.jpg'
@@ -46,7 +46,7 @@ const WORLD_HEIGHT: number = 72;
 const WORLD_POLE_HEIGHT: number = 6;
 const WIND_INTERPOLATION_GRADIENT: number = 0.5;
 const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
-const POLLUTION_SPREAD_RATE: number = 0.1;
-const OZONE_DAMAGE_RATE: number = 0.002;
+const POLLUTION_SPREAD_RATE: number = 0.0005;
+const OZONE_DAMAGE_RATE: number = 0.00001;
 const EARTH_SCORCH_RATE: number = 0.01;
 const EARTH_HEAL_RATE: number = 0.005;

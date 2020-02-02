@@ -32,20 +32,23 @@ class GameLogic
 		this._apiData.setScrapedData();
 
 		this._tilemap = new Tilemap();
-		// for (let i = 0; i < this._apiData.allCities.length; i++) {
-		// 	let city = this._apiData.allCities[i];
-		// 	let cityLocationGeographic = city.data.data.location.coordinates;
-		// 	let cityLocationPlanar = convertCoordinatesGeographicToPlanar(cityLocationGeographic[0], cityLocationGeographic[1]);
-		// 	let cityWeather = city.data.data.current.weather;
-		// 	let cityWind = convertCoordinatesPolarToPlanar(cityWeather.wd, cityWeather.ws);
-		// 	let cityPollution = city.data.data.current.pollution.aqius;
-		// 	this._tilemap.setWindAt(cityLocationPlanar[0], cityLocationPlanar[1], cityWind[0], cityWind[1]);
-		// 	this._tilemap.setPollutionAt(cityLocationPlanar[0], cityLocationPlanar[1], cityPollution);
-		// }
-		let london = convertCoordinatesGeographicToPlanar(0, 51.5);
-		let equator = convertCoordinatesGeographicToPlanar(0, 0);
-        this._tilemap.setPollutionAt(london[0], london[1], 300);
-        this._tilemap.setPollutionAt(equator[0], equator[1], 300);
+		for (let i = 0; i < this._apiData.allCities.length; i++) {
+			let city = this._apiData.allCities[i];
+			let cityLocationGeographic = city.data.data.location.coordinates;
+			let cityLocationPlanar = convertCoordinatesGeographicToPlanar(cityLocationGeographic[0], cityLocationGeographic[1]);
+			let cityWeather = city.data.data.current.weather;
+			let cityWind = convertCoordinatesPolarToPlanar(cityWeather.wd, cityWeather.ws);
+			let cityPollution = city.data.data.current.pollution.aqius;
+			this._tilemap.setWindAt(cityLocationPlanar[0], cityLocationPlanar[1], cityWind[0], cityWind[1]);
+			this._tilemap.setPollutionAt(cityLocationPlanar[0], cityLocationPlanar[1], cityPollution);
+		}
+		// let london = convertCoordinatesGeographicToPlanar(0, 51.5);
+		// this._tilemap.setPollutionAt(london[0], london[1], 300);
+		// this._tilemap.setWindAt(london[0], london[1], 1, 1);
+		// let belgrade = convertCoordinatesGeographicToPlanar(20, 44);
+		// this._tilemap.setPollutionAt(belgrade[0], belgrade[1], 300);
+		// let equator = convertCoordinatesGeographicToPlanar(0, 0);
+        // this._tilemap.setPollutionAt(equator[0], equator[1], 300);
         this._tilemap.interpolateWind();
         Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
         console.log(this._apiData.allCities);
