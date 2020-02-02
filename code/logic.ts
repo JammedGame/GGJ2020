@@ -10,6 +10,8 @@ import { WORLD_WIDTH } from "./data/constants";
 
 export { GameLogic }
 
+import * as Three from 'three';
+
 class GameLogic
 {
     private _input: Input;
@@ -44,13 +46,9 @@ class GameLogic
 		let equator = convertCoordinatesGeographicToPlanar(0, 0);
         this._tilemap.setPollutionAt(london[0], london[1], 300);
         this._tilemap.setPollutionAt(equator[0], equator[1], 300);
-        console.log(london);
         this._tilemap.interpolateWind();
         Settings.debugTilemap = this._tilemap.debug.bind(this._tilemap);
-
         console.log(this._apiData.allCities);
-
-
     }
     public run()
     {

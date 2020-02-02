@@ -3,10 +3,10 @@ export {    DEFAULT_FOV,
             CLIPPING,
             MAPS,
             GLOBE_SCALE,
-            GLOBE_PRECISION,
             PLAYER_SCALE,
             WORLD_WIDTH,
-            WORLD_HEIGHT,
+			WORLD_HEIGHT,
+			WORLD_POLE_HEIGHT,
             WIND_INTERPOLATION_GRADIENT,
             WIND_INTERPOLATION_MAX_DISTANCE,
             POLLUTION_SPREAD_RATE,
@@ -35,14 +35,13 @@ const MAPS =
     SPECULAR: '../../resources/specular.jpg'
 }
 const GLOBE_SCALE = 1.0;
-const GLOBE_PRECISION = 72;
 const PLAYER_SCALE = 0.05;
 const OZONE_SCALE: number = 1.05;
 const PLAYER_Z_POSITION: number = 1.12;
 
-const WORLD_WIDTH: number = 72;
-const WORLD_HEIGHT: number = 36;
-
+const WORLD_WIDTH: number = 60;
+const WORLD_HEIGHT: number = 30;
+const WORLD_POLE_HEIGHT: number = 3;
 const WIND_INTERPOLATION_GRADIENT: number = 0.5;
 const WIND_INTERPOLATION_MAX_DISTANCE: number = 5;
 const POLLUTION_SPREAD_RATE: number = 0.1;

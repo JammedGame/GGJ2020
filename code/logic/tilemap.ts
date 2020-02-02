@@ -1,6 +1,7 @@
 import {
 	WORLD_WIDTH,
 	WORLD_HEIGHT,
+	WORLD_POLE_HEIGHT,
 	WIND_INTERPOLATION_GRADIENT,
 	WIND_INTERPOLATION_MAX_DISTANCE,
 	POLLUTION_SPREAD_RATE,
@@ -188,6 +189,8 @@ class Tilemap {
 		// ozone is damaged
 		for (let x = 0; x < this.width; x++) {
 			for (let y = 0; y < this.height; y++) {
+				if (y < WORLD_POLE_HEIGHT || y >= WORLD_HEIGHT - WORLD_POLE_HEIGHT) continue;
+
 				let tile: Tile = this.matrix[x][y];
 				tile.ozone -= tile.pollution * OZONE_DAMAGE_RATE;
 				if (tile.ozone < 0) tile.ozone = 0;
