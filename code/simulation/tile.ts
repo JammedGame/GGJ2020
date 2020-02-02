@@ -30,4 +30,15 @@ class Tile {
 	toString(): string {
 		return "pollution:" + this.pollution.toFixed(2) + " | ozone:" + this.ozone.toFixed(2) + "\nwind:[" + this.wind[0].toFixed(2) + "," + this.wind[1].toFixed(2) + "] | scorch:" + this.scorch.toFixed(2);
 	}
+
+	reset() : void {
+		this.pollution = 0;
+		this.pollutionDiff = 0;
+		this.ozone = 1;
+		this.ozoneRepairGlow = 0;
+		this.ozonaTakeDiffuseDamage = false;
+		this.trail = false;
+		this.scorch = 0;
+		this.visited = false;
+	}
 }

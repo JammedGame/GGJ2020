@@ -24,6 +24,7 @@ class Input
             pause: () => Settings.pause = !Settings.pause,
 			debug_globe: () => Settings.debugGlobe = !Settings.debugGlobe,
 			debug_tilemap: () => { if (typeof Settings.debugTilemap == 'function') Settings.debugTilemap(); },
+			reset_game: () => { if (typeof Settings.resetGame == 'function') Settings.resetGame(); },
 			menu_click: (target: EventTarget) => { if (typeof Settings.menuClick == 'function') Settings.menuClick(target); },
         }
         this._movement = { direction: MovementDirection.none };

@@ -156,6 +156,13 @@ class Player
         let euler = new Three.Euler(ry * radf, rx * radf, 0, 'YXZ');
         this._camera.pivot.setRotationFromEuler(euler);
     }
+
+    public reset() : void
+    {
+        this._position = new Three.Vector2(WORLD_WIDTH / 2, WORLD_HEIGHT / 2);
+        this.updatePosition(this._position);
+    }
+
     public updateZoom() : void
     {
         if(Settings.zoom)
