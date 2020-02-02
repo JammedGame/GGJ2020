@@ -1,7 +1,7 @@
 export { Player }
 
 import * as Three from 'three';
-import { PLAYER_SCALE, WORLD_WIDTH, 
+import { PLAYER_SCALE, WORLD_WIDTH, PLAYER_ART,
     WORLD_HEIGHT, PLAYER_Z_POSITION, WORLD_POLE_HEIGHT } from '../data/constants';
 import { Camera } from './camera';
 import { MovementDirection } from '../input';
@@ -31,12 +31,12 @@ class Player
         this._position = new Three.Vector2(WORLD_WIDTH / 2, WORLD_HEIGHT / 2);
         this._material = new Three.MeshBasicMaterial({
             color: 0xeecccc,
+            map: new Three.TextureLoader().load(PLAYER_ART),
             transparent: true,
             depthTest: false
         });
         this._geometry = new Three.BoxGeometry(PLAYER_SCALE, PLAYER_SCALE);
         this._mesh = new Three.Mesh(this._geometry, this._material);
-        this._mesh.rotateZ((45 / 180) * Math.PI);
         this._mesh.position.z = PLAYER_Z_POSITION;
         this._mesh.name = 'Player';
         this._mesh.renderOrder = 1000;
@@ -149,7 +149,7 @@ class Player
         {
             this._speed = 16;
             this._mesh.position.z = 0.7;
-            this._camera.instance.position.z = 1.8;
+            this._camera.instance.position.z = 1.5;
             Log.message('Zoom in', 'Zoom');
         }
         else

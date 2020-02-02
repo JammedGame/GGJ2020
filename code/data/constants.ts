@@ -14,7 +14,8 @@ export {    DEFAULT_FOV,
             EARTH_SCORCH_RATE,
             EARTH_HEAL_RATE,
             OZONE_SCALE,
-            PLAYER_Z_POSITION
+            PLAYER_Z_POSITION,
+            PLAYER_ART
 }
 const DEFAULT_FOV = 45;
 const RESOLUTION =
@@ -34,6 +35,7 @@ const MAPS =
     BUMP: '../../resources/bump.jpg',
     SPECULAR: '../../resources/specular.jpg'
 }
+const PLAYER_ART = '../../resources/satelite.png';
 const GLOBE_SCALE = 1.0;
 const PLAYER_SCALE = 0.02;
 const OZONE_SCALE: number = 1.05;
