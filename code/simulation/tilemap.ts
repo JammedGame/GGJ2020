@@ -106,6 +106,17 @@ class Tilemap {
 		}
 	};
 
+	public reset() : void {
+		for(let i = 0; i < WORLD_WIDTH; i++)
+		{
+			for(let j = 0; j < WORLD_HEIGHT; j++)
+			{
+				let tile = this.getTileWrapped(i, j);
+				tile.reset();
+			}
+		}
+	}
+
 	checkIfTrailBroken() : void {
 		for(let i = 0; i < WORLD_WIDTH; i++)
 		{

@@ -6,6 +6,7 @@ class Settings
 	public static pause = false;
 	public static inMenu = true;
 	public static debugGlobe = false;
+	public static resetGame: Function = null;
 	public static debugTilemap: Function = null;
 	public static menuClick: Function = null;
     public static controls = {
@@ -17,5 +18,6 @@ class Settings
         pause: ' ',
 		debug_globe: 'o',
         debug_tilemap: 't',
+        reset_game: 'r',
     }
 }
